@@ -28,13 +28,6 @@ setopt SHARE_HISTORY
 # Ignore commands starting with a space
 setopt hist_ignore_space
 
-### Variables ###
-export BROWSER="qutebrowser"
-export EDITOR="emacs"
-export VISUAL="$EDITOR"
-export PATH="$PATH:$HOME/bin:$HOME/bin/go/bin"
-export VIEW_PDF="zathura" # for latex-makefile
-
 ### Colors for ls ###
 [[ -f ~/.dircolors ]] && eval $(dircolors ~/.dircolors) || eval $(dircolors)
 
@@ -42,16 +35,6 @@ export VIEW_PDF="zathura" # for latex-makefile
 if which cope_path &>/dev/null; then
     export PATH="$(cope_path):$PATH"
 fi
-
-### ccache ###
-export PATH="/usr/lib/ccache/bin/:$PATH"
-export CCACHE_COMPRESS=1
-export CCACHE_BASEDIR=$HOME
-export CCACHE_PREFIX=$(which cope)
-
-### settings
-export SUDO_PROMPT='[sudo] password for %u@%h (-> %U): '
-export GIT_PAGER='less +g'
 
 ### keybindings ###
 # vi mode
