@@ -171,8 +171,7 @@ disp_prompt_info() {
 
 setprompt() {
     local reset="%{$reset_color%}"
-    local upper_start='%F{blue}╭─[%f'
-    local lower_start='%F{blue}╰%f'
+    local upper_start='%F{blue}─[%f'
     local other_start='%F{blue}┄─[%f'
     local other_end=']─╼ ${reset}'
     local userhost='%F{green}%n@%m%f'
@@ -202,7 +201,7 @@ setprompt() {
     PROMPT+="${dtime}${prompt_endsep}${job}\$(venv_prompt_info)${vcs}${ranger}"
     PROMPT+="\$(disp_prompt_info)${fade}$n"
 
-    PROMPT+="${lower_start}${rootwarn}${promptchar}${reset}"
+    #PROMPT+="${lower_start}${rootwarn}${promptchar}${reset}"
 
     PROMPT2="${other_start}%_${other_end}"
     PROMPT3="${other_start}?${other_end}"
