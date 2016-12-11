@@ -27,41 +27,16 @@ setopt hist_ignore_all_dups
 setopt SHARE_HISTORY
 # Ignore commands starting with a space
 setopt hist_ignore_space
-# Maybe this fixes hangs on start?
-# setopt HIST_FCNTL_LOCK
 
 ### Variables ###
-if [[ "$OS" == Windows_NT ]]; then
-    export PATH="/usr/local/bin:/usr/bin:$PATH"
-    export SHELL="/usr/bin/zsh"
-    export TERM="cygwin"
-    alias open='cygstart'
-else
-    export BROWSER="qutebrowser"
-    export EDITOR="vim"
-    export VISUAL="$EDITOR"
-    export PATH="$PATH:$HOME/bin:$HOME/bin/go/bin"
-    export VIEW_PDF="zathura" # for latex-makefile
-    export PAGER="less"
-    if [[ -r /usr/bin/virtualenvwrapper.sh ]];then
-        export WORKON_HOME=~/.virtualenvs
-        source /usr/bin/virtualenvwrapper.sh
-    fi
-fi
+export BROWSER="qutebrowser"
+export EDITOR="emacs"
+export VISUAL="$EDITOR"
+export PATH="$PATH:$HOME/bin:$HOME/bin/go/bin"
+export VIEW_PDF="zathura" # for latex-makefile
 
 ### Colors for ls ###
 [[ -f ~/.dircolors ]] && eval $(dircolors ~/.dircolors) || eval $(dircolors)
-
-### Colors and syntax highlighting for less ###
-export LESS="-R -M +g"
-export LESS_TERMCAP_me=$(printf '\e[0m')
-export LESS_TERMCAP_se=$(printf '\e[0m')
-export LESS_TERMCAP_ue=$(printf '\e[0m')
-export LESS_TERMCAP_mb=$(printf '\e[1;32m')
-export LESS_TERMCAP_md=$(printf '\e[1;34m')
-export LESS_TERMCAP_us=$(printf '\e[1;32m')
-export LESS_TERMCAP_so=$(printf '\e[1;44;1m')
-export LESSCOLORIZER=code2color
 
 ### general colors ###
 if which cope_path &>/dev/null; then
@@ -75,7 +50,6 @@ export CCACHE_BASEDIR=$HOME
 export CCACHE_PREFIX=$(which cope)
 
 ### settings
-export ACK_COLOR_MATCH="bold red"
 export SUDO_PROMPT='[sudo] password for %u@%h (-> %U): '
 export GIT_PAGER='less +g'
 
@@ -112,14 +86,8 @@ alias grep='grep --color=auto'
 alias nano='nano --nowrap'
 alias dmesg='dmesg --human --decode --nopager'
 # shorthands
-alias scr='screen -U -xRR'
-alias s='ssh'
-alias m='mosh'
 alias hc='herbstclient'
 alias yu='yaourt -Suya; sudo abs; sudo pkgfile -u; gpg --refresh-keys; gpg --update-trustdb; sudo pacdiffviewer'
-alias yi='yaourt -S'
-alias yq='yaourt -Si'
-alias yl='yaourt -Ql'
 alias tx='tmux -2 attach -d'
 # pseudo-functions
 alias pymath='bpython -i <(echo "from math import *")'
@@ -142,9 +110,6 @@ alias chown=' chown -c'
 alias shred=' shred -u -z'
 alias cp='cp -i'
 alias mv='mv -i'
-# the fuck
-#alias fuck=$(thefuck $(fc -ln -1))
-alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R' 
 alias bell='echo -e "\a"'
 
 ### completion ###
@@ -281,5 +246,3 @@ fi
 
 ### Humble bundle key ###
 [[ -f ~/.humblebundle ]] && source ~/.humblebundle
-
-alias vim=emacs
