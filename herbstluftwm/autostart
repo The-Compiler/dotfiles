@@ -156,3 +156,7 @@ for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
     # start it on each monitor
     "$panel" $monitor &
 done
+
+# autorun stuff
+[[ -z "$HLWM_LOADED" ]] && ~/.config/herbstluftwm/autorun &
+hc setenv HLWM_LOADED 1
