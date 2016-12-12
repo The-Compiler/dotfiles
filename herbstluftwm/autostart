@@ -71,8 +71,10 @@ for i in ${!tag_names[@]} ; do
 done
 
 # cycle through tags
-hc keybind $Mod-period use_index +1 --skip-visible
-hc keybind $Mod-comma  use_index -1 --skip-visible
+hc keybind Shift-$Mod-Prior spawn hlwm-tagswitch prev
+hc keybind Shift-$Mod-Next spawn hlwm-tagswitch next
+hc keybind $Mod-Prior use_index -1
+hc keybind $Mod-Next use_index +1
 
 # layouting
 hc keybind $Mod-r remove
