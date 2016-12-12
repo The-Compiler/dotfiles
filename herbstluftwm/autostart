@@ -6,6 +6,8 @@ hc() {
 
 hc emit_hook reload
 
+xsetroot -solid black
+
 # remove all existing keybindings
 hc keyunbind --all
 
