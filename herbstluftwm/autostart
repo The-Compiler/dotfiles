@@ -109,7 +109,9 @@ hc keybind XF86MonBrightnessUp spawn yoga-brightness up
 hc keybind XF86MonBrightnessDown spawn yoga-brightness down
 hc keybind XF86Tools spawn systemctl suspend
 hc keybind XF86Search spawn physlock -s
-``
+hc keybind $Mod-d spawn rofi -show run
+hc keybind $Mod-w spawn rofi -show window
+
 # theme
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
