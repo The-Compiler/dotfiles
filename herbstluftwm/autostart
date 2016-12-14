@@ -111,6 +111,7 @@ hc keybind XF86Tools spawn systemctl suspend
 hc keybind XF86Search spawn physlock -s
 hc keybind $Mod-d spawn rofi -show run
 hc keybind $Mod-w spawn rofi -show window
+hc keybind $Mod-y spawn utf8select
 
 # theme
 hc attr theme.tiling.reset 1
