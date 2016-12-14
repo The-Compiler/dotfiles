@@ -15,3 +15,4 @@ export CCACHE_PREFIX=$(which cope)
 ### settings
 export SUDO_PROMPT='[sudo] password for %u@%h (-> %U): '
 export GIT_PAGER='less +g'
+export QT_QPA_PLATFORMTHEME='gtk2'
