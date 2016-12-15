@@ -1,3 +1,4 @@
 #!/bin/bash
 yoga-keyboard
 yoga-brightness 0.8
+easystroke &
