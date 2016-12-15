@@ -310,7 +310,10 @@ you should place your code here."
   ;; Configure automatic modes
   (add-to-list 'auto-mode-alist (cons "\\.asciidoc\\'" 'adoc-mode))
   (add-to-list 'auto-mode-alist (cons "PKGBUILD" 'adoc-mode))
-  )
+
+  ;; Filename in window title
+  (setq frame-title-format ("" invocation-name " - %b"))
+)
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
