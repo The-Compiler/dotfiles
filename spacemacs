@@ -309,7 +309,7 @@ you should place your code here."
 
   ;; Configure automatic modes
   (add-to-list 'auto-mode-alist (cons "\\.asciidoc\\'" 'adoc-mode))
-  (add-to-list 'auto-mode-alist (cons "PKGBUILD" 'adoc-mode))
+  (add-to-list 'auto-mode-alist (cons "PKGBUILD" 'shell-script-mode))
 
   ;; Filename in window title
   (setq frame-title-format ("" invocation-name " - %b"))
