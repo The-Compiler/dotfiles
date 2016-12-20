@@ -1,0 +1,2 @@
+"Lid Switch" "/dev/input/event*" none sw/0/1 "Shell/xset dpms force off"
+"Lid Switch" "/dev/input/event*" none sw/0/0 "Shell/xset dpms force on"

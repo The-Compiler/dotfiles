@@ -3,3 +3,4 @@ yoga-keyboard
 yoga-brightness 0.8
 easystroke &
 dispwin ~/.config/display.icc
+evrouter /dev/input/event* -c ~/.config/evrouterrc
