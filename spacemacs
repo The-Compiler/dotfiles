@@ -312,7 +312,7 @@ you should place your code here."
   (add-to-list 'auto-mode-alist (cons "PKGBUILD" 'shell-script-mode))
 
   ;; Filename in window title
-  (setq frame-title-format ("" invocation-name " - %b"))
+  (setq frame-title-format '("" invocation-name " - %b"))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
