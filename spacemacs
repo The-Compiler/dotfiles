@@ -313,6 +313,10 @@ you should place your code here."
 
   ;; Filename in window title
   (setq frame-title-format '("" invocation-name " - %b"))
+
+  ;; Use zathura for LaTeX
+  (setq TeX-view-program-selection '((output-pdf "Zathura")))
+
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
