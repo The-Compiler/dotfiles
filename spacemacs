@@ -33,8 +33,8 @@ values."
    '(
      helm
      (theming :variables theming-modifications '((monokai (default :background "black"))))
-     ;; auto-completion
-     ;; better-defaults
+     (auto-completion :variables
+                      auto-completion-enable-help-tooltip t)
      git
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -359,7 +359,7 @@ you should place your code here."
     ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
  '(package-selected-packages
    (quote
-    (monokai-theme auctex-latexmk disaster cmake-mode clang-format yapfify xterm-color web-mode web-beautify tagedit sql-indent slim-mode shell-pop scss-mode sass-mode pyvenv pytest pyenv-mode py-isort pug-mode pip-requirements phpunit phpcbf php-extras php-auto-yasnippets multi-term mmm-mode markdown-toc markdown-mode livid-mode skewer-mode simple-httpd live-py-mode less-css-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc jinja2-mode hy-mode helm-pydoc helm-css-scss haml-mode gh-md flycheck-pos-tip pos-tip flycheck eshell-z eshell-prompt-extras esh-help emmet-mode eclim yasnippet drupal-mode php-mode cython-mode coffee-mode auctex ansible-doc ansible anaconda-mode pythonic adoc-mode markup-faces smeargle orgit org magit-gitflow helm-gitignore gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link evil-magit magit magit-popup git-commit with-editor yaml-mode ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spacemacs-theme spaceline restart-emacs request rainbow-delimiters quelpa popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide ido-vertical-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line)))
+    (company-quickhelp git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter diff-hl helm-company helm-c-yasnippet company-web web-completion-data company-tern dash-functional tern company-statistics company-emacs-eclim company-c-headers company-auctex company-anaconda company auto-yasnippet ac-ispell auto-complete bind-key iedit smartparens highlight projectile helm helm-core hydra monokai-theme auctex-latexmk disaster cmake-mode clang-format yapfify xterm-color web-mode web-beautify tagedit sql-indent slim-mode shell-pop scss-mode sass-mode pyvenv pytest pyenv-mode py-isort pug-mode pip-requirements phpunit phpcbf php-extras php-auto-yasnippets multi-term mmm-mode markdown-toc markdown-mode livid-mode skewer-mode simple-httpd live-py-mode less-css-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc jinja2-mode hy-mode helm-pydoc helm-css-scss haml-mode gh-md flycheck-pos-tip pos-tip flycheck eshell-z eshell-prompt-extras esh-help emmet-mode eclim yasnippet drupal-mode php-mode cython-mode coffee-mode auctex ansible-doc ansible anaconda-mode pythonic adoc-mode markup-faces smeargle orgit org magit-gitflow helm-gitignore gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link evil-magit magit magit-popup git-commit with-editor yaml-mode ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spacemacs-theme spaceline restart-emacs request rainbow-delimiters quelpa popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide ido-vertical-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line)))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#073642" 0.2))
@@ -400,4 +400,8 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(company-tooltip-common
+   ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection
+   ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
  )
