@@ -319,6 +319,8 @@ you should place your code here."
   ;; Use zathura for LaTeX
   (setq TeX-view-program-selection '((output-pdf "Zathura")))
 
+  ;; Use caching in projectile
+  (setq projectile-enable-caching t)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
