@@ -308,6 +308,9 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  ;; Open URLs with qutebrowser
+  (setq browse-url-browser-function 'browse-url-generic
+        browse-url-generic-program "qutebrowser")
 
   ;; Configure automatic modes
   (add-to-list 'auto-mode-alist (cons "\\.asciidoc\\'" 'adoc-mode))
