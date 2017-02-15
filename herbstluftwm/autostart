@@ -113,6 +113,7 @@ hc keybind $Mod-d spawn rofi -m -4 -show run
 hc keybind $Mod-w spawn rofi -m -4 -show window
 hc keybind $Mod-y spawn utf8select
 hc keybind $Mod-Multi_key spawn gscreenshot
+hc keybind XF86Explorer spawn guake -t
 
 # theme
 hc attr theme.tiling.reset 1
@@ -158,6 +159,7 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
 hc rule windowrole=GtkFileChooserDialog pseudotile=off  # Don't pseudotile file chooser dialogs
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
+hc rule instance=guake manage=off
 
 hc set tree_style '╾│ ├└╼─┐'
 

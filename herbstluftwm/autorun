@@ -4,3 +4,4 @@ yoga-brightness 0.8
 easystroke &
 dispwin ~/.config/display.icc
 evrouter /dev/input/event* -c ~/.config/evrouterrc
+guake -e 'journalctl -f -n 200' &
