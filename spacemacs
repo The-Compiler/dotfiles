@@ -325,6 +325,8 @@ you should place your code here."
 
   ;; Use caching in projectile
   (setq projectile-enable-caching t)
+
+  (setq magit-diff-refine-hunk t)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
