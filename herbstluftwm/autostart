@@ -159,6 +159,7 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
 hc rule windowrole=GtkFileChooserDialog pseudotile=off  # Don't pseudotile file chooser dialogs
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
+hc rule class=qutebrowser windowtype='_NET_WM_WINDOW_TYPE_UTILITY' manage=off
 hc rule instance=guake manage=off
 
 hc set tree_style '╾│ ├└╼─┐'
