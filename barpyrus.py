@@ -41,6 +41,10 @@ cg.text('% ')
 wifi_icons = [0xe217, 0xe218, 0xe219, 0xe21a]
 wifi_delta = 100 / len(wifi_icons)
 
+with cg.if_('up tun0'):
+    with cg.temp_fg(0xff0000):
+        cg.symbol(0xe0a6)
+
 for iface in ['eth', 'wlan', 'ppp0']:
     with cg.if_('up %s' % iface):
         with cg.temp_fg(0x9fbc00):
