@@ -21,7 +21,6 @@ cg = conky.ConkyGenerator()
 
 with cg.temp_fg(0x9fbc00):
     cg.symbol(0xe026)
-
 cg.space()
 for cpu in '1234':
     cg.var('cpu cpu' + cpu)
@@ -33,24 +32,52 @@ cg.space()
 cg.var('memperc')
 cg.text('% ')
 
+with cg.temp_fg(0x9fbc00):
+    cg.symbol(0x00e1bb)
+cg.space()
+cg.var('fs_used_perc /')
+cg.text('% ')
+
+
 ## Network
-for iface, icon, extra in [('eth', 0xe0af, ''), ('wlan', 0xe21a, '${wireless_essid}'), ('ppp0', 0xe0f3, '')]:
+wifi_icons = [0xe217, 0xe218, 0xe219, 0xe21a]
+wifi_delta = 100 / len(wifi_icons)
+
+for iface in ['eth', 'wlan', 'ppp0']:
     with cg.if_('up %s' % iface):
         with cg.temp_fg(0x9fbc00):
-            cg.symbol(icon)
-        if extra:
-            cg.space()
-            cg.text(extra)
+            if iface == 'wlan':
+                cg.text('%{T2}')
+                with cg.cases():
+                    for i, icon in enumerate(wifi_icons[:-1]):
+                        cg.case('match ${wireless_link_qual_perc wlan} < %d' % ((i+1)*wifi_delta))
+                        cg.text(chr(icon))
+
+                    cg.else_()
+                    cg.text(chr(wifi_icons[-1]))  # icon for 100 percent
+                cg.text('%{T-} ')
+            elif iface == 'eth':
+                cg.symbol(0xe0af)
+            elif iface == 'ppp0':
+                cg.symbol(0xe0f3)
+            else:
+                assert False
+
+        if iface == 'wlan':
+            cg.var('wireless_essid')
 
         cg.space()
         with cg.temp_fg(0x9fbc00):
             cg.symbol(0xe13c)
         cg.var('downspeedf %s' % iface)
-        cg.text('K')
+        cg.text('K ')
+        cg.var('totaldown %s' % iface)
+        cg.space()
         with cg.temp_fg(0x9fbc00):
             cg.symbol(0xe13b)
         cg.var('upspeedf %s' % iface)
-        cg.text('K')
+        cg.text('K ')
+        cg.var('totalup %s' % iface)
 
 ## Battery
 # first icon: 0 percent
@@ -63,7 +90,7 @@ bat_delta = 100 / len(bat_icons)
 
 with cg.if_('existing /sys/class/power_supply/BAT0'):
     cg.text(' %{T2}')
-    with cg.if_('match "$battery" == "discharging $battery_percent%%"'):
+    with cg.if_('match "$battery" == "discharging $battery_percent%"'):
         cg.fg(0xFFC726)
         cg.else_()
         cg.fg(0x9FbC00)
@@ -90,7 +117,7 @@ bar.widget = W.ListLayout([
     W.RawLabel('%{c}'),
     hlwm.HLWMWindowTitle(hc),
     W.RawLabel('%{r}'),
-    conky.ConkyWidget(text=str(cg)),
+    conky.ConkyWidget(text=str(cg), config={'update_interval': '5'}),
     W.RawLabel("%{F#ffffff}"),
     W.DateTime('%d. %B, %H:%M'),
 ])
