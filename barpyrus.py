@@ -21,11 +21,15 @@ cg = conky.ConkyGenerator()
 
 with cg.temp_fg(0x9fbc00):
     cg.symbol(0xe026)
-cg.var('cpu')
-cg.text('% ')
+
+cg.space()
+for cpu in '1234':
+    cg.var('cpu cpu' + cpu)
+    cg.text('% ')
 
 with cg.temp_fg(0x9fbc00):
     cg.symbol(0xe021)
+cg.space()
 cg.var('memperc')
 cg.text('% ')
 
