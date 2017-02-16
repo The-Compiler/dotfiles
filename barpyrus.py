@@ -48,39 +48,16 @@ conky_text += "%{T-} $battery_percent% "
 conky_text += "${endif}"
 conky_text += "%{F-}"
 
-# example options for the hlwm.HLWMLayoutSwitcher widget
-xkblayouts = [
-    'us us -variant altgr-intl us'.split(' '),
-    'de de de'.split(' '),
-]
-setxkbmap = 'setxkbmap -option compose:menu -option ctrl:nocaps'
-setxkbmap += ' -option compose:ralt -option compose:rctrl'
-
-# you can define custom themes
-grey_frame = Theme(bg = '#303030', fg = '#EFEFEF', padding = (3,3))
-
 # Widget configuration:
 bar = lemonbar.Lemonbar(geometry = (x,y,width,height))
 bar.widget = W.ListLayout([
     W.RawLabel('%{l}'),
     hlwm.HLWMTags(hc, monitor, tag_renderer = hlwm.underlined_tags),
     W.RawLabel('%{c}'),
-    hlwm.HLWMMonitorFocusLayout(hc, monitor,
-           # this widget is shown on the focused monitor:
-           grey_frame(hlwm.HLWMWindowTitle(hc)),
-           # this widget is shown on all unfocused monitors:
-           conky.ConkyWidget('df /: ${fs_used_perc /}%')
-                                    ),
+    hlwm.HLWMWindowTitle(hc),
     W.RawLabel('%{r}'),
-    conky.ConkyWidget(text= conky_text),
-    # something like a tabbed widget with the tab labels '>' and '<'
-    W.ShortLongLayout(
-        W.RawLabel(''),
-        W.ListLayout([
-            hlwm.HLWMLayoutSwitcher(hc, xkblayouts, command = setxkbmap.split(' ')),
-            W.RawLabel(' '),
-        ])),
-        grey_frame(W.DateTime('%d. %B, %H:%M')),
+    conky.ConkyWidget(text=conky_text),
+    W.DateTime('%d. %B, %H:%M'),
 ])
 
 
