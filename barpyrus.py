@@ -17,19 +17,28 @@ height = 16 # height of the panel
 width = monitor_w # width of the panel
 hc(['pad', str(monitor), str(height)]) # get space for the panel
 
-# An example conky-section:
-# icons
+conky_text = '%{F\\#9fbc00}%{T2}\ue026%{T-}%{F\\#989898}${cpu}% '
+conky_text += '%{F\\#9fbc00}%{T2}\ue021%{T-}%{F\\#989898}${memperc}% '
+
+## Network
+for iface, icon, extra in [('eth', '\ue0af', ''), ('wlan', '\ue21a', '${wireless_essid}'), ('ppp0', '\ue0f3', '')]:
+    conky_text += '${if_up %s}' % iface
+    conky_text += '%%{F\\#9fbc00}%%{T2}%s%%{T-}%%{F\\#989898}' % icon
+    if extra:
+        conky_text += ' %s ' % extra
+    conky_text += '%%{F\\#9fbc00}%%{T2}\ue13c%%{T-}%%{F\\#989898}${downspeedf %s}K ' % iface
+    conky_text += '%%{F\\#9fbc00}%%{T2}\ue13b%%{T-}%%{F\\#989898}${upspeedf %s}K ' % iface
+    conky_text += '${endif}'
+
+
+## Battery
+# first icon: 0 percent
+# last icon: 100 percent
 bat_icons = [
     0xe242, 0xe243, 0xe244, 0xe245, 0xe246,
     0xe247, 0xe248, 0xe249, 0xe24a, 0xe24b,
 ]
-# first icon: 0 percent
-# last icon: 100 percent
 bat_delta = 100 / len(bat_icons)
-conky_text = '%{F\\#9fbc00}%{T2}\ue026%{T-}%{F\\#989898}${cpu}% '
-conky_text += '%{F\\#9fbc00}%{T2}\ue021%{T-}%{F\\#989898}${memperc}% '
-conky_text += '%{F\\#9fbc00}%{T2}\ue13c%{T-}%{F\\#989898}${downspeedf}K '
-conky_text += '%{F\\#9fbc00}%{T2}\ue13b%{T-}%{F\\#989898}${upspeedf}K '
 conky_text += "${if_existing /sys/class/power_supply/BAT0}"
 conky_text += "%{T2}"
 conky_text += "${if_match \"$battery\" == \"discharging $battery_percent%\"}"
