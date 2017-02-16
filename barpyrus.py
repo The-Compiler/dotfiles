@@ -112,7 +112,9 @@ with cg.if_('existing /sys/class/power_supply/BAT0'):
     cg.text('%{T-} ')
     cg.var('battery_percent')
     cg.text('% ')
+    cg.var('battery_time')
     cg.fg(None)
+    cg.space()
 
 
 # Widget configuration:
