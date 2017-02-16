@@ -17,19 +17,36 @@ height = 16 # height of the panel
 width = monitor_w # width of the panel
 hc(['pad', str(monitor), str(height)]) # get space for the panel
 
-conky_text = '%{F\\#9fbc00}%{T2}\ue026%{T-}%{F\\#989898}${cpu}% '
-conky_text += '%{F\\#9fbc00}%{T2}\ue021%{T-}%{F\\#989898}${memperc}% '
+cg = conky.ConkyGenerator()
+
+with cg.temp_fg(0x9fbc00):
+    cg.symbol(0xe026)
+cg.var('cpu')
+cg.text('% ')
+
+with cg.temp_fg(0x9fbc00):
+    cg.symbol(0xe021)
+cg.var('memperc')
+cg.text('% ')
 
 ## Network
-for iface, icon, extra in [('eth', '\ue0af', ''), ('wlan', '\ue21a', '${wireless_essid}'), ('ppp0', '\ue0f3', '')]:
-    conky_text += '${if_up %s}' % iface
-    conky_text += '%%{F\\#9fbc00}%%{T2}%s%%{T-}%%{F\\#989898}' % icon
-    if extra:
-        conky_text += ' %s ' % extra
-    conky_text += '%%{F\\#9fbc00}%%{T2}\ue13c%%{T-}%%{F\\#989898}${downspeedf %s}K ' % iface
-    conky_text += '%%{F\\#9fbc00}%%{T2}\ue13b%%{T-}%%{F\\#989898}${upspeedf %s}K ' % iface
-    conky_text += '${endif}'
+for iface, icon, extra in [('eth', 0xe0af, ''), ('wlan', 0xe21a, '${wireless_essid}'), ('ppp0', 0xe0f3, '')]:
+    with cg.if_('up %s' % iface):
+        with cg.temp_fg(0x9fbc00):
+            cg.symbol(icon)
+        if extra:
+            cg.space()
+            cg.text(extra)
 
+        cg.space()
+        with cg.temp_fg(0x9fbc00):
+            cg.symbol(0xe13c)
+        cg.var('downspeedf %s' % iface)
+        cg.text('K')
+        with cg.temp_fg(0x9fbc00):
+            cg.symbol(0xe13b)
+        cg.var('upspeedf %s' % iface)
+        cg.text('K')
 
 ## Battery
 # first icon: 0 percent
@@ -39,23 +56,27 @@ bat_icons = [
     0xe247, 0xe248, 0xe249, 0xe24a, 0xe24b,
 ]
 bat_delta = 100 / len(bat_icons)
-conky_text += "${if_existing /sys/class/power_supply/BAT0}"
-conky_text += "%{T2}"
-conky_text += "${if_match \"$battery\" == \"discharging $battery_percent%\"}"
-conky_text += "%{F\\#FFC726}"
-conky_text += "$else"
-conky_text += "%{F\\#9fbc00}"
-conky_text += "$endif"
-for i,icon in enumerate(bat_icons[:-1]):
-    conky_text += "${if_match $battery_percent < %d}" % ((i+1)*bat_delta)
-    conky_text += chr(icon)
-    conky_text += "${else}"
-conky_text += chr(bat_icons[-1]) # icon for 100 percent
-for _ in bat_icons[:-1]:
-    conky_text += "${endif}"
-conky_text += "%{T-} $battery_percent% "
-conky_text += "${endif}"
-conky_text += "%{F-}"
+
+with cg.if_('existing /sys/class/power_supply/BAT0'):
+    cg.text(' %{T2}')
+    with cg.if_('match "$battery" == "discharging $battery_percent%%"'):
+        cg.fg(0xFFC726)
+        cg.else_()
+        cg.fg(0x9FbC00)
+
+    with cg.cases():
+        for i, icon in enumerate(bat_icons[:-1]):
+            cg.case('match $battery_percent < %d' % ((i+1)*bat_delta))
+            cg.text(chr(icon))
+
+        cg.else_()
+        cg.text(chr(bat_icons[-1]))  # icon for 100 percent
+
+    cg.text('%{T-} ')
+    cg.var('battery_percent')
+    cg.text('% ')
+    cg.fg(None)
+
 
 # Widget configuration:
 bar = lemonbar.Lemonbar(geometry = (x,y,width,height))
@@ -65,7 +86,8 @@ bar.widget = W.ListLayout([
     W.RawLabel('%{c}'),
     hlwm.HLWMWindowTitle(hc),
     W.RawLabel('%{r}'),
-    conky.ConkyWidget(text=conky_text),
+    conky.ConkyWidget(text=str(cg)),
+    W.RawLabel("%{F#ffffff}"),
     W.DateTime('%d. %B, %H:%M'),
 ])
 
