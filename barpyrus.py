@@ -46,7 +46,7 @@ with cg.if_('up tun0'):
         cg.symbol(0xe0a6)
 
 for iface in ['eth', 'wlan', 'ppp0']:
-    with cg.if_('up %s' % iface):
+    with cg.if_('up %s' % iface), cg.if_('match "${addr %s}" != "No Address"' % iface):
         with cg.temp_fg(0x9fbc00):
             if iface == 'wlan':
                 cg.text('%{T2}')
@@ -68,7 +68,7 @@ for iface in ['eth', 'wlan', 'ppp0']:
         if iface == 'wlan':
             cg.var('wireless_essid')
 
-        if iface != 'wwan':
+        if iface != 'ppp0':
             cg.space()
             cg.var('addr %s' % iface)
 
@@ -84,6 +84,7 @@ for iface in ['eth', 'wlan', 'ppp0']:
         cg.var('upspeedf %s' % iface)
         cg.text('K ')
         cg.var('totalup %s' % iface)
+        cg.space()
 
 ## Battery
 # first icon: 0 percent
@@ -95,7 +96,7 @@ bat_icons = [
 bat_delta = 100 / len(bat_icons)
 
 with cg.if_('existing /sys/class/power_supply/BAT0'):
-    cg.text(' %{T2}')
+    cg.text('%{T2}')
     with cg.if_('match "$battery" == "discharging $battery_percent%"'):
         cg.fg(0xFFC726)
         cg.else_()
@@ -117,6 +118,11 @@ with cg.if_('existing /sys/class/power_supply/BAT0'):
     cg.space()
 
 
+conky_config = {
+    'update_interval': '5',
+}
+
+
 # Widget configuration:
 bar = lemonbar.Lemonbar(geometry = (x,y,width,height))
 bar.widget = W.ListLayout([
@@ -125,7 +131,7 @@ bar.widget = W.ListLayout([
     W.RawLabel('%{c}'),
     hlwm.HLWMWindowTitle(hc),
     W.RawLabel('%{r}'),
-    conky.ConkyWidget(text=str(cg), config={'update_interval': '5'}),
+    conky.ConkyWidget(text=str(cg), config=conky_config),
     W.RawLabel("%{F#ffffff}"),
     W.DateTime('%d. %B, %H:%M'),
 ])
