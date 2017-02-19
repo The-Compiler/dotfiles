@@ -49,15 +49,14 @@ for iface in ['eth', 'wlan', 'ppp0']:
     with cg.if_('up %s' % iface), cg.if_('match "${addr %s}" != "No Address"' % iface):
         with cg.temp_fg('#9fbc00'):
             if iface == 'wlan':
-                cg.drawRaw('%{T2}')
                 with cg.cases():
                     for i, icon in enumerate(wifi_icons[:-1]):
                         cg.case('match ${wireless_link_qual_perc wlan} < %d' % ((i+1)*wifi_delta))
-                        cg.text(chr(icon))
+                        cg.symbol(icon)
 
                     cg.else_()
-                    cg.text(chr(wifi_icons[-1]))  # icon for 100 percent
-                cg.drawRaw('%{T-} ')
+                    cg.symbol(wifi_icons[-1])  # icon for 100 percent
+                cg.space(5)
             elif iface == 'eth':
                 cg.symbol(0xe0af)
             elif iface == 'ppp0':
@@ -96,7 +95,6 @@ bat_icons = [
 bat_delta = 100 / len(bat_icons)
 
 with cg.if_('existing /sys/class/power_supply/BAT0'):
-    cg.drawRaw('%{T2}')
     with cg.if_('match "$battery" == "discharging $battery_percent%"'):
         cg.fg('#ffc726')
         cg.else_()
@@ -105,12 +103,12 @@ with cg.if_('existing /sys/class/power_supply/BAT0'):
     with cg.cases():
         for i, icon in enumerate(bat_icons[:-1]):
             cg.case('match $battery_percent < %d' % ((i+1)*bat_delta))
-            cg.text(chr(icon))
+            cg.symbol(icon)
 
         cg.else_()
-        cg.text(chr(bat_icons[-1]))  # icon for 100 percent
+        cg.symbol(bat_icons[-1])  # icon for 100 percent
+    cg.space(5)
 
-    cg.drawRaw('%{T-} ')
     cg.var('battery_percent')
     cg.text('% ')
     cg.var('battery_time')
