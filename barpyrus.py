@@ -14,25 +14,25 @@ width = monitor_w
 
 hc(['pad', str(monitor), str(height)])
 
-cg = conky.ConkyGenerator()
+cg = conky.ConkyGenerator(lemonbar.textpainter())
 
 ## CPU / RAM / df
-with cg.temp_fg(0x9fbc00):
+with cg.temp_fg('#9fbc00'):
     cg.symbol(0xe026)
-cg.space()
+cg.space(5)
 for cpu in '1234':
     cg.var('cpu cpu' + cpu)
     cg.text('% ')
 
-with cg.temp_fg(0x9fbc00):
+with cg.temp_fg('#9fbc00'):
     cg.symbol(0xe021)
-cg.space()
+cg.space(5)
 cg.var('memperc')
 cg.text('% ')
 
-with cg.temp_fg(0x9fbc00):
+with cg.temp_fg('#9fbc00'):
     cg.symbol(0x00e1bb)
-cg.space()
+cg.space(5)
 cg.var('fs_used_perc /')
 cg.text('% ')
 
@@ -42,14 +42,14 @@ wifi_icons = [0xe217, 0xe218, 0xe219, 0xe21a]
 wifi_delta = 100 / len(wifi_icons)
 
 with cg.if_('up tun0'):
-    with cg.temp_fg(0xff0000):
+    with cg.temp_fg('#ff0000'):
         cg.symbol(0xe0a6)
 
 for iface in ['eth', 'wlan', 'ppp0']:
     with cg.if_('up %s' % iface), cg.if_('match "${addr %s}" != "No Address"' % iface):
-        with cg.temp_fg(0x9fbc00):
+        with cg.temp_fg('#9fbc00'):
             if iface == 'wlan':
-                cg.text('%{T2}')
+                cg.drawRaw('%{T2}')
                 with cg.cases():
                     for i, icon in enumerate(wifi_icons[:-1]):
                         cg.case('match ${wireless_link_qual_perc wlan} < %d' % ((i+1)*wifi_delta))
@@ -57,7 +57,7 @@ for iface in ['eth', 'wlan', 'ppp0']:
 
                     cg.else_()
                     cg.text(chr(wifi_icons[-1]))  # icon for 100 percent
-                cg.text('%{T-} ')
+                cg.drawRaw('%{T-} ')
             elif iface == 'eth':
                 cg.symbol(0xe0af)
             elif iface == 'ppp0':
@@ -69,22 +69,22 @@ for iface in ['eth', 'wlan', 'ppp0']:
             cg.var('wireless_essid')
 
         if iface != 'ppp0':
-            cg.space()
+            cg.space(5)
             cg.var('addr %s' % iface)
 
-        cg.space()
-        with cg.temp_fg(0x9fbc00):
+        cg.space(5)
+        with cg.temp_fg('#9fbc00'):
             cg.symbol(0xe13c)
         cg.var('downspeedf %s' % iface)
         cg.text('K ')
         cg.var('totaldown %s' % iface)
-        cg.space()
-        with cg.temp_fg(0x9fbc00):
+        cg.space(5)
+        with cg.temp_fg('#9fbc00'):
             cg.symbol(0xe13b)
         cg.var('upspeedf %s' % iface)
         cg.text('K ')
         cg.var('totalup %s' % iface)
-        cg.space()
+        cg.space(5)
 
 ## Battery
 # first icon: 0 percent
@@ -96,11 +96,11 @@ bat_icons = [
 bat_delta = 100 / len(bat_icons)
 
 with cg.if_('existing /sys/class/power_supply/BAT0'):
-    cg.text('%{T2}')
+    cg.drawRaw('%{T2}')
     with cg.if_('match "$battery" == "discharging $battery_percent%"'):
-        cg.fg(0xFFC726)
+        cg.fg('#ffc726')
         cg.else_()
-        cg.fg(0x9FbC00)
+        cg.fg('#9fbC00')
 
     with cg.cases():
         for i, icon in enumerate(bat_icons[:-1]):
@@ -110,12 +110,12 @@ with cg.if_('existing /sys/class/power_supply/BAT0'):
         cg.else_()
         cg.text(chr(bat_icons[-1]))  # icon for 100 percent
 
-    cg.text('%{T-} ')
+    cg.drawRaw('%{T-} ')
     cg.var('battery_percent')
     cg.text('% ')
     cg.var('battery_time')
     cg.fg(None)
-    cg.space()
+    cg.space(5)
 
 
 conky_config = {
