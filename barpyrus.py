@@ -1,9 +1,20 @@
+import sys
+import contextlib
+
 from barpyrus import hlwm
 from barpyrus import widgets as W
 from barpyrus.core import Theme
 from barpyrus import lemonbar
 from barpyrus import conky
-import sys
+
+
+@contextlib.contextmanager
+def maybe_orange(match, predicate='> 90'):
+    with cg.if_('match ${%s} %s' % (match, predicate)):
+        cg.fg('#ffc726')
+    yield
+    cg.fg(None)
+
 
 hc = hlwm.connect()
 
@@ -21,20 +32,23 @@ with cg.temp_fg('#9fbc00'):
     cg.symbol(0xe026)
 cg.space(5)
 for cpu in '1234':
-    cg.var('cpu cpu' + cpu)
-    cg.text('% ')
+    with maybe_orange('cpu cpu%s' % cpu):
+        cg.var('cpu cpu' + cpu)
+        cg.text('% ')
 
 with cg.temp_fg('#9fbc00'):
     cg.symbol(0xe021)
 cg.space(5)
-cg.var('memperc')
-cg.text('% ')
+with maybe_orange('memperc'):
+    cg.var('memperc')
+    cg.text('% ')
 
 with cg.temp_fg('#9fbc00'):
     cg.symbol(0x00e1bb)
 cg.space(5)
-cg.var('fs_used_perc /')
-cg.text('% ')
+with maybe_orange('fs_used_perc /'):
+    cg.var('fs_used_perc /')
+    cg.text('% ')
 
 
 ## Network
@@ -95,10 +109,7 @@ bat_icons = [
 bat_delta = 100 / len(bat_icons)
 
 with cg.if_('existing /sys/class/power_supply/BAT0'):
-    with cg.if_('match "$battery" == "discharging $battery_percent%"'):
-        cg.fg('#ffc726')
-        cg.else_()
-        cg.fg('#9fbC00')
+    cg.fg('#9fbC00')
 
     with cg.cases():
         for i, icon in enumerate(bat_icons[:-1]):
@@ -107,13 +118,17 @@ with cg.if_('existing /sys/class/power_supply/BAT0'):
 
         cg.else_()
         cg.symbol(bat_icons[-1])  # icon for 100 percent
-    cg.space(5)
 
-    cg.var('battery_percent')
-    cg.text('% ')
-    cg.var('battery_time')
     cg.fg(None)
     cg.space(5)
+
+    with maybe_orange('battery_percent', '< 10'):
+        with cg.if_('match "$battery" != "discharging $battery_percent%"'):
+            cg.fg('#9fbC00')
+        cg.var('battery_percent')
+        cg.text('% ')
+        cg.var('battery_time')
+        cg.space(5)
 
 
 conky_config = {
