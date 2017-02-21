@@ -131,6 +131,12 @@ with cg.if_('existing /sys/class/power_supply/BAT0'):
         cg.space(5)
 
 
+with cg.temp_fg('#9fbc00'):
+    cg.symbol(0xe015)
+cg.space(5)
+cg.var('time %d. %B, %H:%M')
+
+
 conky_config = {
     'update_interval': '5',
 }
@@ -145,6 +151,4 @@ bar.widget = W.ListLayout([
     hlwm.HLWMWindowTitle(hc),
     W.RawLabel('%{r}'),
     conky.ConkyWidget(text=str(cg), config=conky_config),
-    W.RawLabel("%{F#ffffff}"),
-    W.DateTime('%d. %B, %H:%M'),
 ])
