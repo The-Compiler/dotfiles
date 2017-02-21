@@ -111,6 +111,9 @@ bat_delta = 100 / len(bat_icons)
 with cg.if_('existing /sys/class/power_supply/BAT0'):
     cg.fg('#9fbC00')
 
+    with cg.if_('match "$battery" != "discharging $battery_percent%"'):
+        cg.symbol(0xe0db)
+
     with cg.cases():
         for i, icon in enumerate(bat_icons[:-1]):
             cg.case('match $battery_percent < %d' % ((i+1)*bat_delta))
@@ -123,8 +126,6 @@ with cg.if_('existing /sys/class/power_supply/BAT0'):
     cg.space(5)
 
     with maybe_orange('battery_percent', '< 10'):
-        with cg.if_('match "$battery" != "discharging $battery_percent%"'):
-            cg.fg('#9fbC00')
         cg.var('battery_percent')
         cg.text('% ')
         cg.var('battery_time')
