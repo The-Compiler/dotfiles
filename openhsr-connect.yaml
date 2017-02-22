@@ -18,6 +18,9 @@ sync:
     ## HS16
     icth:
       remote-dir: Informatik/Fachbereich/Informations-_und_Codierungstheorie/ICTh/
+      exclude:
+        - 'Unterlagen 2014/Videos 2013'
+        - 'Tools/DasyLab/Signal-Videos'
     oo:
       remote-dir: Informatik/Fachbereich/Objektorientierte_Programmierung/OO/
     # bsys1: moodle
@@ -29,6 +32,12 @@ sync:
       remote-dir: Mathematik_Naturwissenschaften/Diskrete_Mathematik_fuer_Informatik_/DMI/
     cn1:
       remote-dir: Informatik/Fachbereich/Computernetze_1/
+      exclude:
+        - 'CN1Prak/Archiv_HS2015/V3-Ethernet-PHY/Videos'
+        - 'CN1Prak/Archiv_HS2015/V6_Switched_LAN/SoftwareTools/NetgearProsafeGS108Tv2'
+        - 'CN1Prak/V1_Signalanalyse/Videos'
+        - 'CN1Prak/V5_Switched_LAN/SoftwareTools/NetgearProsafeGS108Tv2'
+
     ## FS17
     ad1:
       remote-dir: Informatik/Fachbereich/Algorithmen_und_Datenstrukturen_1/AD1/
