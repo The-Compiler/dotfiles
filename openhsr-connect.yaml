@@ -1,0 +1,47 @@
+
+login:
+  username: fbruhin
+  email: florian.bruhin@hsr.ch
+
+sync:
+  global-exclude:
+    - .DS_Store
+    - Thumbs.db
+
+  conflict-handling:
+    local-changes: ask # ask | keep | overwrite | makeCopy
+    remote-deleted: ask # ask | delete | keep
+
+  default-local-dir: /home/florian/hsr/sync/<name>/
+
+  repositories:
+    ## HS16
+    icth:
+      remote-dir: Informatik/Fachbereich/Informations-_und_Codierungstheorie/ICTh/
+    oo:
+      remote-dir: Informatik/Fachbereich/Objektorientierte_Programmierung/OO/
+    # bsys1: moodle
+    db1:
+      remote-dir: Informatik/Fachbereich/Datenbanksysteme_1/Dbs1/
+    an1:
+      remote-dir: Mathematik_Naturwissenschaften/Analysis_1_fuer_Informatiker/An1I/
+    dmi:
+      remote-dir: Mathematik_Naturwissenschaften/Diskrete_Mathematik_fuer_Informatik_/DMI/
+    cn1:
+      remote-dir: Informatik/Fachbereich/Computernetze_1/
+    ## FS17
+    ad1:
+      remote-dir: Informatik/Fachbereich/Algorithmen_und_Datenstrukturen_1/AD1/
+    an2:
+      remote-dir: Mathematik_Naturwissenschaften/Analysis_2_fuer_Informatiker/An2I/
+    autospr:
+      remote-dir: Mathematik_Naturwissenschaften/Automaten_und_Sprachen/AutoSpr/
+    # bsys2: moodle
+    cn2:
+      remote-dir: Informatik/Fachbereich/Computernetze_2/
+    exev:
+      remote-dir: Informatik/Fachbereich/Experimentieren_und_Evaluieren_fuer_Informatik/ExEv/
+    infsi1:
+      remote-dir: Informatik/Fachbereich/Informationssicherheit_1_-_Grundlagen/InfSi1/
+    wed1:
+      remote-dir: Informatik/Fachbereich/Web_Engineering_+_Design_1/WED1/
