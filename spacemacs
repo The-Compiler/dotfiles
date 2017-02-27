@@ -330,7 +330,16 @@ you should place your code here."
   ;; Use caching in projectile
   (setq projectile-enable-caching t)
 
+  ;; Better diffs
   (setq magit-diff-refine-hunk t)
+
+  ;; Use html tidy for flycheck
+  (eval-after-load 'flycheck
+    '(flycheck-add-mode 'html-tidy 'web-mode))
+
+  ;; Relative \includegraphics
+  (setq LaTeX-includegraphics-read-file
+    'LaTeX-includegraphics-read-file-relative)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
