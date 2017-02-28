@@ -18,8 +18,10 @@ bind-key L toggle-show-read-feeds
 # solarized
 color background   default   default
 color listnormal   default   default
-color listfocus    white     yellow
-color info         default   black
+color listnormal_unread   green   default
+color listfocus_unread   yellow default bold
+color listfocus    yellow    default bold
+color info         cyan   black
 color article      default   default
 
 # highlights
