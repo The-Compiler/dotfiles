@@ -1,0 +1,37 @@
+auto-reload yes
+confirm-exit yes
+reload-time 5
+reload-threads 1
+
+# vimlike bindings
+unbind-key ^B
+bind-key ^B pageup
+unbind-key ^F
+bind-key ^F pagedown
+bind-key k up
+bind-key j down
+bind-key h quit
+unbind-key l
+bind-key l open
+bind-key L toggle-show-read-feeds
+
+# solarized
+color background   default   default
+color listnormal   default   default
+color listfocus    white     yellow
+color info         default   black
+color article      default   default
+
+# highlights
+highlight article "^(Title):.*$" blue default
+highlight article "https?://[^ ]+" red default
+highlight article "\\[image\\ [0-9]+\\]" green default
+
+notify-xterm yes
+notify-beep yes
+
+urls-source "ttrss"
+ttrss-url "https://rss.the-compiler.org/"
+ttrss-login "florian"
+ttrss-passwordfile "~/.config/newsbeuter/password""
+ttrss-flag-star "s"
