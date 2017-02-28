@@ -3,7 +3,7 @@ import contextlib
 
 from barpyrus import hlwm
 from barpyrus import widgets as W
-from barpyrus.core import Theme
+from barpyrus.core import Theme, Painter
 from barpyrus import lemonbar
 from barpyrus import conky
 
@@ -14,6 +14,31 @@ def maybe_orange(match, predicate='> 90'):
         cg.fg('#ffc726')
     yield
     cg.fg(None)
+
+
+def underlined_tags(taginfo, painter):
+    if taginfo.empty:
+        return
+    painter.set_flag(painter.underline, True if taginfo.visible else False)
+    painter.fg('#a0a0a0' if taginfo.occupied else '#909090')
+    if taginfo.urgent:
+        painter.ol('#FF7F27')
+        painter.fg('#FF7F27')
+        painter.set_flag(Painter.underline, True)
+        painter.bg('#57000F')
+    elif taginfo.here:
+        painter.fg('#ffffff')
+        painter.ol(taginfo.activecolor if taginfo.focused else '#ffffff')
+        painter.bg(taginfo.emphbg)
+    else:
+        painter.ol('#454545')
+    painter.space(3)
+    painter += taginfo.name
+    painter.space(3)
+    painter.bg()
+    painter.ol()
+    painter.set_flag(painter.underline, False)
+    painter.space(2)
 
 
 hc = hlwm.connect()
@@ -147,7 +172,7 @@ conky_config = {
 bar = lemonbar.Lemonbar(geometry = (x,y,width,height))
 bar.widget = W.ListLayout([
     W.RawLabel('%{l}'),
-    hlwm.HLWMTags(hc, monitor, tag_renderer = hlwm.underlined_tags),
+    hlwm.HLWMTags(hc, monitor, tag_renderer=underlined_tags),
     W.RawLabel('%{c}'),
     hlwm.HLWMWindowTitle(hc),
     W.RawLabel('%{r}'),
