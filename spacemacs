@@ -340,6 +340,17 @@ you should place your code here."
   ;; Relative \includegraphics
   (setq LaTeX-includegraphics-read-file
     'LaTeX-includegraphics-read-file-relative)
+
+  ;; LaTeX screenshot
+  (defun LaTex-screenshot ()
+    "Take a screenshot and insert it into the current LaTex file."
+    (interactive)
+    (let ((filename (concat (read-file-name "Enter file name:") ".png")))
+      (message "Select region...")
+      (call-process "scrot" nil nil nil "-zs" filename)
+      (insert (concat "\\includegraphics[width=\\linewidth]{" (file-name-nondirectory filename) "}"))
+    ))
+  (spacemacs/set-leader-keys-for-major-mode 'latex-mode "is" 'LaTex-screenshot)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
