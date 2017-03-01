@@ -352,6 +352,11 @@ you should place your code here."
       (insert (concat "\\includegraphics[width=\\linewidth]{" (file-name-nondirectory filename) "}"))
     ))
   (spacemacs/set-leader-keys-for-major-mode 'latex-mode "is" 'LaTex-screenshot)
+
+  ;; Zoom keys
+  (global-set-key (kbd "C-+") 'text-scale-increase)
+  (global-set-key (kbd "C--") 'text-scale-decrease)
+  (global-set-key (kbd "C-=") (lambda () (interactive) (text-scale-set 0)))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
