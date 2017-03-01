@@ -330,8 +330,9 @@ you should place your code here."
   ;; Use caching in projectile
   (setq projectile-enable-caching t)
 
-  ;; Better diffs
-  (setq magit-diff-refine-hunk t)
+  ;; Magit
+  (setq magit-diff-refine-hunk t)  ; better diffs
+  (setq magit-cherry-pick-arguments '("-x"))
 
   ;; Use html tidy for flycheck
   (eval-after-load 'flycheck
