@@ -340,6 +340,7 @@ you should place your code here."
   ;; Use html tidy for flycheck
   (eval-after-load 'flycheck
     '(flycheck-add-mode 'html-tidy 'web-mode))
+  (setq flycheck-checker-error-threshold nil)
 
   ;; Relative \includegraphics
   (setq LaTeX-includegraphics-read-file
