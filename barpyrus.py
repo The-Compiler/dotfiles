@@ -84,7 +84,7 @@ with cg.if_('up tun0'):
     with cg.temp_fg('#ff0000'):
         cg.symbol(0xe0a6)
 
-for iface in ['eth', 'wlan', 'ppp0']:
+for iface in ['eth', 'dock', 'wlan', 'ppp0']:
     with cg.if_('up %s' % iface), cg.if_('match "${addr %s}" != "No Address"' % iface):
         with cg.temp_fg('#9fbc00'):
             if iface == 'wlan':
@@ -96,7 +96,7 @@ for iface in ['eth', 'wlan', 'ppp0']:
                     cg.else_()
                     cg.symbol(wifi_icons[-1])  # icon for 100 percent
                 cg.space(5)
-            elif iface == 'eth':
+            elif iface in ['eth', 'dock']:
                 cg.symbol(0xe0af)
             elif iface == 'ppp0':
                 cg.symbol(0xe0f3)
