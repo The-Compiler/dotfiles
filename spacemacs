@@ -365,6 +365,9 @@ you should place your code here."
   (global-set-key (kbd "C-+") 'text-scale-increase)
   (global-set-key (kbd "C--") 'text-scale-decrease)
   (global-set-key (kbd "C-=") (lambda () (interactive) (text-scale-set 0)))
+
+  ;; Indent
+  (setq c-basic-offset 4)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
