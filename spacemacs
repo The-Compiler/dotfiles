@@ -326,7 +326,7 @@ you should place your code here."
   ;; Configure automatic modes
   (add-to-list 'auto-mode-alist '("\\.asciidoc\\'" . 'adoc-mode))
   (add-to-list 'auto-mode-alist '("\\.service\\'" . 'systemd-mode))
-  (add-to-list 'auto-mode-alist '("\\.feature$" . 'feature-mode))
+  (add-to-list 'auto-mode-alist '("\\.feature\\'" . 'feature-mode))
 
   ;; Filename in window title
   (setq frame-title-format '("" invocation-name " - %b"))
