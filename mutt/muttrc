@@ -1,0 +1,46 @@
+## connection/folders
+source ~/.mutt/accounts
+set from = "me@the-compiler.org"
+set realname = "Florian Bruhin"
+set folder = "imap://menkent.uberspace.de"
+set spoolfile = "+INBOX"
+set ssl_starttls
+mailboxes =INBOX =spam =news =lists
+set postponed = "=drafts"
+set record = "=sent"
+set trash = "=trash"
+
+## UI
+set sidebar_visible
+set sidebar_width = 10
+set sort = "threads"
+set sort_aux = "reverse-last-date-received"
+set delete = yes
+
+## keybindings
+macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+bind index,pager \CP sidebar-prev
+bind index,pager \CN sidebar-next
+bind index,pager \CO sidebar-open
+
+## colors
+color status cyan default
+color indicator brightyellow default
+color error red default
+color hdrdefault blue default
+color header brightblue default "^Subject:"
+color index green default "~N|~O"  # unread
+color index red default "~D"  # deleted
+color index brightgreen default "~T"  # tagged
+color index blue default "~F"  # flagged
+color sidebar_divider cyan default
+color sidebar_new green default
+color sidebar_indicator yellow default
+color sidebar_highlight brightyellow default
+
+## sending
+set signature = ~/.mutt/sig
+set editor = "vim -c 'set filetype=mail' -c 'set fileencodings=' \
+             -c 'set fileencoding=' -c 'set nohlsearch' '+:silent+?^$' "
+set autoedit
+set edit_headers
