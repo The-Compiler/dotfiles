@@ -21,6 +21,7 @@ set sort = "threads"
 set sort_aux = "reverse-last-date-received"
 set delete
 set nomarkers
+set pager_index_lines = 8
 
 ## keybindings
 macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
@@ -49,8 +50,17 @@ color sidebar_indicator yellow default
 color sidebar_highlight brightyellow default
 color body blue default \
     '(\w+://|www\.)[-.a-z0-9]+\.[a-z]{2,}[A-Za-z0-9;:.~_/%@#?+&=-]*' # URLs
-color body cyan default '[-=+#_*~]{3,}.*'   # lines
+color body cyan default '[-=+#_*~.]{3,}.*'   # lines
 color body red default '@The-Compiler'
+
+color body cyan default '^gpg.*'
+color body cyan default '^Primary key fingerprint:.*'
+color body cyan default '^     Subkey fingerprint:.*'
+color body brightgreen default '^gpg: Good signature .*'
+color body brightwhite red   '^gpg: BAD signature from.*'
+color body yellow default '^gpg: WARNING.*'
+color body yellow default '^gpg:          There is no indication that the signature belongs to the owner.'
+color body yellow default '^gpg: no valid OpenPGP data found.*'
 
 ## sending
 set signature = ~/.mutt/sig
@@ -61,6 +71,7 @@ set edit_headers
 
 ## attachments
 auto_view text/html application/pdf
+alternative_order text/plain text/html
 
 ## GPG
 source /usr/share/doc/mutt/samples/gpg.rc
