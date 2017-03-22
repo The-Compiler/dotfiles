@@ -28,6 +28,7 @@ color article      default   default
 highlight article "^(Title):.*$" blue default
 highlight article "https?://[^ ]+" red default
 highlight article "\\[image\\ [0-9]+\\]" green default
+highlight article "[-=+#_*~]{3,}.*" green default  # lines
 
 notify-xterm yes
 notify-beep yes
