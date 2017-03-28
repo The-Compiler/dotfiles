@@ -1,2 +1,4 @@
 text/html; elinks -force-html -dump -localhost %s | sed 's/^   //'; copiousoutput
 application/pdf; pdftotext -layout -l 10 -nopgbrk /dev/stdin -; copiousoutput
+
+image/*; sxiv %s
