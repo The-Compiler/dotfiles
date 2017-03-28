@@ -1,3 +1,5 @@
+source ~/.mutt/hooks
+
 ## connection/folders
 source ~/.mutt/accounts
 set from = "me@the-compiler.org"
@@ -22,6 +24,8 @@ set sort_aux = "reverse-last-date-received"
 set delete
 set nomarkers
 set pager_index_lines = 8
+set noconfirmappend
+set include
 
 ## keybindings
 macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
@@ -29,6 +33,10 @@ bind index,pager \CP sidebar-prev
 bind index,pager \CN sidebar-next
 bind index,pager \CO sidebar-open
 bind index,pager,attach H display-toggle-weed
+bind pager j next-line
+bind pager k previous-line
+macro index,pager S "<save-message>=spam<enter>" "Spam"
+macro index,pager I "<save-message>=INBOX<enter>" "Inbox"
 
 ## colors
 color status cyan default
@@ -50,8 +58,10 @@ color sidebar_indicator yellow default
 color sidebar_highlight brightyellow default
 color body blue default \
     '(\w+://|www\.)[-.a-z0-9]+\.[a-z]{2,}[A-Za-z0-9;:.~_/%@#?+&=-]*' # URLs
-color body cyan default '[-=+#_*~.]{3,}.*'   # lines
-color body red default '@The-Compiler'
+color body cyan default '[-=+#_*~]{3,}.*'   # lines
+color body cyan default '\.{4,}.*'   # lines
+color body cyan default '^\*.*\*$'   # titles
+color body yellow default '@The-Compiler'
 
 color body cyan default '^gpg.*'
 color body cyan default '^Primary key fingerprint:.*'
