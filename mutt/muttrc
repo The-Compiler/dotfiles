@@ -32,6 +32,7 @@ macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
 bind index,pager \CP sidebar-prev
 bind index,pager \CN sidebar-next
 bind index,pager \CO sidebar-open
+macro index,pager \CB '<enter-command>toggle sidebar_visible<enter>'
 bind index,pager,attach H display-toggle-weed
 bind pager j next-line
 bind pager k previous-line
