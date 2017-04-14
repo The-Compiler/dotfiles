@@ -86,3 +86,4 @@ alternative_order text/plain text/html
 
 ## GPG
 source /usr/share/doc/mutt/samples/gpg.rc
+set crypt_autosign
