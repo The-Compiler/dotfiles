@@ -5,3 +5,4 @@ easystroke &
 dispwin ~/.config/display.icc
 evrouter /dev/input/event* -c ~/.config/evrouterrc
 guake -e 'journalctl -f -n 200' &
+dunst &
