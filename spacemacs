@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     csv
      helm
      (theming :variables theming-modifications '((monokai (default :background "black"))))
      (auto-completion :variables
