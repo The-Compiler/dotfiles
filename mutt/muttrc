@@ -84,6 +84,11 @@ set edit_headers
 auto_view text/html application/pdf
 alternative_order text/plain text/html
 
+## S/MIME
+source /usr/share/doc/mutt/samples/smime.rc
+set smime_default_key = '0bb3041b.0'
+unset smime_is_default
+
 ## GPG
 source /usr/share/doc/mutt/samples/gpg.rc
 set crypt_autosign
