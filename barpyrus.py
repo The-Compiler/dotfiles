@@ -75,6 +75,17 @@ with maybe_orange('fs_used_perc /'):
     cg.var('fs_used_perc /')
     cg.text('% ')
 
+## temp / fan
+with cg.temp_fg('#9fbc00'):
+    cg.symbol(0xe1c0)
+cg.space(5)
+cg.var('ibm_fan')
+cg.text('rpm ')
+with cg.temp_fg('#9fbc00'):
+    cg.symbol(0xe01b)
+cg.space(5)
+cg.var('acpitemp')
+cg.text('° ')
 
 ## Network
 wifi_icons = [0xe217, 0xe218, 0xe219, 0xe21a]
