@@ -74,6 +74,7 @@ values."
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(
        (stylus-mode :location (recipe :fetcher github :repo "vladh/stylus-mode"))
+       (nsis-mode :location (recipe :fetcher github :repo "mlf176f2/nsis-mode"))
        feature-mode
        form-feed
    )
