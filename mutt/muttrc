@@ -28,6 +28,7 @@ set noconfirmappend
 set include
 
 ## keybindings
+bind index g noop
 macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
 bind index,pager \CP sidebar-prev
 bind index,pager \CN sidebar-next
