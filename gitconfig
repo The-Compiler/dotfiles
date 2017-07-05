@@ -1,0 +1,12 @@
+[user]
+email = git@the-compiler.org
+name = Florian Bruhin
+
+[rerere]
+enabled = true
+
+[alias]
+authorlist = !"la() { git log --pretty=format:'%aN <%ae>' $1 | sort -u; }; la"
+
+[include]
+path=~/.config/git/github
