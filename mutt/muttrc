@@ -4,7 +4,7 @@ source ~/.mutt/hooks
 source ~/.mutt/accounts
 set from = "me@the-compiler.org"
 set realname = "Florian Bruhin"
-set folder = "imap://menkent.uberspace.de"
+set folder = "~/mail"
 set spoolfile = "+INBOX"
 mailboxes =INBOX =news =lists
 set postponed = "=drafts"
@@ -28,6 +28,7 @@ set noconfirmappend
 set include
 
 ## keybindings
+macro index i "<shell-escape>offlineimap<enter>"
 bind index g noop
 macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
 bind index,pager \CP sidebar-prev
