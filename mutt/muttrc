@@ -26,6 +26,7 @@ set nomarkers
 set pager_index_lines = 8
 set noconfirmappend
 set include
+set nodigest_collapse
 
 ## keybindings
 macro index i "<shell-escape>offlineimap<enter>"
