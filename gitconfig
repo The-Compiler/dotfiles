@@ -12,3 +12,5 @@ lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(r
 
 [include]
 path=~/.config/git/github
+[magit]
+	hideCampaign = true
