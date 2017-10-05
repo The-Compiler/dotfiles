@@ -239,3 +239,9 @@ fi
 
 ### Humble bundle key ###
 [[ -f ~/.humblebundle ]] && source ~/.humblebundle
+
+
+## infsi1
+viewcert() {
+    openssl x509 -in "$1" -noout -text
+}
