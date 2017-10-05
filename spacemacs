@@ -154,7 +154,7 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Terminus"
+   dotspacemacs-default-font '("xos4 Terminus"
                                :size 16
                                :weight normal
                                :width normal
@@ -381,6 +381,14 @@ you should place your code here."
         (python-shell-completion-native-get-completions
          (get-buffer-process (current-buffer))
          nil "_"))))
+
+  ;; Mitigate Bug#28350 (security) in Emacs 25.2 and earlier.
+  (eval-after-load "enriched"
+    '(defun enriched-decode-display-prop (start end &optional param)
+       (list start end)))
+
+  ;; Workaround for https://github.com/syl20bnr/spacemacs/issues/9549
+  (require 'helm-bookmark)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
