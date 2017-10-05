@@ -162,6 +162,7 @@ hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 hc rule class=qutebrowser windowtype='_NET_WM_WINDOW_TYPE_UTILITY' manage=off
 hc rule instance=guake manage=off
+hc rule class=mobilequiz index=1                                                                                                                                                                                                                                                                                    ╾─[1]──┄
 
 hc set tree_style '╾│ ├└╼─┐'
 
