@@ -9,6 +9,10 @@ doubleuparrow ⇑
 doubledownarrow ⇓
 leftto leftarrow <- ←
 mapsto ⟼
+blackrightarrow |> ►
+blackleftarrow <| ◄
+blackuparrow ^_ ▲
+blackdownarrow _v ▼
 
 # equal
 neq not equal != ≠
