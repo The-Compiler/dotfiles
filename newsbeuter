@@ -1,7 +1,7 @@
 auto-reload yes
 confirm-exit yes
 reload-time 5
-reload-threads 1
+reload-threads 4
 
 # vimlike bindings
 unbind-key ^B
