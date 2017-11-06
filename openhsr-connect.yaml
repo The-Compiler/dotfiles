@@ -16,6 +16,9 @@ sync:
 
   repositories:
     ### HS18
+    bsys1:
+      remote-dir: Informatik/Fachbereich/Betriebssysteme_1/Bsys1/
+
     wed2: 
       remote-dir: Informatik/Fachbereich/Web_Engineering_+_Design_2/WED2/
 
