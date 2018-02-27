@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     typescript
      csv
      helm
      (theming :variables theming-modifications '((monokai (default :background "black"))))
@@ -46,6 +47,7 @@ values."
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      syntax-checking
+     spell-checking
      dash
      emoji
      semantic
