@@ -15,40 +15,25 @@ sync:
   default-local-dir: /home/florian/hsr/sync/<name>/
 
   repositories:
-    ### HS18
-    bsys1:
-      remote-dir: Informatik/Fachbereich/Betriebssysteme_1/Bsys1/
+    # vss: Moodle
+    #   remote-dir: Informatik/Fachbereich/Verteilte_SW-Systeme/Vss/
 
-    wed2: 
-      remote-dir: Informatik/Fachbereich/Web_Engineering_+_Design_2/WED2/
+    parprog: 
+      remote-dir: Informatik/Fachbereich/Parallele_Programmierung/ParProg/
 
-    mge:
-      remote-dir: Informatik/Fachbereich/Mobile_and_GUI_Engineering/MGE/
+    hcid:
+      remote-dir: Informatik/Fachbereich/Human_Computer_Interaction_Design/HCID/
 
-    # FIXME what about Kammhuber subdir?
-    fk:
-      remote-dir: Kommunikation_Wirtschaft_Recht/Fuehrungskommunikation_im_internationalen_Arbeitsmarkt/FK/Kammhuber/
+    # se2: Moodle
+    # seremote-dir: Informatik/Fachbereich/
 
-    ik:
-      remote-dir: Kommunikation_Wirtschaft_Recht/Fuehrungskommunikation_im_internationalen_Arbeitsmarkt/IK/
+    # vwl:
+    # vwremote-dir: Kommunikation_Wirtschaft_Recht/Volkswirtschaft_und_Technikgeschichte/VwlWp/
 
-    ad2: 
-      remote-dir: Informatik/Fachbereich/Algorithmen_und_Datenstrukturen_2/AD2/
+    tg:
+      remote-dir: Kommunikation_Wirtschaft_Recht/Volkswirtschaft_und_Technikgeschichte/TeGesch/
 
-    mste:
-      remote-dir: Informatik/Fachbereich/DotNet_Technologien/MsTe/
+    # Wirtschaft1: Moodle??
 
-    cp1:
-      remote-dir: Informatik/Fachbereich/C++/CPl/
-
-    engsci:
-      remote-dir: Kommunikation_Wirtschaft_Recht/English_The_World_of_Science/EnglScience/
-
-    infsi2:
-      remote-dir: Informatik/Fachbereich/Informationssicherheit_2/InfSi2/
-
-    se2:
-      remote-dir: Informatik/Fachbereich/Software-Engineering_2/SE2/
-
-    # se2proj:
-    #   remote-dir: Informatik/Fachbereich/Software-Engineering_2_-_Projekt/SE2P/
+    infsi3:
+      remote-dir: Informatik/Fachbereich/Informationssicherheit_3/InfSi3/
