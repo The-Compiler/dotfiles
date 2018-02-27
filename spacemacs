@@ -397,6 +397,22 @@ you should place your code here."
 
   ;; asm pdf
   (setq x86-lookup-pdf "/home/florian/ebooks/325383-sdm-vol-2abcd.pdf")
+
+  ;; https://emacs.stackexchange.com/a/13831
+  (defun magit-diff-master (&optional args)
+    "Show diff range master...HEAD"
+    (interactive (list (magit-diff-arguments)))
+    (magit-diff "master...HEAD" args))
+
+  (defun magit-diff-mbase (&optional args)
+    "Show diff of $(git merge-base master HEAD) to working tree."
+    (interactive (list (magit-diff-arguments)))
+    (magit-diff-working-tree
+     (magit-git-string "merge-base" "master" "HEAD") args))
+
+  (eval-after-load 'magit
+    '(magit-define-popup-action 'magit-diff-popup
+      ?m "Diff merge-base master" 'magit-diff-mbase))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
