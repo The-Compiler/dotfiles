@@ -185,3 +185,4 @@ done
 # autorun stuff
 [[ -z "$HLWM_LOADED" ]] && ~/.config/herbstluftwm/autorun &
 hc setenv HLWM_LOADED 1
+hc setenv QT_AUTO_SCREEN_SCALE_FACTOR 0
