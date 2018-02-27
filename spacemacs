@@ -395,14 +395,6 @@ you should place your code here."
          (get-buffer-process (current-buffer))
          nil "_"))))
 
-  ;; Mitigate Bug#28350 (security) in Emacs 25.2 and earlier.
-  (eval-after-load "enriched"
-    '(defun enriched-decode-display-prop (start end &optional param)
-       (list start end)))
-
-  ;; Workaround for https://github.com/syl20bnr/spacemacs/issues/9549
-  (require 'helm-bookmark)
-
   ;; asm pdf
   (setq x86-lookup-pdf "/home/florian/ebooks/325383-sdm-vol-2abcd.pdf")
 )
