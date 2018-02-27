@@ -245,3 +245,8 @@ fi
 viewcert() {
     openssl x509 -in "$1" -noout -text
 }
+
+## pyenv
+export PATH="/home/florian/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
