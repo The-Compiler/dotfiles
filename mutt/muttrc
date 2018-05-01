@@ -27,6 +27,9 @@ set pager_index_lines = 8
 set noconfirmappend
 set include
 set nodigest_collapse
+# set title
+set ts_enabled
+set ts_status_format = "%f - NeoMutt"
 
 ## keybindings
 macro index i "<shell-escape>offlineimap<enter>"
