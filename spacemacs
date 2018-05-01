@@ -474,9 +474,6 @@ before packages are loaded."
   (add-to-list 'auto-mode-alist '("\\.service\\'" . 'systemd-mode))
   (add-to-list 'auto-mode-alist '("\\.feature\\'" . 'feature-mode))
 
-  ;; Filename in window title
-  (setq frame-title-format '("" invocation-name " - %b"))
-
   ;; Use zathura for LaTeX
   (setq TeX-view-program-selection '((output-pdf "Zathura")))
 
