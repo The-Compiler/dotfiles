@@ -43,6 +43,7 @@ This function should only modify configuration layer settings."
                       auto-completion-enable-snippets-in-popup t)
      git
      github
+     neotree
      (version-control :variables
                       version-control-diff-tool 'diff-hl
                       version-control-global-margin t)
