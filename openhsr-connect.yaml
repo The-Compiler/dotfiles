@@ -37,3 +37,5 @@ sync:
 
     infsi3:
       remote-dir: Informatik/Fachbereich/Informationssicherheit_3/InfSi3/
+      exclude:
+        - Hacking Lab/HackingLab.ova
