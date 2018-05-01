@@ -29,3 +29,4 @@ c.qt.args = ['ppapi-widevine-path=/usr/lib/qt/plugins/ppapi/libwidevinecdmadapte
 
 
 c.content.javascript.enabled = False
+config.source('perdomain.py')
