@@ -14,3 +14,10 @@ lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(r
 path=~/.config/git/github
 [magit]
 	hideCampaign = true
+
+[diff]
+colorMoved = plain
+
+[color "diff"]
+	oldMoved = red dim
+	newMoved = green dim
