@@ -20,6 +20,7 @@ c.url.searchengines['rfc'] = 'https://tools.ietf.org/html/rfc{}'
 
 c.fonts.tabs = '8pt monospace'
 c.fonts.statusbar = '8pt monospace'
+c.fonts.web.family.fantasy = 'Arial'
 
 c.search.incremental = False
 c.editor.command = ['emacs', '{}']
