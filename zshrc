@@ -208,11 +208,11 @@ setprompt
 ### Hooks ###
 preexec() { # Gets run before a command gets executed
     # Set screen/tmux window title
-    [[ $TERM == screen* ]] && echo -ne "\ek$1\e\\"
+    echo -ne "\e]0;$1\e\\" || 
 }
 precmd() { # gets run after a command before the prompt
     # Reset screen/tmux window title
-    [[ $TERM == screen* ]] && echo -ne "\ekzsh\e\\"
+    echo -ne "\e]0;zsh\e\\"
     # Generate vcs_info
     vcs_info
 }
