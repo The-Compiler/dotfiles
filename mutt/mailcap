@@ -1,4 +1,5 @@
 text/html; elinks -force-html -dump -localhost %s | sed 's/^   //'; copiousoutput
 application/pdf; pdftotext -layout -l 10 -nopgbrk /dev/stdin -; copiousoutput
 
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; libreoffice %s
 image/*; sxiv %s
