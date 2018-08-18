@@ -25,6 +25,7 @@ and conjunktion konjunktion ∧
 not negation ¬
 or disjuction disjunktion ∨
 equivalent equiv <=> ⇔
+entails turnstile provable ⊢
 
 # special sets
 setZ setz integers ganzzahlen ℤ
