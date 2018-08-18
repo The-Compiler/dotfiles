@@ -76,11 +76,13 @@ with maybe_orange('fs_used_perc /'):
     cg.text('% ')
 
 ## temp / fan
-with cg.temp_fg('#9fbc00'):
-    cg.symbol(0xe1c0)
-cg.space(5)
-cg.var('ibm_fan')
-cg.text('rpm ')
+with cg.if_('match ${ibm_fan} != 65535'):
+    with cg.temp_fg('#9fbc00'):
+        cg.symbol(0xe1c0)
+    cg.space(5)
+    with maybe_orange('ibm_fan', '> 6000'):
+        cg.var('ibm_fan')
+        cg.text('rpm ')
 with cg.temp_fg('#9fbc00'):
     cg.symbol(0xe01b)
 cg.space(5)
