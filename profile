@@ -18,4 +18,4 @@ export GIT_PAGER='less +g'
 export QT_QPA_PLATFORMTHEME='gtk2'
 
 ### ndless
-export PATH="/home/florian/code/Ndless/ndless-sdk/toolchain/install/bin:/home/florian/code/Ndless/ndless-sdk/bin:$PATH"
+#export PATH="/home/florian/code/Ndless/ndless-sdk/toolchain/install/bin:/home/florian/code/Ndless/ndless-sdk/bin:$PATH"
