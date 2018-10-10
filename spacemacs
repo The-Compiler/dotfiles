@@ -467,6 +467,7 @@ configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (setq evil-want-integration nil)
+  (setq evil-want-keybinding nil)
   )
 
 (defun dotspacemacs/user-load ()
@@ -564,7 +565,7 @@ before packages are loaded."
   (setq flycheck-inferior-dafny-executable "/home/florian/bin/dafny/dafny-server")
 
   ;; evil-collection
-  (evil-collection-init)
+  (evil-collection-init 'ediff)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
