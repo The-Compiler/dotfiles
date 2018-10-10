@@ -73,6 +73,7 @@ This function should only modify configuration layer settings."
      systemd
      asm
      typescript
+     csharp
      csv
      )
 
