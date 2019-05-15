@@ -16,6 +16,10 @@ css = '~/code/solarized-everything-css/css/solarized-all-sites-dark.css'
 config.bind(',n', f'config-cycle content.user_stylesheets {css} ""')
 
 c.url.searchengines['rfc'] = 'https://tools.ietf.org/html/rfc{}'
+c.url.searchengines['pypi'] = 'https://pypi.org/project/{}/'
+c.url.searchengines['qtbug'] = 'https://bugreports.qt.io/browse/QTBUG-{}'
+c.url.searchengines['qb'] = 'https://github.com/The-Compiler/qutebrowser/issues/{}'
+c.url.searchengines['btc'] = 'https://www.blockchain.com/btc/address/{}'
 #c.url.searchengines['maps'] = 'https://www.google.com/maps?q=%s'
 
 c.fonts.tabs = '8pt monospace'
@@ -25,8 +29,7 @@ c.fonts.web.family.fantasy = 'Arial'
 c.search.incremental = False
 c.editor.command = ['emacs', '{}']
 
-c.qt.args = ['ppapi-widevine-path=/usr/lib/qt/plugins/ppapi/libwidevinecdmadapter.so']
-
+#c.qt.args = ['ppapi-widevine-path=/usr/lib/qt/plugins/ppapi/libwidevinecdmadapter.so']
 
 c.content.javascript.enabled = False
 config.source('perdomain.py')

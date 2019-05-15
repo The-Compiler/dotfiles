@@ -15,27 +15,14 @@ sync:
   default-local-dir: /home/florian/hsr/sync/<name>/
 
   repositories:
-    # vss: Moodle
-    #   remote-dir: Informatik/Fachbereich/Verteilte_SW-Systeme/Vss/
+    sa_da_ba: 
+      remote-dir: Informatik/Fachbereich/SA-DA-BA/
 
-    parprog: 
-      remote-dir: Informatik/Fachbereich/Parallele_Programmierung/ParProg/
+    ba:
+      remote-dir: Informatik/Fachbereich/Bachelor-Arbeit_Informatik/BAI14/
 
-    hcid:
-      remote-dir: Informatik/Fachbereich/Human_Computer_Interaction_Design/HCID/
+    cpla:
+      remote-dir: Informatik/Fachbereich/C++_Advanced/CplA/
 
-    # se2: Moodle
-    # seremote-dir: Informatik/Fachbereich/
-
-    # vwl:
-    # vwremote-dir: Kommunikation_Wirtschaft_Recht/Volkswirtschaft_und_Technikgeschichte/VwlWp/
-
-    tg:
-      remote-dir: Kommunikation_Wirtschaft_Recht/Volkswirtschaft_und_Technikgeschichte/TeGesch/
-
-    # Wirtschaft1: Moodle??
-
-    infsi3:
-      remote-dir: Informatik/Fachbereich/Informationssicherheit_3/InfSi3/
-      exclude:
-        - Hacking Lab/HackingLab.ova
+    combau:
+      remote-dir: Informatik/Fachbereich/Compilerbau/ComBau/

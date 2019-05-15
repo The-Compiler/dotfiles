@@ -26,6 +26,8 @@ not negation ¬
 or disjuction disjunktion ∨
 equivalent equiv <=> ⇔
 entails turnstile provable ⊢
+true tautology ⊤
+false contradiction ⊥
 
 # special sets
 setZ setz integers ganzzahlen ℤ
@@ -293,3 +295,6 @@ cross ⨯
 all ∀
 exists ∃
 congruent ≡
+
+because since ∵
+corresponds ≙

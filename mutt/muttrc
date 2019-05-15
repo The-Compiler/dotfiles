@@ -1,4 +1,5 @@
 source ~/.mutt/hooks
+source ~/.mutt/alias
 
 ## connection/folders
 source ~/.mutt/accounts

@@ -16,6 +16,7 @@ export CCACHE_PREFIX=$(which cope)
 export SUDO_PROMPT='[sudo] password for %u@%h (-> %U): '
 export GIT_PAGER='less +g'
 export QT_QPA_PLATFORMTHEME='gtk2'
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 ### ndless
 #export PATH="/home/florian/code/Ndless/ndless-sdk/toolchain/install/bin:/home/florian/code/Ndless/ndless-sdk/bin:$PATH"
