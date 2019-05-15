@@ -117,7 +117,7 @@ for iface in ['eth', 'dock', 'wlan', 'ppp0']:
                 assert False
 
         if iface == 'wlan':
-            cg.var('wireless_essid')
+            cg.var('wireless_essid wlan')
 
         if iface != 'ppp0':
             cg.space(5)
