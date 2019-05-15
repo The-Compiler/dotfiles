@@ -34,6 +34,7 @@ This function should only modify configuration layer settings."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(rust
+     django
      php
      helm
      (theming :variables theming-modifications '((monokai (default :background "black"))))
