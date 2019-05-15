@@ -1,5 +1,9 @@
+text/html; qutebrowser %s; needsterminal; nametemplate=%s.html
 text/html; elinks -force-html -dump -localhost %s | sed 's/^   //'; copiousoutput
+
+application/pdf; zathura %s
 application/pdf; pdftotext -layout -l 10 -nopgbrk /dev/stdin -; copiousoutput
+
 application/zip; als %s; copiousoutput
 
 application/vnd.openxmlformats-officedocument.wordprocessingml.document; libreoffice %s
