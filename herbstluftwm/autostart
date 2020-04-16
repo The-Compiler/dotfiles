@@ -159,10 +159,14 @@ hc set smart_window_surroundings 0
 hc set smart_frame_surroundings 1
 hc set mouse_recenter_gap 0
 
-# Volume keys
+# Multimedia keys
 hc keybind XF86AudioLowerVolume spawn yoga-volume decrease
 hc keybind XF86AudioRaiseVolume spawn yoga-volume increase
 hc keybind XF86AudioMute spawn yoga-volume mute
+
+hc keybind XF86AudioPlay spawn playerctl play-pause
+hc keybind XF86AudioPrev spawn playerctl previous
+hc keybind XF86AudioNext spawn playerctl next
 
 # rules
 hc unrule -F
