@@ -1,6 +1,7 @@
 [user]
 email = me@the-compiler.org
 name = Florian Bruhin
+	signingkey = 0xfd55a072
 
 [rerere]
 enabled = true
