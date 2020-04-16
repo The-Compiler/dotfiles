@@ -8,7 +8,8 @@ enabled = true
 
 [alias]
 authorlist = !"la() { git log --pretty=format:'%aN <%ae>' $1 | sort -u; }; la"
-lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
+lg = log --all --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
+lgmd = log --oneline --format=format:'- %h %s' --reverse
 
 
 [include]
