@@ -1,5 +1,6 @@
 import sys
 import contextlib
+import multiprocessing
 
 from barpyrus import hlwm
 from barpyrus import widgets as W
@@ -56,7 +57,7 @@ cg = conky.ConkyGenerator(lemonbar.textpainter())
 with cg.temp_fg('#9fbc00'):
     cg.symbol(0xe026)
 cg.space(5)
-for cpu in '1234':
+for cpu in [str(i+1) for i in range(multiprocessing.cpu_count())]:
     with maybe_orange('cpu cpu%s' % cpu):
         cg.var('cpu cpu' + cpu)
         cg.text('% ')
