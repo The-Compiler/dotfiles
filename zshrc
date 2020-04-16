@@ -241,6 +241,7 @@ fi
 
 ### Humble bundle key ###
 [[ -f ~/.humblebundle ]] && source ~/.humblebundle
+[[ -f ~/.deltachat ]] && source ~/.deltachat
 
 
 ## infsi1
