@@ -90,6 +90,7 @@ modbind r remove
 modbind s floating toggle
 modbind f fullscreen toggle
 modbind p pseudotile toggle
+modbind Shift-f set_attr clients.focus.floating toggle
 # The following cycles through the available layouts within a frame, but skips
 # layouts, if the layout change wouldn't affect the actual window positions.
 # I.e. if there are two windows within a frame, the grid layout is skipped.
@@ -164,13 +165,12 @@ hc keybind XF86AudioMute spawn yoga-volume mute
 # rules
 hc unrule -F
 hc rule focus=on
-hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
-hc rule windowrole=GtkFileChooserDialog pseudotile=off  # Don't pseudotile file chooser dialogs
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on
+# hc rule windowrole=GtkFileChooserDialog pseudotile=off  # Don't pseudotile file chooser dialogs
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
-hc rule class=qutebrowser windowtype='_NET_WM_WINDOW_TYPE_UTILITY' manage=off
-hc rule instance=guake manage=off
-hc rule class=mobilequiz index=1                                                                                                                                                                                                                                                                                    ╾─[1]──┄
+hc rule class=qutebrowser windowtype='_NET_WM_WINDOW_TYPE_UTILITY' floating=on
+hc rule instance=guake floating=on
 
 hc set tree_style '╾│ ├└╼─┐'
 
