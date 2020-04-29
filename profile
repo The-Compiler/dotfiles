@@ -20,3 +20,5 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 ### ndless
 #export PATH="/home/florian/code/Ndless/ndless-sdk/toolchain/install/bin:/home/florian/code/Ndless/ndless-sdk/bin:$PATH"
+
+source ~/.profile-private
