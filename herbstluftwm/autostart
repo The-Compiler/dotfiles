@@ -116,6 +116,7 @@ modbind i jumpto urgent
 hc keybind XF86MonBrightnessUp spawn yoga-brightness up
 hc keybind XF86MonBrightnessDown spawn yoga-brightness down
 hc keybind XF86Tools chain , spawn physlock -s , spawn systemctl suspend
+hc keybind Shift-XF86Tools spawn systemctl suspend
 hc keybind XF86Search spawn physlock -s
 modbind d spawn rofi -m -4 -show run
 modbind Shift-d spawn rofi -m -4 -show drun -show-icons
