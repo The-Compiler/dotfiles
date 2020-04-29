@@ -19,7 +19,7 @@ path=~/.config/git/github
 
 [diff]
 colorMoved = plain
-	noprefix = true
+	mnemonicPrefix = true
 
 [color "diff"]
 	oldMoved = red dim
