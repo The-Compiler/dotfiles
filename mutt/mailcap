@@ -12,3 +12,4 @@ application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; libreoffice %
 image/*; sxiv %s
 
 text/calendar; vcal --all -; copiousoutput
+application/json; jq -C; copiousoutput
