@@ -543,6 +543,9 @@ before packages are loaded."
     '(flycheck-add-mode 'html-tidy 'web-mode))
   (setq flycheck-checker-error-threshold nil)
 
+  ;; Never use pylint for flycheck (fails to load qute_pylint)
+  (setq-default flycheck-disabled-checkers '(python-pylint))
+
   ;; Relative \includegraphics
   (setq LaTeX-includegraphics-read-file
     'LaTeX-includegraphics-read-file-relative)
