@@ -111,3 +111,4 @@ set print_command="muttprint -p - | ps2pdf - $HOME/muttprint.pdf"
 
 # headers
 unignore Bcc
+mailto_allow In-Reply-To
