@@ -13,7 +13,7 @@ set record = "=sent"
 set trash = "=trash"
 
 ## files
-set header_cache = ~/.mutt/cache/headers
+# set header_cache = ~/.mutt/cache/headers
 set message_cachedir = ~/.mutt/cache/bodies
 set mailcap_path = ~/.mutt/mailcap
 
