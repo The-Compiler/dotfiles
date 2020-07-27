@@ -12,7 +12,7 @@ config.bind(',rta', 'open {url}top/?sort=top&t=all')
 config.bind(',rtv', 'spawn termite -e "rtv {url}"')
 config.bind(',c', 'spawn -d chromium {url}')
 
-css = '~/code/solarized-everything-css/css/solarized-all-sites-dark.css'
+css = '~/code/solarized-everything-css/css/solarized-dark/solarized-dark-all-sites.css'
 config.bind(',n', f'config-cycle content.user_stylesheets {css} ""')
 
 c.url.searchengines['rfc'] = 'https://tools.ietf.org/html/rfc{}'
