@@ -30,3 +30,5 @@ colorMoved = plain
 	includeStatusHeader = false
 	includePullRequestsSection = false
 	includeIssuesSection = false
+[pull]
+	rebase = false
