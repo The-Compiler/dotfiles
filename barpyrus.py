@@ -62,19 +62,15 @@ for cpu in [str(i+1) for i in range(multiprocessing.cpu_count())]:
         cg.var('cpu cpu' + cpu)
         cg.text('% ')
 
-with cg.temp_fg('#9fbc00'):
-    cg.symbol(0xe021)
-cg.space(5)
-with maybe_orange('memperc'):
-    cg.var('memperc')
-    cg.text('% ')
-
-with cg.temp_fg('#9fbc00'):
-    cg.symbol(0x00e1bb)
-cg.space(5)
-with maybe_orange('fs_used_perc /'):
-    cg.var('fs_used_perc /')
-    cg.text('% ')
+for symbol, command in [(0xe021, 'memperc'),
+                        (0xe1bb, 'fs_used_perc /'),
+                        (0xe1eb, 'fs_used_perc /mnt/sd')]:
+    with cg.temp_fg('#9fbc00'):
+        cg.symbol(symbol)
+    cg.space(5)
+    with maybe_orange(command):
+        cg.var(command)
+        cg.text('% ')
 
 ## temp / fan
 with cg.if_('match ${ibm_fan} != 65535'):
