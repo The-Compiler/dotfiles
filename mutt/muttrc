@@ -19,6 +19,7 @@ set mailcap_path = ~/.mutt/mailcap
 
 ## UI
 set sidebar_visible
+set sidebar_short_path = yes
 set sidebar_width = 10
 set sort = "threads"
 set sort_aux = "reverse-last-date-received"
