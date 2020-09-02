@@ -46,8 +46,8 @@ ACCENT_COLOR = Gruv.ORANGE_DARK
 
 
 @contextlib.contextmanager
-def highlight_critical(cg, match, predicate='> 90'):
-    with cg.if_('match ${%s} %s' % (match, predicate)):
+def highlight_critical(cg, match):
+    with cg.if_(match):
         cg.fg(Gruv.RED_LIGHT)
     yield
     cg.fg(None)
@@ -75,7 +75,7 @@ def tag_renderer(taginfo, painter):
 
 
 def _cg_cpu_perc(cg, num):
-    with highlight_critical(cg, f'cpu cpu{num}'):
+    with highlight_critical(cg, cg.match(f'cpu cpu{num}') > 90):
         cg.var(f'cpu cpu{num}')
         cg.text('% ')
 
@@ -98,7 +98,7 @@ def _cg_space_usage(cg, symbol, command):
     with cg.temp_fg(ACCENT_COLOR):
         cg.symbol(symbol)
     cg.space(5)
-    with highlight_critical(cg, command):
+    with highlight_critical(cg, cg.match(command) > 90):
         cg.var(command)
         cg.text('% ')
 
@@ -112,11 +112,11 @@ def cg_space(cg):
 
 
 def cg_fan(cg):
-    with cg.if_('match ${ibm_fan} != 65535'):
+    with cg.if_(cg.match('ibm_fan') != 65535):
         with cg.temp_fg(ACCENT_COLOR):
             cg.symbol(0xe1c0)
         cg.space(5)
-        with highlight_critical(cg, 'ibm_fan', '> 6000'):
+        with highlight_critical(cg, cg.match('ibm_fan') > 6000):
             cg.var('ibm_fan')
             cg.text('rpm ')
 
@@ -156,7 +156,7 @@ def cg_net(cg):
             cg.symbol(0xe0a6)
 
     for iface in ['eth', 'dock', 'wlan', 'ppp0']:
-        with cg.if_(f'up {iface}'), cg.if_('match "${addr %s}" != "No Address"' % iface):
+        with cg.if_(f'up {iface}'), cg.if_(cg.match(f'addr {iface}') != "No Address"):
             _cg_net_icon(cg, iface)
 
             if iface == 'wlan':
@@ -193,12 +193,12 @@ def cg_battery(cg):
     with cg.if_('existing /sys/class/power_supply/BAT0'):
         cg.fg(ACCENT_COLOR)
 
-        with cg.if_('match "$battery" != "discharging $battery_percent%"'):
+        with cg.if_(cg.match('battery') != 'discharging $battery_percent%'):
             cg.symbol(0xe0db)
 
         with cg.cases():
             for i, icon in enumerate(bat_icons[:-1]):
-                cg.case('match $battery_percent < %d' % ((i+1)*bat_delta))
+                cg.case(cg.match('battery_percent') < (i+1) * bat_delta)
                 cg.symbol(icon)
 
             cg.else_()
@@ -207,7 +207,7 @@ def cg_battery(cg):
         cg.fg(None)
         cg.space(5)
 
-        with highlight_critical(cg, 'battery_percent', '< 10'):
+        with highlight_critical(cg, cg.match('battery_percent') < 10):
             cg.var('battery_percent')
             cg.text('% ')
             cg.var('battery_time')
