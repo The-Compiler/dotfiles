@@ -129,52 +129,55 @@ def cg_temp(cg):
     cg.text('° ')
 
 
-def cg_net(cg):
+def _cg_net_icon(cg, iface):
     wifi_icons = [0xe217, 0xe218, 0xe219, 0xe21a]
     wifi_delta = 100 / len(wifi_icons)
+    with cg.temp_fg(ACCENT_COLOR):
+        if iface == 'wlan':
+            with cg.cases():
+                for i, icon in enumerate(wifi_icons[:-1]):
+                    cg.case('match ${wireless_link_qual_perc wlan} < %d' % ((i+1)*wifi_delta))
+                    cg.symbol(icon)
 
+                cg.else_()
+                cg.symbol(wifi_icons[-1])  # icon for 100 percent
+            cg.space(5)
+        elif iface in ['eth', 'dock']:
+            cg.symbol(0xe0af)
+        elif iface == 'ppp0':
+            cg.symbol(0xe0f3)
+        else:
+            assert False
+
+
+def cg_net(cg):
     with cg.if_('up tun0'):
         with cg.temp_fg('#ff0000'):
             cg.symbol(0xe0a6)
 
     for iface in ['eth', 'dock', 'wlan', 'ppp0']:
-        with cg.if_('up %s' % iface), cg.if_('match "${addr %s}" != "No Address"' % iface):
-            with cg.temp_fg(ACCENT_COLOR):
-                if iface == 'wlan':
-                    with cg.cases():
-                        for i, icon in enumerate(wifi_icons[:-1]):
-                            cg.case('match ${wireless_link_qual_perc wlan} < %d' % ((i+1)*wifi_delta))
-                            cg.symbol(icon)
-
-                        cg.else_()
-                        cg.symbol(wifi_icons[-1])  # icon for 100 percent
-                    cg.space(5)
-                elif iface in ['eth', 'dock']:
-                    cg.symbol(0xe0af)
-                elif iface == 'ppp0':
-                    cg.symbol(0xe0f3)
-                else:
-                    assert False
+        with cg.if_(f'up {iface}'), cg.if_('match "${addr %s}" != "No Address"' % iface):
+            _cg_net_icon(cg, iface)
 
             if iface == 'wlan':
                 cg.var('wireless_essid wlan')
 
             if iface != 'ppp0':
                 cg.space(5)
-                cg.var('addr %s' % iface)
+                cg.var(f'addr {iface}')
 
             cg.space(5)
             with cg.temp_fg(ACCENT_COLOR):
                 cg.symbol(0xe13c)
-            cg.var('downspeedf %s' % iface)
+            cg.var(f'downspeedf {iface}')
             cg.text('K ')
-            cg.var('totaldown %s' % iface)
+            cg.var(f'totaldown {iface}')
             cg.space(5)
             with cg.temp_fg(ACCENT_COLOR):
                 cg.symbol(0xe13b)
-            cg.var('upspeedf %s' % iface)
+            cg.var(f'upspeedf {iface}')
             cg.text('K ')
-            cg.var('totalup %s' % iface)
+            cg.var(f'totalup {iface}')
             cg.space(5)
 
 
