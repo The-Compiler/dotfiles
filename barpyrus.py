@@ -8,30 +8,68 @@ from barpyrus.core import Theme, Painter
 from barpyrus import lemonbar, conky, trayer
 
 
+class Gruv:
+
+    # https://github.com/morhetz/gruvbox
+
+    BG0_H = '#1d2021'
+    BG0_S = '#32302f'
+    BG0 = '#282828'
+    BG1 = '#3c3836'
+    BG2 = '#504945'
+    BG3 = '#665c54'
+    BG4 = '#7c6f64'
+    FG0 = '#fbf1c7'
+    FG1 = '#ebdbb2'
+    FG2 = '#d5c4a1'
+    FG3 = '#bdae93'
+    FG4 = '#a89984'
+    FG = FG1
+    BG = BG0
+    RED_DARK = '#cc241d'
+    GREEN_DARK = '#98971a'
+    YELLOW_DARK = '#d79921'
+    BLUE_DARK = '#458588'
+    PURPLE_DARK = '#b16286'
+    AQUA_DARK = '#689d6a'
+    GRAY_DARK = '#a89984'
+    ORANGE_DARK = '#d65d0e'
+    RED_LIGHT = '#fb4934'
+    GREEN_LIGHT = '#b8bb26'
+    YELLOW_LIGHT = '#fabd2f'
+    BLUE_LIGHT = '#83a598'
+    PURPLE_LIGHT = '#d3869b'
+    AQUA_LIGHT = '#8ec07c'
+    GRAY_LIGHT = '#928374'
+    ORANGE_LIGHT = '#fe8019'
+
+
+ACCENT_COLOR = Gruv.ORANGE_DARK
+
+
 @contextlib.contextmanager
-def maybe_orange(match, predicate='> 90'):
+def highlight_critical(match, predicate='> 90'):
     with cg.if_('match ${%s} %s' % (match, predicate)):
-        cg.fg('#ffc726')
+        cg.fg(Gruv.RED_LIGHT)
     yield
     cg.fg(None)
 
 
-def underlined_tags(taginfo, painter):
+def tag_renderer(taginfo, painter):
     if taginfo.empty:
         return
-    painter.set_flag(painter.underline, True if taginfo.visible else False)
-    painter.fg('#a0a0a0' if taginfo.occupied else '#909090')
+
     if taginfo.urgent:
-        painter.ol('#FF7F27')
-        painter.fg('#FF7F27')
-        painter.set_flag(Painter.underline, True)
-        painter.bg('#57000F')
-    elif taginfo.here:
-        painter.fg('#ffffff')
-        painter.ol(taginfo.activecolor if taginfo.focused else '#ffffff')
-        painter.bg(taginfo.emphbg)
+        painter.fg(Gruv.RED_LIGHT)
     else:
-        painter.ol('#454545')
+        painter.fg(None)
+
+    if taginfo.here:
+        painter.bg(ACCENT_COLOR)
+    else:
+        painter.set_flag(painter.underline, taginfo.visible)
+        painter.ol(ACCENT_COLOR)
+
     painter.space(3)
     painter += taginfo.name
     painter.space(3)
@@ -53,33 +91,33 @@ hc(['pad', str(monitor), str(height)])
 cg = conky.ConkyGenerator(lemonbar.textpainter())
 
 ## CPU / RAM / df
-with cg.temp_fg('#9fbc00'):
+with cg.temp_fg(ACCENT_COLOR):
     cg.symbol(0xe026)
 cg.space(5)
 for cpu in [str(i+1) for i in range(multiprocessing.cpu_count())]:
-    with maybe_orange('cpu cpu%s' % cpu):
+    with highlight_critical('cpu cpu%s' % cpu):
         cg.var('cpu cpu' + cpu)
         cg.text('% ')
 
 for symbol, command in [(0xe021, 'memperc'),
                         (0xe1bb, 'fs_used_perc /'),
                         (0xe1eb, 'fs_used_perc /mnt/sd')]:
-    with cg.temp_fg('#9fbc00'):
+    with cg.temp_fg(ACCENT_COLOR):
         cg.symbol(symbol)
     cg.space(5)
-    with maybe_orange(command):
+    with highlight_critical(command):
         cg.var(command)
         cg.text('% ')
 
 ## temp / fan
 with cg.if_('match ${ibm_fan} != 65535'):
-    with cg.temp_fg('#9fbc00'):
+    with cg.temp_fg(ACCENT_COLOR):
         cg.symbol(0xe1c0)
     cg.space(5)
-    with maybe_orange('ibm_fan', '> 6000'):
+    with highlight_critical('ibm_fan', '> 6000'):
         cg.var('ibm_fan')
         cg.text('rpm ')
-with cg.temp_fg('#9fbc00'):
+with cg.temp_fg(ACCENT_COLOR):
     cg.symbol(0xe01b)
 cg.space(5)
 cg.var('acpitemp')
@@ -95,7 +133,7 @@ with cg.if_('up tun0'):
 
 for iface in ['eth', 'dock', 'wlan', 'ppp0']:
     with cg.if_('up %s' % iface), cg.if_('match "${addr %s}" != "No Address"' % iface):
-        with cg.temp_fg('#9fbc00'):
+        with cg.temp_fg(ACCENT_COLOR):
             if iface == 'wlan':
                 with cg.cases():
                     for i, icon in enumerate(wifi_icons[:-1]):
@@ -120,13 +158,13 @@ for iface in ['eth', 'dock', 'wlan', 'ppp0']:
             cg.var('addr %s' % iface)
 
         cg.space(5)
-        with cg.temp_fg('#9fbc00'):
+        with cg.temp_fg(ACCENT_COLOR):
             cg.symbol(0xe13c)
         cg.var('downspeedf %s' % iface)
         cg.text('K ')
         cg.var('totaldown %s' % iface)
         cg.space(5)
-        with cg.temp_fg('#9fbc00'):
+        with cg.temp_fg(ACCENT_COLOR):
             cg.symbol(0xe13b)
         cg.var('upspeedf %s' % iface)
         cg.text('K ')
@@ -143,7 +181,7 @@ bat_icons = [
 bat_delta = 100 / len(bat_icons)
 
 with cg.if_('existing /sys/class/power_supply/BAT0'):
-    cg.fg('#9fbC00')
+    cg.fg(ACCENT_COLOR)
 
     with cg.if_('match "$battery" != "discharging $battery_percent%"'):
         cg.symbol(0xe0db)
@@ -159,14 +197,14 @@ with cg.if_('existing /sys/class/power_supply/BAT0'):
     cg.fg(None)
     cg.space(5)
 
-    with maybe_orange('battery_percent', '< 10'):
+    with highlight_critical('battery_percent', '< 10'):
         cg.var('battery_percent')
         cg.text('% ')
         cg.var('battery_time')
         cg.space(5)
 
 
-with cg.temp_fg('#9fbc00'):
+with cg.temp_fg(ACCENT_COLOR):
     cg.symbol(0xe015)
 cg.space(5)
 cg.var('time %d. %B, %H:%M')
@@ -175,16 +213,21 @@ cg.var('time %d. %B, %H:%M')
 conky_config = {
     'update_interval': '5',
 }
+trayer_config = {
+    'tint': Gruv.BG.replace('#', '0x'),
+    'iconspacing': '5',
+    'padding': '5'
+}
 
 
 # Widget configuration:
-bar = lemonbar.Lemonbar(geometry = (x,y,width,height))
+bar = lemonbar.Lemonbar(geometry = (x,y,width,height), foreground=Gruv.FG)
 bar.widget = W.ListLayout([
     W.RawLabel('%{l}'),
-    hlwm.HLWMTags(hc, monitor, tag_renderer=underlined_tags),
+    hlwm.HLWMTags(hc, monitor, tag_renderer=tag_renderer),
     W.RawLabel('%{c}'),
     hlwm.HLWMWindowTitle(hc),
     W.RawLabel('%{r}'),
     conky.ConkyWidget(text=str(cg), config=conky_config),
-    trayer.TrayerWidget(args={'tint': '0x000000', 'iconspacing': '5', 'padding': '5'}),
+    trayer.TrayerWidget(args=trayer_config),
 ])

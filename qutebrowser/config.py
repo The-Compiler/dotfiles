@@ -12,7 +12,7 @@ config.bind(',rta', 'open {url}top/?sort=top&t=all')
 config.bind(',rtv', 'spawn termite -e "rtv {url}"')
 config.bind(',c', 'spawn -d chromium {url}')
 
-css = '~/code/solarized-everything-css/css/solarized-dark/solarized-dark-all-sites.css'
+css = '~/proj/solarized-everything-css/css/gruvbox/gruvbox-all-sites.css'
 config.bind(',n', f'config-cycle content.user_stylesheets {css} ""')
 
 c.url.searchengines['rfc'] = 'https://tools.ietf.org/html/rfc{}'
@@ -36,3 +36,4 @@ c.editor.command = ['emacs', '{}']
 
 c.content.javascript.enabled = False
 config.source('perdomain.py')
+config.source('gruvbox.py')
