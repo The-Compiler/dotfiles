@@ -4,7 +4,8 @@ export EDITOR="emacs"
 export VISUAL="$EDITOR"
 export PATH="$PATH:$HOME/bin:$HOME/bin/go/bin"
 export VIEW_PDF="zathura" # for latex-makefile
-export TERMINAL="termite"
+# export TERMINAL="termite"
+export TERMINAL="kitty"
 
 ### ccache ###
 export PATH="/usr/lib/ccache/bin/:$PATH"
