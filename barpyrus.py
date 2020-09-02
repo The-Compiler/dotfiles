@@ -74,14 +74,24 @@ def tag_renderer(taginfo, painter):
     painter.space(2)
 
 
+def _cg_cpu_perc(cg, num):
+    with highlight_critical(cg, f'cpu cpu{num}'):
+        cg.var(f'cpu cpu{num}')
+        cg.text('% ')
+
+
 def cg_cpu(cg):
     with cg.temp_fg(ACCENT_COLOR):
         cg.symbol(0xe026)
     cg.space(5)
-    for cpu in [str(i+1) for i in range(multiprocessing.cpu_count())]:
-        with highlight_critical(cg, 'cpu cpu%s' % cpu):
-            cg.var('cpu cpu' + cpu)
-            cg.text('% ')
+
+    cpu_count = multiprocessing.cpu_count()
+    if cpu_count <= 4:
+        for cpu in range(cpu_count):
+            _cg_cpu_perc(cg, cpu + 1)
+    else:
+        # Too many numbers to digest, show total
+        _cg_cpu_perc(cg, 0)
 
 
 def _cg_space_usage(cg, symbol, command):
