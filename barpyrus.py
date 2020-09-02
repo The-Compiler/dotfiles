@@ -96,7 +96,9 @@ def _cg_space_usage(cg, symbol, command):
 def cg_space(cg):
     _cg_space_usage(cg, 0xe021, 'memperc')
     _cg_space_usage(cg, 0xe1bb, 'fs_used_perc /')
-    _cg_space_usage(cg, 0xe1eb, 'fs_used_perc /mnt/sd')
+
+    with cg.if_('mounted /mnt/sd'):
+        _cg_space_usage(cg, 0xe1eb, 'fs_size /mnt/sd')
 
 
 def cg_fan(cg):
