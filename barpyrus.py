@@ -251,6 +251,8 @@ def main():
         'padding': '5'
     }
 
+    bar = lemonbar.Lemonbar(geometry=geom, foreground=Gruv.FG)
+
     left_widgets = [
         hlwm.HLWMTags(hc, monitor, tag_renderer=tag_renderer),
     ]
@@ -263,7 +265,6 @@ def main():
     if monitor == 0:
         right_widgets.append(trayer.TrayerWidget(args=trayer_config))
 
-    bar = lemonbar.Lemonbar(geometry=geom, foreground=Gruv.FG)
     bar.widget = widgets.ListLayout([
         widgets.RawLabel('%{l}'),
         *left_widgets,
