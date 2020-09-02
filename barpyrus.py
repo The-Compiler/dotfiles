@@ -5,8 +5,7 @@ import multiprocessing
 from barpyrus import hlwm
 from barpyrus import widgets as W
 from barpyrus.core import Theme, Painter
-from barpyrus import lemonbar
-from barpyrus import conky
+from barpyrus import lemonbar, conky, trayer
 
 
 @contextlib.contextmanager
@@ -187,4 +186,5 @@ bar.widget = W.ListLayout([
     hlwm.HLWMWindowTitle(hc),
     W.RawLabel('%{r}'),
     conky.ConkyWidget(text=str(cg), config=conky_config),
+    trayer.TrayerWidget(args={'tint': '0x000000', 'iconspacing': '5', 'padding': '5'}),
 ])
