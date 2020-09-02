@@ -251,15 +251,26 @@ def main():
         'padding': '5'
     }
 
+    left_widgets = [
+        hlwm.HLWMTags(hc, monitor, tag_renderer=tag_renderer),
+    ]
+    center_widgets = [
+        hlwm.HLWMWindowTitle(hc),
+    ]
+    right_widgets = [
+        conky.ConkyWidget(text=str(cg), config=conky_config),
+    ]
+    if monitor == 0:
+        right_widgets.append(trayer.TrayerWidget(args=trayer_config))
+
     bar = lemonbar.Lemonbar(geometry=geom, foreground=Gruv.FG)
     bar.widget = widgets.ListLayout([
         widgets.RawLabel('%{l}'),
-        hlwm.HLWMTags(hc, monitor, tag_renderer=tag_renderer),
+        *left_widgets,
         widgets.RawLabel('%{c}'),
-        hlwm.HLWMWindowTitle(hc),
+        *center_widgets,
         widgets.RawLabel('%{r}'),
-        conky.ConkyWidget(text=str(cg), config=conky_config),
-        trayer.TrayerWidget(args=trayer_config),
+        *right_widgets,
     ])
     return bar
 
