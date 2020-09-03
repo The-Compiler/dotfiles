@@ -23,7 +23,7 @@ class Gruv:
     FG3 = '#bdae93'
     FG4 = '#a89984'
     FG = FG1
-    BG = BG0
+    BG = BG0_H
     RED_DARK = '#cc241d'
     GREEN_DARK = '#98971a'
     YELLOW_DARK = '#d79921'
@@ -251,7 +251,7 @@ def main():
         'padding': '5'
     }
 
-    bar = lemonbar.Lemonbar(geometry=geom, foreground=Gruv.FG)
+    bar = lemonbar.Lemonbar(geometry=geom, foreground=Gruv.FG, background=Gruv.BG)
 
     left_widgets = [
         hlwm.HLWMTags(hc, monitor, tag_renderer=tag_renderer),
