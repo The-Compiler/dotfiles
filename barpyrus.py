@@ -242,7 +242,8 @@ def main():
     cg_time(cg)
 
     conky_config = {
-        'update_interval': '5',
+        'update_interval': '1',
+        'update_interval_on_battery': '10',
     }
 
     trayer_config = {
