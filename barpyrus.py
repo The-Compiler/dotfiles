@@ -226,7 +226,7 @@ Geometry = collections.namedtuple('Geometry', ['x', 'y', 'width', 'height'])
 
 def main():
     hc = hlwm.connect()
-    monitor = sys.argv[1] if len(sys.argv) >= 2 else 0
+    monitor = int(sys.argv[1]) if len(sys.argv) >= 2 else 0
 
     x, y, monitor_w, _monitor_h = hc.monitor_rect(monitor)
     geom = Geometry(x, y, width=monitor_w, height=16)
