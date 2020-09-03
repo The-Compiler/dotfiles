@@ -1,8 +1,9 @@
-source ~/.mutt/hooks
-source ~/.mutt/alias
+set my_cfgdir = $HOME/.config/neomutt
+set my_cachedir = $HOME/.cache/neomutt
+
+source $my_cfgdir/hooks $my_cfgdir/alias $my_cfgdir/accounts
 
 ## connection/folders
-source ~/.mutt/accounts
 set from = "me@the-compiler.org"
 set realname = "Florian Bruhin"
 set folder = "~/mail"
@@ -13,9 +14,9 @@ set record = "=sent"
 set trash = "=trash"
 
 ## files
-# set header_cache = ~/.mutt/cache/headers
-set message_cachedir = ~/.mutt/cache/bodies
-set mailcap_path = ~/.mutt/mailcap
+set header_cache = $my_cachedir/headers
+set message_cachedir = $my_cachedir/bodies
+set mailcap_path = $my_cfgdir/mailcap
 
 ## UI
 set sidebar_visible
@@ -114,4 +115,4 @@ unignore Bcc
 mailto_allow In-Reply-To
 
 # icons
-source ~/.config/neomutt/powerline/powerline.neomuttrc
+source $my_cfgdir/powerline/powerline.neomuttrc
