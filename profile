@@ -6,6 +6,7 @@ export PATH="$PATH:$HOME/bin:$HOME/bin/go/bin:$HOME/.emacs.d/bin"
 export VIEW_PDF="zathura" # for latex-makefile
 # export TERMINAL="termite"
 export TERMINAL="kitty"
+export PYTHONSTARTUP=~/.config/startup.py
 
 ### ccache ###
 export PATH="/usr/lib/ccache/bin/:$PATH"
