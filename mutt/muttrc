@@ -111,7 +111,7 @@ set pgp_encrypt_sign_command="/usr/lib/neomutt/pgpewrap gpg %?p?--pinentry-mode 
 set print_command="muttprint -p - | ps2pdf - $HOME/muttprint.pdf"
 
 # headers
-unignore Bcc
+unignore Bcc X-Rspamd-Report X-Rspamd-Score
 mailto_allow In-Reply-To
 
 # icons
