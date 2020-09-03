@@ -190,7 +190,7 @@ def cg_battery(cg):
     ]
     bat_delta = 100 / len(bat_icons)
 
-    with cg.if_('existing /sys/class/power_supply/BAT0'):
+    with cg.if_('existing /sys/class/power_supply/BAT0'), cg.if_('match "$battery" != ""'):
         cg.fg(ACCENT_COLOR)
 
         with cg.if_('match "$battery" != "discharging $battery_percent%"'):
