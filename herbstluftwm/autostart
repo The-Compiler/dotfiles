@@ -189,8 +189,6 @@ hc rule instance=guake floating=on
 
 hc set tree_style '╾│ ├└╼─┐'
 
-hc unlock
-
 # start the panel
 [ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
 for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
@@ -202,3 +200,5 @@ done
 [[ -z "$HLWM_LOADED" ]] && ~/.config/herbstluftwm/autorun &
 hc setenv HLWM_LOADED 1
 hc setenv QT_AUTO_SCREEN_SCALE_FACTOR 0
+
+hc unlock
