@@ -83,6 +83,7 @@ alias hc='herbstclient'
 alias yu='yaourt -Suya; sudo abs; sudo pkgfile -u; gpg --refresh-keys; gpg --update-trustdb; sudo pacdiffviewer'
 alias tx='tmux -2 attach -d'
 alias fap='fahrplan -f'
+alias kal='vdirsyncer sync && khal interactive && vdirsyncer sync'
 # pseudo-functions
 alias pymath='bpython -i <(echo "from math import *")'
 alias newx='xinit /usr/bin/urxvt -- :1'

@@ -1,0 +1,35 @@
+[general]
+status_path = "~/.local/share/vdirsyncer/status/"
+
+[pair contacts]
+a = "contacts_local"
+b = "contacts_remote"
+collections = ["from a", "from b"]
+
+[pair calendars]
+a = "calendars_local"
+b = "calendars_remote"
+collections = ["from a", "from b"]
+
+[storage contacts_local]
+type = "filesystem"
+path = "~/.local/share/vdirsyncer/contacts/"
+fileext = ".vcf"
+
+[storage contacts_remote]
+type = "carddav"
+url = "https://compiler.uber.space/nextcloud/remote.php/carddav/"
+username = "The Compiler"
+password.fetch = ["command", "cat", "/home/florian/.config/vdirsyncer/password"]
+
+[storage calendars_local]
+type = "filesystem"
+path = "~/.local/share/vdirsyncer/calendars/"
+fileext = ".ics"
+
+[storage calendars_remote]
+type = "caldav"
+url = "https://compiler.uber.space/nextcloud/remote.php/caldav/"
+username = "The Compiler"
+password.fetch = ["command", "cat", "/home/florian/.config/vdirsyncer/password"]
+

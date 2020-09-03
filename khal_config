@@ -1,0 +1,39 @@
+[calendars]
+
+[[birthdays]]
+path = ~/.local/share/vdirsyncer/calendars/birthdays
+color = dark red
+
+[[contact_birthdays]]
+path = ~/.local/share/vdirsyncer/calendars/contact_birthdays
+color = dark red
+
+[[default]]
+path = ~/.local/share/vdirsyncer/calendars/default
+color = dark green
+
+[[hsr]]
+path = ~/.local/share/vdirsyncer/calendars/hsr
+color = dark blue
+
+[[mline]]
+path = ~/.local/share/vdirsyncer/calendars/mline
+color = dark magenta
+
+[locale]
+timeformat = %H:%M
+dateformat = %Y-%m-%d
+longdateformat = %Y-%m-%d
+datetimeformat = %Y-%m-%d %H:%M
+longdatetimeformat = %Y-%m-%d %H:%M
+
+[default]
+default_calendar = default
+highlight_event_days = True
+print_new = event
+show_all_days = True
+timedelta = 7d
+
+[view]
+frame = top
+agenda_event_format = {calendar-color}{cancelled}{start-end-time-style} {title}{repeat-symbol}{description-separator}{reset}
