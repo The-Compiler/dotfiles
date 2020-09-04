@@ -156,7 +156,7 @@ hc set frame_gap 4
 # hc set frame_active_opacity 1
 # hc set frame_normal_opacity 0.5
 
-hc attr theme.active.color '#fabd2f'
+hc attr theme.active.color '#fbf1c7'
 hc attr theme.normal.color '#d65d0e'
 
 hc attr theme.urgent.color orange
