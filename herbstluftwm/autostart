@@ -215,6 +215,8 @@ if is_first_start; then
     nm-applet &
     pasystray &
     xss-lock tp-lock &
+    mate-power-manager &
+    xinput disable 'SynPS/2 Synaptics TouchPad' &
 fi
 
 hc new_attr bool my_loaded true
