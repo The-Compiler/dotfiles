@@ -1,0 +1,10 @@
+[Default Applications]
+application/pdf=org.pwmt.zathura.desktop
+x-scheme-handler/mailto=neomutt.desktop;
+x-scheme-handler/http=org.qutebrowser.qutebrowser.desktop;
+x-scheme-handler/https=org.qutebrowser.qutebrowser.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
+x-scheme-handler/sgnl=signal-desktop.desktop
+x-scheme-handler/msteams=teams.desktop
+image/jpeg=org.kde.gwenview.desktop;
+image/svg+xml=inkscape.desktop;
