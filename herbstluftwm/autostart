@@ -125,18 +125,19 @@ modbind i jumpto urgent
 # utility keys
 hc keybind XF86MonBrightnessUp spawn brightnessctl set +5
 hc keybind XF86MonBrightnessDown spawn brightnessctl set 5-
-hc keybind XF86Tools chain , spawn physlock -s , spawn systemctl suspend
-hc keybind Shift-XF86Tools spawn systemctl suspend
-hc keybind XF86Search spawn physlock -s
+hc keybind XF86Display spawn rofi-xrandr
+hc keybind XF86Favorites spawn tp-lock
+hc keybind Shift+XF86Favorites spawn systemctl suspend
+
 modbind d spawn rofi -m -4 -show run
 modbind Shift-d spawn rofi -m -4 -show drun -show-icons
 modbind w spawn rofi -m -4 -show window
 modbind Shift-w spawn hlwm-bring
-modbind n spawn rofi-netctl
+modbind n spawn networkmanager_dmenu
 modbind y spawn utf8select
 modbind Shift-y spawn rofimoji
-modbind Multi_key spawn gscreenshot
-hc keybind XF86Explorer spawn guake -t
+modbind p spawn keepmenu
+modbind Shift-p spawn flameshot gui
 
 # theme
 hc attr theme.tiling.reset 1
@@ -178,9 +179,11 @@ hc set smart_frame_surroundings 1
 hc set mouse_recenter_gap 0
 
 # Multimedia keys
-hc keybind XF86AudioLowerVolume spawn yoga-volume decrease
-hc keybind XF86AudioRaiseVolume spawn yoga-volume increase
-hc keybind XF86AudioMute spawn yoga-volume mute
+hc keybind XF86AudioLowerVolume spawn pavolume-dunst decrease 5
+hc keybind XF86AudioRaiseVolume spawn pavolume-dunst increase 5
+hc keybind Shift-XF86AudioLowerVolume spawn pavolume-dunst decrease 5 --allow-boost
+hc keybind Shift-XF86AudioRaiseVolume spawn pavolume-dunst increase 5 --allow-boost
+hc keybind XF86AudioMute spawn pavolume-dunst mute
 
 hc keybind XF86AudioPlay spawn playerctl play-pause
 hc keybind XF86AudioPrev spawn playerctl previous
