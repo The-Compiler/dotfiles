@@ -75,14 +75,17 @@ bindkey -M vicmd '/' history-incremental-search-backward
 
 ### aliases / functions ###
 # default settings
-alias ls='ls --color --classify'
-alias l='ls --color --classify -lah'
+alias ls='lsd'
+alias l='lsd -la'
+alias lt='lsd --tree'
 alias grep='grep --color=auto'
 alias nano='nano --nowrap'
 alias dmesg='dmesg --human --decode --nopager'
+alias diff='diff --color=auto'
+alias ip='ip --color=auto'
+alias ping='prettyping'
 # shorthands
 alias hc='herbstclient'
-alias yu='yaourt -Suya; sudo abs; sudo pkgfile -u; gpg --refresh-keys; gpg --update-trustdb; sudo pacdiffviewer'
 alias tx='tmux -2 attach -d'
 alias fap='fahrplan -f'
 alias kal='vdirsyncer sync && khal interactive && vdirsyncer sync'
