@@ -8,6 +8,8 @@ setopt longlistjobs
 setopt notify
 # don't kill background jobs
 setopt nohup
+# no bells for completion
+unsetopt BEEP
 # pkgfile command_not_found handler
 if [[ -f /usr/share/doc/pkgfile/command-not-found.zsh ]]; then
     source /usr/share/doc/pkgfile/command-not-found.zsh
@@ -37,7 +39,7 @@ if which cope_path &>/dev/null; then
 fi
 
 ### Colors for less ###
-export LESS="-R -M +g"
+export LESS="-Q -R -M +g"
 export LESS_TERMCAP_me=$(printf '\e[0m')
 export LESS_TERMCAP_se=$(printf '\e[0m')
 export LESS_TERMCAP_ue=$(printf '\e[0m')
