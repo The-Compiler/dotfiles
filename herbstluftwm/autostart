@@ -11,7 +11,16 @@ modbind() {
     #hc keybind Mod1-$key "$@"
 }
 
+is_first_start() {
+    ! hc get_attr my_loaded 2>/dev/null
+}
+
 hc emit_hook reload
+
+if is_first_start; then
+    picom &
+    hc detect_monitors
+fi
 
 # xsetroot -solid black
 feh --bg-fill ~/img/wallpapers/abstract.png
@@ -197,8 +206,16 @@ for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
 done
 
 # autorun stuff
-[[ -z "$HLWM_LOADED" ]] && ~/.config/herbstluftwm/autorun &
-hc setenv HLWM_LOADED 1
+if is_first_start; then
+    guake -e 'journalctl -f -n 200' &
+    dunst &
+    nm-applet &
+    pasystray &
+    xss-lock tp-lock &
+fi
+
+hc new_attr bool my_loaded true
+
 hc setenv QT_AUTO_SCREEN_SCALE_FACTOR 0
 
 hc unlock
