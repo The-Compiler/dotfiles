@@ -254,10 +254,16 @@ def main():
 
     bar = lemonbar.Lemonbar(geometry=geom, foreground=Gruv.FG, background=Gruv.BG)
 
+    # painter = lemonbar.textpainter()
+    # with painter.temp_fg(ACCENT_COLOR):
+    #     painter.space(30)
+    #     painter.symbol(0xe0b4)
+    #     painter.space(5)
+
     left_widgets = [
         hlwm.HLWMTags(hc, monitor, tag_renderer=tag_renderer),
-    ]
-    center_widgets = [
+        # widgets.RawLabel(str(painter)),
+        widgets.Label(' ' * 5),
         hlwm.HLWMWindowTitle(hc),
     ]
     right_widgets = [
@@ -269,8 +275,6 @@ def main():
     bar.widget = widgets.ListLayout([
         widgets.RawLabel('%{l}'),
         *left_widgets,
-        widgets.RawLabel('%{c}'),
-        *center_widgets,
         widgets.RawLabel('%{r}'),
         *right_widgets,
     ])
