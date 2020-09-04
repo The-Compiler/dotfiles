@@ -1,7 +1,7 @@
 sy on
 set ts=4 sts=4 sw=4 et
 set nu
-set belloff=error,esc,wildmode  " Disable terminal bell in some situations
+set belloff=error,esc,wildmode,cursor  " Disable terminal bell in some situations
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
