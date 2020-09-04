@@ -32,3 +32,5 @@ colorMoved = plain
 	includeIssuesSection = false
 [pull]
 	rebase = false
+[github]
+	user = The-Compiler

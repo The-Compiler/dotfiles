@@ -61,3 +61,6 @@
   '(minimap-active-region-background :background "#3c3836")
   '(minimap-current-line-face :background "#504945")
 )
+
+;; for magit force
+(setq auth-sources '("~/.authinfo"))
