@@ -66,3 +66,12 @@
 
 ;; https://github.com/hlissner/doom-emacs/issues/2688
 (setq confirm-kill-emacs nil)
+
+;; FIXME doesn't seem to work?
+;; zoom keys
+(global-set-key (kbd "C-+") 'text-scale-increase)
+(global-set-key (kbd "C--") 'text-scale-decrease)
+(global-set-key (kbd "C-=") (lambda () (interactive) (text-scale-set 0)))
+
+;; Never use pylint for flycheck (fails to load qute_pylint)
+(after! flycheck (setq-default flycheck-disabled-checkers '(python-pylint)))
