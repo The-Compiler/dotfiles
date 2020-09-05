@@ -17,7 +17,7 @@ export CCACHE_PREFIX=$(which cope)
 ### settings
 export SUDO_PROMPT='[sudo] password for %u@%h (-> %U): '
 export GIT_PAGER='less +g'
-export QT_QPA_PLATFORMTHEME='gtk2'
+export QT_QPA_PLATFORMTHEME='qt5ct'
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 ### ndless
