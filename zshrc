@@ -30,9 +30,6 @@ setopt SHARE_HISTORY
 # Ignore commands starting with a space
 setopt hist_ignore_space
 
-### Colors for ls ###
-[[ -f ~/.dircolors ]] && eval $(dircolors ~/.dircolors) || eval $(dircolors)
-
 ### general colors ###
 if which cope_path &>/dev/null; then
     export PATH="$(cope_path):$PATH"
@@ -245,11 +242,6 @@ if [[ -n "$highlight" ]]; then
     ZSH_HIGHLIGHT_STYLES[path]='bold'
     ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red'
 fi
-
-### Humble bundle key ###
-[[ -f ~/.humblebundle ]] && source ~/.humblebundle
-[[ -f ~/.deltachat ]] && source ~/.deltachat
-
 
 ## infsi1
 viewcert() {
