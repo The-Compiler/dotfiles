@@ -133,6 +133,7 @@ modbind d spawn rofi -m -4 -show run
 modbind Shift-d spawn rofi -m -4 -show drun -show-icons
 modbind w spawn rofi -m -4 -show window
 modbind Shift-w spawn hlwm-bring
+modbind grave spawn hlwm-namenstag
 modbind n spawn networkmanager_dmenu
 modbind y spawn utf8select
 modbind Shift-y spawn rofimoji
