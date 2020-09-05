@@ -20,7 +20,7 @@
 	"mflags": "",
 	"sortby": "votes",
 	"gitflags": "",
-	"removemake": true,
+	"removemake": "yes",
 	"requestsplitn": 150,
 	"sortmode": 0,
 	"completionrefreshtime": 7,
