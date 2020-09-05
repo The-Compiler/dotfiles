@@ -97,10 +97,14 @@ modbind Next use_index +1
 
 # layouting
 modbind r remove
-modbind s floating toggle
-modbind f fullscreen toggle
 modbind p pseudotile toggle
-modbind Shift-f set_attr clients.focus.floating toggle
+
+modbind s floating toggle
+modbind Shift-s set_attr clients.focus.floating toggle
+
+modbind f spawn /usr/share/doc/herbstluftwm/examples/maximize.sh
+modbind Shift-f fullscreen toggle
+
 # The following cycles through the available layouts within a frame, but skips
 # layouts, if the layout change wouldn't affect the actual window positions.
 # I.e. if there are two windows within a frame, the grid layout is skipped.
