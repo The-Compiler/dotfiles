@@ -262,7 +262,6 @@ def main():
 
     left_widgets = [
         hlwm.HLWMTags(hc, monitor, tag_renderer=tag_renderer),
-        # widgets.RawLabel(str(painter)),
         widgets.Label(' ' * 5),
         hlwm.HLWMWindowTitle(hc),
     ]
