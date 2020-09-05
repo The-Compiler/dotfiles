@@ -25,10 +25,10 @@ bright_yellow = "#fabd2f"
 bright_blue = "#83a598"
 bright_purple = "#d3869b"
 bright_aqua = "#8ec07c"
-# bright_gray = "#928374"
+bright_gray = "#928374"
 bright_orange = "#fe8019"
 
-# dark_red = "#cc241d"
+dark_red = "#cc241d"
 # dark_green = "#98971a"
 # dark_yellow = "#d79921"
 # dark_blue = "#458588"
@@ -122,18 +122,17 @@ c.colors.downloads.error.fg = bright_red
 # Font color for hints.
 c.colors.hints.fg = bg0_hard
 
-# Background color for hints. Note that you can use a `rgba(...)` value
-# for transparency.
-c.colors.hints.bg = bright_yellow
+# Background color for hints.
+c.colors.hints.bg = 'rgba(250, 191, 47, 200)'  # bright_yellow
 
 # Font color for the matched part of hints.
-c.colors.hints.match.fg = fg2
+c.colors.hints.match.fg = dark_red
 
 # Text color for the keyhint widget.
 c.colors.keyhint.fg = fg2
 
 # Highlight color for keys to complete the current keychain.
-c.colors.keyhint.suffix.fg = fg2
+c.colors.keyhint.suffix.fg = fg3
 
 # Background color of the keyhint widget.
 c.colors.keyhint.bg = bg0_hard
@@ -169,7 +168,7 @@ c.colors.messages.info.border = bg0_hard
 c.colors.prompts.fg = fg2
 
 # Border used around UI elements in prompts.
-c.colors.prompts.border = bg0_hard
+c.colors.prompts.border = f'1px solid {bg1}'
 
 # Background color for prompts.
 c.colors.prompts.bg = bg0_hard
@@ -310,4 +309,4 @@ c.colors.tabs.selected.even.bg = bg0_hard
 
 # Background color for webpages if unset (or empty to use the theme's
 # color).
-c.colors.webpage.bg = bg0_hard
+c.colors.webpage.bg = bg4
