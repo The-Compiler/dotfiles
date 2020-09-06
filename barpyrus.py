@@ -3,7 +3,7 @@ import contextlib
 import multiprocessing
 import collections
 
-from barpyrus import lemonbar, conky, trayer, widgets, hlwm
+from barpyrus import lemonbar, conky, trayer, widgets, hlwm, core
 
 
 class Gruv:
@@ -254,18 +254,11 @@ def main():
 
     bar = lemonbar.Lemonbar(geometry=geom, foreground=Gruv.FG, background=Gruv.BG)
 
-    color_painter = lemonbar.textpainter()
-    color_painter.fg(Gruv.FG4)
-
-    reset_painter = lemonbar.textpainter()
-    reset_painter.fg(None)
+    title_theme = core.Theme(fg=Gruv.FG4, padding=(40, 0))
 
     left_widgets = [
         hlwm.HLWMTags(hc, monitor, tag_renderer=tag_renderer),
-        widgets.Label(' ' * 5),
-        widgets.RawLabel(str(color_painter)),
-        hlwm.HLWMWindowTitle(hc),
-        widgets.RawLabel(str(reset_painter)),
+        title_theme(hlwm.HLWMWindowTitle(hc)),
     ]
     right_widgets = [
         conky.ConkyWidget(text=str(cg), config=conky_config),
