@@ -254,16 +254,18 @@ def main():
 
     bar = lemonbar.Lemonbar(geometry=geom, foreground=Gruv.FG, background=Gruv.BG)
 
-    # painter = lemonbar.textpainter()
-    # with painter.temp_fg(ACCENT_COLOR):
-    #     painter.space(30)
-    #     painter.symbol(0xe0b4)
-    #     painter.space(5)
+    color_painter = lemonbar.textpainter()
+    color_painter.fg(Gruv.FG4)
+
+    reset_painter = lemonbar.textpainter()
+    reset_painter.fg(None)
 
     left_widgets = [
         hlwm.HLWMTags(hc, monitor, tag_renderer=tag_renderer),
         widgets.Label(' ' * 5),
+        widgets.RawLabel(str(color_painter)),
         hlwm.HLWMWindowTitle(hc),
+        widgets.RawLabel(str(reset_painter)),
     ]
     right_widgets = [
         conky.ConkyWidget(text=str(cg), config=conky_config),
