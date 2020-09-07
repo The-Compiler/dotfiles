@@ -90,10 +90,10 @@ for i in ${!tag_names[@]} ; do
 done
 
 # cycle through tags
-hc keybind Shift-$Mod-Prior spawn hlwm-tagswitch prev
-hc keybind Shift-$Mod-Next spawn hlwm-tagswitch next
-modbind Prior use_index -1
-modbind Next use_index +1
+modbind comma spawn hlwm-tagswitch prev
+modbind period spawn hlwm-tagswitch next
+modbind Shift-comma use_index -1
+modbind Shift-period use_index +1
 
 # layouting
 modbind r remove
@@ -206,10 +206,8 @@ hc rule instance=guake floating=on
 
 hc set tree_style '╾│ ├└╼─┐'
 
-# start the panel
-[ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
-for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
-    # start it on each monitor
+# start the panel on each monitor
+for monitor in $(hc list_monitors | cut -d: -f1) ; do
     barpyrus $monitor &
 done
 
@@ -226,7 +224,5 @@ if is_first_start; then
 fi
 
 hc new_attr bool my_loaded true
-
-hc setenv QT_AUTO_SCREEN_SCALE_FACTOR 0
 
 hc unlock
