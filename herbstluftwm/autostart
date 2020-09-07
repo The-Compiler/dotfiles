@@ -1,5 +1,18 @@
 #!/usr/bin/env bash
 
+handle_error() {
+    trap '' ERR
+    local frame=0 str
+    local stacktrace="Command exited with status $1\n\nStack:"
+    while str=$(caller $frame); do
+        stacktrace+="\nline $str"
+        frame=$((frame+1))
+    done
+    notify-send -u critical "hlwm config error" "$stacktrace"
+}
+set -o errtrace
+trap 'handle_error $?' ERR
+
 hc() {
     herbstclient "$@"
 }
@@ -12,7 +25,7 @@ modbind() {
 }
 
 is_first_start() {
-    ! hc get_attr my_loaded 2>/dev/null
+    ! hc silent get_attr my_loaded 2>/dev/null
 }
 
 hc emit_hook reload
@@ -226,8 +239,7 @@ if is_first_start; then
     mate-power-manager &
     xinput disable 'SynPS/2 Synaptics TouchPad' &
     hp-systray &
+    hc new_attr bool my_loaded true
 fi
-
-hc new_attr bool my_loaded true
 
 hc unlock
