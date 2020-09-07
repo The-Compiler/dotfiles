@@ -222,6 +222,7 @@ if is_first_start; then
     xss-lock tp-lock &
     mate-power-manager &
     xinput disable 'SynPS/2 Synaptics TouchPad' &
+    hp-systray &
 fi
 
 hc new_attr bool my_loaded true
