@@ -76,18 +76,20 @@ modbind Control-Up      resize up +$resizestep
 modbind Control-Right   resize right +$resizestep
 
 # tags
-tag_names=( {1..9} )
-tag_keys=( {1..9} 0 )
+if is_first_start; then
+    tag_names=( {1..9} )
+    tag_keys=( {1..9} 0 )
 
-hc rename default "${tag_names[0]}" || true
-for i in ${!tag_names[@]} ; do
-    hc add "${tag_names[$i]}"
-    key="${tag_keys[$i]}"
-    if ! [ -z "$key" ] ; then
-        modbind $key use_index "$i"
-        modbind Shift-$key move_index "$i"
-    fi
-done
+    hc rename default "${tag_names[0]}" || true
+    for i in ${!tag_names[@]} ; do
+        hc add "${tag_names[$i]}"
+        key="${tag_keys[$i]}"
+        if ! [ -z "$key" ] ; then
+            modbind $key use_index "$i"
+            modbind Shift-$key move_index "$i"
+        fi
+    done
+fi
 
 # cycle through tags
 modbind comma spawn hlwm-tagswitch prev
