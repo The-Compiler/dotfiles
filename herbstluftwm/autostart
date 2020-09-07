@@ -239,6 +239,7 @@ if is_first_start; then
     mate-power-manager &
     xinput disable 'SynPS/2 Synaptics TouchPad' &
     hp-systray &
+    udiskie &
     hc new_attr bool my_loaded true
 fi
 

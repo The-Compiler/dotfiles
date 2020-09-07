@@ -1,0 +1,9 @@
+program_options:
+  tray: auto
+  menu: flat
+  automount: false
+  notify: true
+  password_cache: false
+quickmenu_actions: [mount, eject]
+icon_names:
+  media: [media-flash]
