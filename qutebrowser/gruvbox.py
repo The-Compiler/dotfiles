@@ -13,8 +13,8 @@ bg2 = "#504945"
 bg3 = "#665c54"
 bg4 = "#7c6f64"
 
-# fg0 = "#fbf1c7"
-# fg1 = "#ebdbb2"
+fg0 = "#fbf1c7"
+fg1 = "#ebdbb2"
 fg2 = "#d5c4a1"
 fg3 = "#bdae93"
 fg4 = "#a89984"
@@ -42,10 +42,10 @@ dark_red = "#cc241d"
 c.colors.completion.fg = fg2
 
 # Background color of the completion widget for odd rows.
-c.colors.completion.odd.bg = bg0_hard
+c.colors.completion.odd.bg = bg1
 
 # Background color of the completion widget for even rows.
-c.colors.completion.even.bg = bg0_hard
+c.colors.completion.even.bg = bg1
 
 # Foreground color of completion widget category headers.
 c.colors.completion.category.fg = bright_blue
@@ -63,7 +63,7 @@ c.colors.completion.category.border.bottom = bg0_hard
 c.colors.completion.item.selected.fg = fg2
 
 # Background color of the selected completion item.
-c.colors.completion.item.selected.bg = bg2
+c.colors.completion.item.selected.bg = bg4
 
 # Top border color of the selected completion item.
 c.colors.completion.item.selected.border.top = bg2
@@ -72,7 +72,7 @@ c.colors.completion.item.selected.border.top = bg2
 c.colors.completion.item.selected.border.bottom = bg2
 
 # Foreground color of the matched text in the selected completion item.
-c.colors.completion.item.selected.match.fg = fg2
+c.colors.completion.item.selected.match.fg = bright_orange
 
 # Foreground color of the matched text in the completion.
 c.colors.completion.match.fg = bright_orange
@@ -126,13 +126,13 @@ c.colors.hints.fg = bg0_hard
 c.colors.hints.bg = 'rgba(250, 191, 47, 200)'  # bright_yellow
 
 # Font color for the matched part of hints.
-c.colors.hints.match.fg = dark_red
+c.colors.hints.match.fg = bg4
 
 # Text color for the keyhint widget.
-c.colors.keyhint.fg = fg2
+c.colors.keyhint.fg = fg4
 
 # Highlight color for keys to complete the current keychain.
-c.colors.keyhint.suffix.fg = fg3
+c.colors.keyhint.suffix.fg = fg0
 
 # Background color of the keyhint widget.
 c.colors.keyhint.bg = bg0_hard
