@@ -158,54 +158,52 @@ venv_prompt_info() {
         else
             local name=$(basename "$VIRTUAL_ENV")
         fi
-        echo "${prompt_startsep}%F{red}venv:$name%f${prompt_endsep}"
+        echo "${prompt_startsep}%F{cyan}venv:$name%f${prompt_endsep}"
     fi
 }
 
 disp_prompt_info() {
     if [[ -n "$DISPLAY" && "$DISPLAY" != ":0" ]]; then
-        echo "${prompt_startsep}%F{red}disp:$DISPLAY%f${prompt_endsep}"
+        echo "${prompt_startsep}%F{cyan}disp $DISPLAY%f${prompt_endsep}"
     fi
 }
 
 setprompt() {
+    # Not local because they're used in utility functions above!
+    prompt_startsep="%F{blue}──[%f"
+    prompt_endsep="%F{blue}]%f"
     local reset="%{$reset_color%}"
     local upper_start='%F{blue}─[%f'
     local other_start='%F{blue}┄─[%f'
-    local other_end=']─╼ ${reset}'
-    local userhost='%F{green}%n@%m%f'
+    local other_end="]─╼ ${reset}"
+    local userhost='%(?.%F{green}.%F{red})%n@%m%(?.. %F{yellow}$?)%f'
     local sep='%F{blue}]──[%f'
-    prompt_startsep='%F{blue}──[%f'
-    prompt_endsep='%F{blue}]%f'
     local fade='%F{blue}────┄%f'
     local dir='%F{red}%~%f'
     local date='%F{yellow}%D%f'
     local dtime='%F{yellow}%T%f'
-    local job="%(1j.${prompt_startsep}%F{red}%j job.)%(2j.s.)%(1j.${prompt_endsep}.)%f"
+    local job="%(1j.${prompt_startsep}%F{cyan}%j job.)%(2j.s.)%(1j.${prompt_endsep}.)%f"
     local vcs='${vcs_info_msg_0_}'
     if [[ -n $RANGER_LEVEL ]]; then
-        local ranger="${prompt_startsep}%F{red}ranger"
-        (( RANGER_LEVEL > 1 )) && ranger+=":$RANGER_LEVEL"
+        local ranger="${prompt_startsep}%F{cyan}ranger"
+        (( RANGER_LEVEL > 1 )) && ranger+=" $RANGER_LEVEL"
         ranger+="%f${prompt_endsep}"
     else
         local ranger=
     fi
-    local rootwarn='%(!.%F{blue}(%f%F{red}!%f%F{blue}).)%f'
     local promptchar='%F{blue}─╼ %f'
     local n=$'\n'
-    local rstatus='%(?..%F{red}╾─[%F{blue}$?%F{red}]──┄)'
+    local dollar="%(!.%F{yellow}#.%F{#665c54}\$) ${reset}"
 
     export VIRTUAL_ENV_DISABLE_PROMPT=1
-    PROMPT="${upper_start}${userhost}${sep}${dir}${sep}${date}${sep}"
+    PROMPT="${n}${upper_start}${userhost}${sep}${dir}${sep}${date}${sep}"
     PROMPT+="${dtime}${prompt_endsep}${job}\$(venv_prompt_info)${vcs}${ranger}"
-    PROMPT+="\$(disp_prompt_info)${fade}$n"
-
-    #PROMPT+="${lower_start}${rootwarn}${promptchar}${reset}"
+    PROMPT+="\$(disp_prompt_info)${fade}"
+    PROMPT+="$n${dollar}"
 
     PROMPT2="${other_start}%_${other_end}"
     PROMPT3="${other_start}?${other_end}"
     PROMPT4="${other_start}%N:%i${other_end}"
-    RPROMPT="${rstatus}${reset}"
 }
 
 setprompt
