@@ -75,3 +75,6 @@
 
 ;; Never use pylint for flycheck (fails to load qute_pylint)
 (after! flycheck (setq-default flycheck-disabled-checkers '(python-pylint)))
+
+;; Don't display DOOM ascii banner
+(remove-hook '+doom-dashboard-functions 'doom-dashboard-widget-banner)
