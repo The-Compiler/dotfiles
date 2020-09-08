@@ -17,7 +17,6 @@ export CCACHE_PREFIX=$(which cope)
 
 ### settings
 export SUDO_PROMPT=$'\033[33m[sudo]\033[0m password for \033[32m%u@%h\033[0m (-> \033[31m%U\033[0m): '
-export GIT_PAGER='less +g'
 export QT_QPA_PLATFORMTHEME='qt5ct'
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
 export DOTNET_CLI_TELEMETRY_OPTOUT=1

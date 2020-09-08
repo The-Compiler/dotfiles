@@ -78,3 +78,6 @@
 
 ;; Don't display DOOM ascii banner
 (remove-hook '+doom-dashboard-functions 'doom-dashboard-widget-banner)
+
+;; nicer magit diffs
+(magit-delta-mode)
