@@ -65,7 +65,7 @@
 (setq auth-sources '("~/.authinfo"))
 
 ;; https://github.com/hlissner/doom-emacs/issues/2688
-(setq confirm-kill-emacs nil)
+; (setq confirm-kill-emacs nil)
 
 ;; FIXME doesn't seem to work?
 ;; zoom keys
