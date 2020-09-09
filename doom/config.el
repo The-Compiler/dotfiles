@@ -81,3 +81,27 @@
 
 ;; nicer magit diffs
 (magit-delta-mode)
+
+;; Various customizations
+;; most from https://tecosaur.github.io/emacs-config/config.html
+(setq-default
+ tab-width 4
+ uniquify-buffer-name-style 'forward
+ window-combination-resize t
+ evil-want-fine-undo t
+ truncate-string-ellipsis "…")
+
+(global-subword-mode)
+(mouse-avoidance-mode 'exile)
+
+;; Prompt for buffer after splitting
+;; From https://tecosaur.github.io/emacs-config/config.html
+(setq evil-vsplit-window-right t
+      evil-split-window-below t)
+(defadvice! prompt-for-buffer (&rest _)
+  :after '(evil-window-split evil-window-vsplit)
+  (+ivy/switch-buffer))
+(setq +ivy-buffer-preview t)
+
+;; Others from tecosaur
+(setq which-key-idle-delay 0.4)
