@@ -71,6 +71,8 @@ color body blue default \
 color body cyan default '[-=+#_*~]{3,}.*'   # lines
 color body cyan default '\.{4,}.*'   # lines
 color body cyan default '^\*.*\*$'   # titles
+color body cyan default '^» .*'   # titles (inwx)
+color body cyan default '^– .* –$'   # titles (KOSMOS)
 color body yellow default '@The-Compiler'
 
 color body cyan default '^gpg.*'
