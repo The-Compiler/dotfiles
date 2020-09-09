@@ -16,7 +16,7 @@ export CCACHE_BASEDIR=~
 export CCACHE_PREFIX=$(which cope)
 
 ### settings
-export SUDO_PROMPT=$'\033[33m[sudo]\033[0m password for \033[32m%u@%h\033[0m (-> \033[31m%U\033[0m): '
+export SUDO_PROMPT="$(tput setaf 3)[sudo]$(tput sgr0) password for $(tput setaf 2)%u@%h$(tput sgr0) (-> $(tput setaf 1)%U$(tput sgr0)): "
 export QT_QPA_PLATFORMTHEME='qt5ct'
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
