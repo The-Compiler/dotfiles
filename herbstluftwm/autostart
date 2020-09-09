@@ -44,7 +44,8 @@ hc keyunbind --all
 # keybindings
 Mod=Mod4   # Use the super key as the main modifier
 
-modbind Shift-q quit
+modbind Shift-space spawn metarofi
+modbind Shift-q spawn rofi-power 'herbstclient quit'
 modbind Shift-r reload
 modbind Shift-c close
 modbind Return spawn ${TERMINAL:-xterm}
