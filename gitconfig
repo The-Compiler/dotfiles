@@ -5,7 +5,9 @@
     diffFilter = delta --color-only
 
 [delta]
-    features = line-numbers decorations
+    # https://github.com/dandavison/magit-delta/issues/13
+    # features = line-numbers decorations
+    features = decorations
     whitespace-error-style = green reverse
 
 [delta "decorations"]
