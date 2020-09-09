@@ -182,7 +182,7 @@ setprompt() {
     prompt_startsep="%F{blue}──[%f"
     prompt_endsep="%F{blue}]%f"
     local upper_start='%F{blue}─[%f'
-    local userhost='%(?.%F{green}.%F{red})%n@%m%(?.. %F{yellow}$?)%f'
+    local userhost='%(?.%F{green}.%F{red})%n@%m%(?..%(130?.. %F{yellow}$?))%f'
     local sep='%F{blue}]──[%f'
     local dir='%F{red}%~%f'
     local date='%F{yellow}%D%f'
