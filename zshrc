@@ -30,6 +30,9 @@ setopt SHARE_HISTORY
 # Ignore commands starting with a space
 setopt hist_ignore_space
 
+### Colors for ls ###
+[[ -f ~/.dircolors ]] && eval $(dircolors ~/.dircolors) || eval $(dircolors)
+
 ### general colors ###
 if which cope_path &>/dev/null; then
     export PATH="$(cope_path):$PATH"
