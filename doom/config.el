@@ -102,7 +102,7 @@
       evil-split-window-below t)
 (defadvice! prompt-for-buffer (&rest _)
   :after '(evil-window-split evil-window-vsplit)
-  (+ivy/switch-buffer))
+  (+ivy/projectile-find-file))
 (setq +ivy-buffer-preview t)
 
 ;; Others from tecosaur
