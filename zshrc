@@ -1,4 +1,8 @@
 #!/usr/bin/zsh
+### utilities ###
+cmd_exists() {
+    which "$1" &>/dev/null
+}
 ### General options ###
 # Report time if command runs >2s
 REPORTTIME=2
@@ -34,7 +38,7 @@ setopt hist_ignore_space
 [[ -f ~/.dircolors ]] && eval $(dircolors ~/.dircolors) || eval $(dircolors)
 
 ### general colors ###
-if which cope_path &>/dev/null; then
+if cmd_exists cope_path; then
     export PATH="$(cope_path):$PATH"
 fi
 
@@ -75,15 +79,17 @@ bindkey -M vicmd '/' history-incremental-search-backward
 
 ### aliases / functions ###
 # default settings
-alias ls='lsd'
-alias l='lsd -la'
-alias lt='lsd --tree'
+if cmd_exists lsd; then
+    alias ls='lsd'
+    alias l='lsd -la'
+    alias lt='lsd --tree'
+fi
 alias grep='grep --color=auto'
 alias nano='nano --nowrap'
 alias dmesg='dmesg --human --decode --nopager'
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
-alias ping='prettyping'
+cmd_exists prettyping && alias ping='prettyping'
 # shorthands
 alias hc='herbstclient'
 alias tx='tmux -2 attach -d'
@@ -193,7 +199,9 @@ setprompt() {
     local job="%(1j.${prompt_startsep}%F{cyan}%j job.)%(2j.s.)%(1j.${prompt_endsep}.)%f"
     local vcs='${vcs_info_msg_0_}'
     local fade='%F{blue}────┄%f'
-    local dollar="%(!.%F{yellow}#.%F{#665c54}\$) %f"
+    local dollarcolor
+    [[ $COLORTERM = *(24bit|truecolor)* ]] && dollarcolor='#665c64' || dollarcolor='white'
+    local dollar="%(!.%F{yellow}#.%F{$dollarcolor}%b\$) %f"
     local n=$'\n'
 
     export VIRTUAL_ENV_DISABLE_PROMPT=1
@@ -251,7 +259,7 @@ viewcert() {
 
 ## pyenv
 export PATH="/home/florian/.pyenv/bin:$PATH"
-if which pyenv &>/dev/null; then
+if cmd_exists pyenv; then
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 fi
