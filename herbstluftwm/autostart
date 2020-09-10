@@ -232,16 +232,20 @@ done
 
 # autorun stuff
 if is_first_start; then
+    hc new_attr bool my_loaded true
+
+    xinput disable 'SynPS/2 Synaptics TouchPad' &
     guake -e 'journalctl -f -n 200' &
+
     dunst &
-    nm-applet &
-    pasystray &
     xss-lock tp-lock &
     mate-power-manager &
-    xinput disable 'SynPS/2 Synaptics TouchPad' &
+
+    nm-applet &
+    pasystray &
     hp-systray &
     udiskie &
-    hc new_attr bool my_loaded true
+    blueman &
 fi
 
 hc unlock
