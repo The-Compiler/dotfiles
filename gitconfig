@@ -9,6 +9,9 @@
     # features = line-numbers decorations
     features = decorations
     whitespace-error-style = green reverse
+    # https://github.com/peaceant/gruvbox
+    # cloned to ~/.config/bat/themes/
+    syntax-theme = gruvbox
 
 [delta "decorations"]
     commit-decoration-style = bold yellow ul ol
