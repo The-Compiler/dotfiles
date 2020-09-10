@@ -72,6 +72,8 @@
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
 (global-set-key (kbd "C-=") (lambda () (interactive) (text-scale-set 0)))
+;; SPC /
+(map! :leader :desc "Search project" "p /" #'+default/search-project)
 
 ;; Never use pylint for flycheck (fails to load qute_pylint)
 (after! flycheck (setq-default flycheck-disabled-checkers '(python-pylint)))
