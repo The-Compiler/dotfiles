@@ -151,8 +151,8 @@ def _cg_net_icon(cg, iface):
 
 
 def cg_net(cg):
-    with cg.if_('up tun0'):
-        with cg.temp_fg('#ff0000'):
+    with cg.if_('up vpn0'):
+        with cg.temp_fg(Gruv.YELLOW_LIGHT):
             cg.symbol(0xe0a6)
 
     for iface in ['eth', 'dock', 'wlan', 'ppp0']:
