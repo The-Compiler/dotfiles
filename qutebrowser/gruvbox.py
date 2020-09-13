@@ -43,7 +43,7 @@ dark_orange = "#d65d0e"
 
 # Text color of the completion widget. May be a single color to use for
 # all columns or a list of three colors, one for each column.
-c.colors.completion.fg = fg2
+c.colors.completion.fg = [fg1, bright_aqua, bright_yellow]
 
 # Background color of the completion widget for odd rows.
 c.colors.completion.odd.bg = bg0
@@ -64,7 +64,7 @@ c.colors.completion.category.border.top = c.colors.completion.category.bg
 c.colors.completion.category.border.bottom = c.colors.completion.category.bg
 
 # Foreground color of the selected completion item.
-c.colors.completion.item.selected.fg = c.colors.completion.fg
+c.colors.completion.item.selected.fg = fg0
 
 # Background color of the selected completion item.
 c.colors.completion.item.selected.bg = bg4
@@ -82,7 +82,7 @@ c.colors.completion.item.selected.match.fg = bright_orange
 c.colors.completion.match.fg = c.colors.completion.item.selected.match.fg
 
 # Color of the scrollbar handle in the completion view.
-c.colors.completion.scrollbar.fg = c.colors.completion.fg
+c.colors.completion.scrollbar.fg = c.colors.completion.item.selected.fg
 
 # Color of the scrollbar in the completion view.
 c.colors.completion.scrollbar.bg = c.colors.completion.category.bg
