@@ -3,7 +3,7 @@ from pprint import pprint as pp  # convenience
 
 try:
     from rich import pretty
-except ModuleNotFoundError:
+except ImportError:
     pass
 else:
     pretty.install()
