@@ -144,7 +144,7 @@ def _cg_net_icon(cg, iface):
             cg.space(5)
         elif iface in ['eth', 'dock']:
             cg.symbol(0xe0af)
-        elif iface == 'ppp0':
+        elif iface in ['ppp0', 'bnep0']:
             cg.symbol(0xe0f3)
         else:
             assert False
@@ -155,14 +155,14 @@ def cg_net(cg):
         with cg.temp_fg(Gruv.YELLOW_LIGHT):
             cg.symbol(0xe0a6)
 
-    for iface in ['eth', 'dock', 'wlan', 'ppp0']:
+    for iface in ['eth', 'dock', 'wlan', 'ppp0', 'bnep0']:
         with cg.if_(f'up {iface}'), cg.if_('match "${addr %s}" != "No Address"' % iface):
             _cg_net_icon(cg, iface)
 
             if iface == 'wlan':
                 cg.var('wireless_essid wlan')
 
-            if iface != 'ppp0':
+            if iface not in ['ppp0', 'bnep0']:
                 cg.space(5)
                 cg.var(f'addr {iface}')
 
