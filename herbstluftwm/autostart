@@ -246,6 +246,7 @@ if is_first_start; then
     hp-systray &
     udiskie &
     blueman &
+    redshift-gtk &
 fi
 
 hc unlock
