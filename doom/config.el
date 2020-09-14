@@ -107,3 +107,7 @@
 
 ;; Others from tecosaur
 (setq which-key-idle-delay 0.4)
+
+;; Custom modes
+(use-package! feature-mode :mode ("\\.feature\\'" . feature-mode))
+(add-to-list 'auto-mode-alist '("\\.feature\\'" . 'feature-mode))

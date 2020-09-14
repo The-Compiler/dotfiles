@@ -51,3 +51,4 @@
 
 (package! gruvbox-theme)
 (package! magit-delta)
+(package! feature-mode)
