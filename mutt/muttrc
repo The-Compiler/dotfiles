@@ -86,7 +86,7 @@ color body yellow default '^gpg:          There is no indication that the signat
 color body yellow default '^gpg: no valid OpenPGP data found.*'
 
 ## sending
-set signature = ~/.mutt/sig
+set signature = $my_cfgdir/sig
 set editor = "vim -c 'set filetype=mail' -c 'set fileencodings=' \
              -c 'set fileencoding=' -c 'set nohlsearch' '+:silent+?^$' "
 set autoedit
