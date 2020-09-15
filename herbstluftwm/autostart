@@ -152,9 +152,9 @@ hc keybind XF86Display spawn rofi-xrandr
 hc keybind XF86Favorites spawn tp-lock
 hc keybind Shift+XF86Favorites spawn systemctl suspend
 
-modbind d spawn rofi -show drun -show-icons
-modbind Shift-d spawn rofi -show run
-modbind w spawn rofi -show window -show-icons
+modbind d spawn rofi -show drun -modi drun,run -show-icons
+modbind Shift-d spawn rofi -show run -modi drun,run
+modbind w spawn rofi -show window -modi window -show-icons
 modbind Shift-w spawn hlwm-bring
 modbind grave spawn hlwm-namenstag
 modbind n spawn networkmanager_dmenu
