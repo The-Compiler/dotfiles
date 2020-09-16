@@ -45,12 +45,12 @@ fi
 ### Colors for less ###
 export LESS="-Q -R -M +g"
 export LESS_TERMCAP_me=$(tput sgr0)  # reset
-export LESS_TERMCAP_se=$(tput rmso)  # stop standout
-export LESS_TERMCAP_ue=$(tput rmul)  # stop underline
 export LESS_TERMCAP_mb=$(tput blink)
 export LESS_TERMCAP_md=$(tput setaf 4)  # bold -> blue
 export LESS_TERMCAP_us=$(tput setaf 2)  # underline -> green
+export LESS_TERMCAP_ue=$(tput sgr0)  # stop underline (green)
 export LESS_TERMCAP_so=$(tput smso)  # standout
+export LESS_TERMCAP_se=$(tput rmso)  # stop standout
 
 ### keybindings ###
 # vi mode
