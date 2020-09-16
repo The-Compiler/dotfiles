@@ -68,7 +68,7 @@ color sidebar_indicator yellow default
 color sidebar_highlight brightyellow default
 color body blue default \
     '(\w+://|www\.)[-.a-z0-9]+\.[a-z]{2,}[A-Za-z0-9;:.~_/%@#?+&=-]*' # URLs
-color body cyan default '[-=+#_*~]{3,}.*'   # lines
+color body cyan default '^ *[-=+#_*~]{3,}.*'   # lines
 color body cyan default '\.{4,}.*'   # lines
 color body cyan default '^\*.*\*$'   # titles
 color body cyan default '^» .*'   # titles (inwx)
