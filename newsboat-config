@@ -1,7 +1,7 @@
 auto-reload yes
 confirm-exit yes
 reload-time 5
-reload-threads 4
+reload-threads 1
 
 # vimlike bindings
 unbind-key ^B
@@ -28,7 +28,8 @@ color article      default   default
 highlight article "^(Title):.*$" blue default
 highlight article "https?://[^ ]+" red default
 highlight article "\\[image\\ [0-9]+\\]" green default
-highlight article "[-=+#_*~]{3,}.*" green default  # lines
+# highlight article "[-=+#_*~]{3,}.*" green default  # lines
+highlight article "[-=+_*~]{3,}.*" green default  # lines
 
 notify-xterm yes
 notify-beep yes
@@ -36,5 +37,5 @@ notify-beep yes
 urls-source "ttrss"
 ttrss-url "https://rss.the-compiler.org/"
 ttrss-login "florian"
-ttrss-passwordfile "~/.config/newsbeuter/password""
+ttrss-passwordfile "~/.config/newsboat/password"
 ttrss-flag-star "s"
