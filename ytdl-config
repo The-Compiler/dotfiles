@@ -1,0 +1,5 @@
+--mark-watched
+--output '%(uploader)s : %(upload_date)s : %(title)s : %(id)s.%(ext)s'
+--write-sub --write-auto-sub --embed-subs --sub-lang en
+--format bestvideo[height<=1080]+bestaudio/best
+--cookies ~/.config/youtube-dl/cookies.txt
