@@ -213,6 +213,22 @@ def cg_battery(cg):
             cg.var('battery_time')
             cg.space(5)
 
+    with cg.if_('existing /run/tlp/manual_mode'):
+        cg.fg(ACCENT_COLOR)
+        cg.symbol(0xe1d8)
+        cg.fg(None)
+        with cg.cases():
+            cg.case('match ${cat /run/tlp/manual_mode} == 0')
+            cg.symbol(0xe0db)
+            cg.case('match ${cat /run/tlp/manual_mode} == 1')
+            cg.space(2)
+            cg.symbol(0xe03b)
+            cg.else_()
+            cg.text("unknown")
+
+        cg.fg(None)
+        cg.space(2)
+
 
 def cg_time(cg):
     with cg.temp_fg(ACCENT_COLOR):
