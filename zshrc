@@ -86,7 +86,7 @@ if cmd_exists lsd; then
 fi
 alias grep='grep --color=auto'
 alias nano='nano --nowrap'
-alias dmesg='dmesg --human --decode --nopager'
+alias dmesg='dmesg --human --nopager'
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
 cmd_exists prettyping && alias ping='prettyping'
