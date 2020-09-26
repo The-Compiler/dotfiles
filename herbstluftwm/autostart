@@ -238,7 +238,7 @@ if is_first_start; then
     guake -e 'journalctl -f -n 200' &
 
     dunst &
-    xss-lock tp-lock &
+    # xss-lock tp-lock &
     mate-power-manager &
 
     nm-applet &
