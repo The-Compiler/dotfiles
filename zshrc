@@ -93,8 +93,11 @@ cmd_exists prettyping && alias ping='prettyping'
 # shorthands
 alias hc='herbstclient'
 alias tx='tmux -2 attach -d'
-alias fap='fahrplan -f'
 alias kal='vdirsyncer sync && khal interactive && vdirsyncer sync'
+# (no, I'm not as immature as those aliases suggest - but they're memorable at
+# least...)
+alias fap='fahrplan -f'
+alias clit='cloclify'
 # pseudo-functions
 alias pymath='bpython -i <(echo "from math import *")'
 alias newx='xinit /usr/bin/urxvt -- :1'
@@ -252,9 +255,18 @@ if [[ -n "$highlight" ]]; then
     ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red'
 fi
 
-## infsi1
 viewcert() {
     openssl x509 -in "$1" -noout -text
+}
+
+ytdl() {
+    if [[ $1 == *://* || $1 == -* ]]; then
+        youtube-dl "$@"
+    else
+        local url="https://youtu.be/$1"
+        shift 1
+        youtube-dl "$url" "$@"
+    fi
 }
 
 ## pyenv
