@@ -7,6 +7,7 @@ export VIEW_PDF="zathura" # for latex-makefile
 # export TERMINAL="termite"
 export TERMINAL="kitty"
 export PYTHONSTARTUP=~/.config/startup.py
+export ARDUINO_PATH=/usr/share/arduino
 
 ### ccache ###
 export PATH="/usr/lib/ccache/bin/:$PATH"
