@@ -20,12 +20,16 @@ hc() {
 modbind() {
     key=$1
     shift
-    hc keybind Mod4-$key "$@"
-    #hc keybind Mod1-$key "$@"
+    is_xephyr && Mod=Mod1 || Mod=Mod4  # Alt/Super
+    hc keybind $Mod-$key "$@"
 }
 
 is_first_start() {
     ! hc silent get_attr my_loaded 2>/dev/null
+}
+
+is_xephyr() {
+    [[ $DISPLAY == :99 ]]
 }
 
 hc emit_hook reload
@@ -42,8 +46,6 @@ feh --bg-fill ~/img/wallpapers/abstract.png
 hc keyunbind --all
 
 # keybindings
-Mod=Mod4   # Use the super key as the main modifier
-
 modbind Shift-space spawn metarofi
 modbind Shift-q spawn rofi-power 'herbstclient quit'
 modbind Shift-r reload
@@ -133,6 +135,7 @@ modbind space                                                           \
                , cycle_layout +1
 
 # mouse
+is_xephyr && Mod=Mod1 || Mod=Mod4  # Alt/Super
 hc mouseunbind --all
 hc mousebind $Mod-Button1 move
 hc mousebind $Mod-Button2 zoom
@@ -230,8 +233,7 @@ for monitor in $(hc list_monitors | cut -d: -f1) ; do
     barpyrus $monitor &
 done
 
-# autorun stuff
-if is_first_start; then
+if is_first_start && ! is_xephyr; then
     hc new_attr bool my_loaded true
 
     xinput disable 'SynPS/2 Synaptics TouchPad' &
