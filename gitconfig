@@ -54,3 +54,5 @@ colorMoved = plain
 	rebase = false
 [github]
 	user = The-Compiler
+[merge]
+    renamelimit=4096
