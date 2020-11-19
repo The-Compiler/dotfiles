@@ -21,6 +21,7 @@ export SUDO_PROMPT=$'\033[33m[sudo]\033[0m password for \033[32m%u@%h\033[0m (->
 export QT_QPA_PLATFORMTHEME='qt5ct'
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+export CM_LAUNCHER=rofi  # clipmenu
 
 ### ndless
 #export PATH="/home/florian/code/Ndless/ndless-sdk/toolchain/install/bin:/home/florian/code/Ndless/ndless-sdk/bin:$PATH"
