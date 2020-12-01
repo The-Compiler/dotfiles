@@ -113,6 +113,7 @@ genpwd() { tr -dc A-Za-z0-9 < /dev/urandom | head -c 8; echo }
 igitt() { git clone "ssh://git@tonks/$1" ;}
 bashhelp() { bash -c "help -m '$1'" | $PAGER ;}
 pyedit() { vim "${1//.//}.py" }
+tonok() { kdeconnect-cli -n "Nokia 8.3 5G" --share-text "$1" }
 # ignore dangerous commands from history and make them safer
 alias rm='rm -I'
 alias chmod=' chmod -c'
