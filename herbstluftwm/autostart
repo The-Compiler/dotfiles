@@ -36,7 +36,6 @@ hc emit_hook reload
 
 if is_first_start; then
     picom &
-    hc detect_monitors
 fi
 
 # xsetroot -solid black
@@ -98,6 +97,7 @@ if is_first_start; then
     for i in "${!tag_names[@]}"; do
         hc add "${tag_names[$i]}"
     done
+    hc detect_monitors
 fi
 
 # Always bind keys to tags
