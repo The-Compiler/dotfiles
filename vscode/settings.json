@@ -103,7 +103,7 @@
     "vim.showMarksInGutter": true,
     "window.dialogStyle": "custom",
     "window.menuBarVisibility": "toggle",
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 1,
     "workbench.colorTheme": "Monokai Classic",
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.iconTheme": "Monokai Classic Icons",
