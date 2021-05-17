@@ -57,3 +57,5 @@ colorMoved = plain
 	user = The-Compiler
 [merge]
     renamelimit=4096
+[init]
+	defaultBranch = main
