@@ -57,5 +57,20 @@ colorMoved = plain
 	user = The-Compiler
 [merge]
     renamelimit=4096
+
+# https://mobile.twitter.com/glyph/status/1359955841810530304
+[protocol "http"]
+    allow = never
+# FIXME Qt?
+#[protocol "git"]
+#    allow = never
+#
+# fails when cloning https://github.com/philc/vimium.git
+#[fetch]
+#    fsckObjects = true
+#[transfer]
+#    fsckObjects = true
+#[receive]
+#    fsckObjects = true
 [init]
 	defaultBranch = main
