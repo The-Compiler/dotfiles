@@ -1,6 +1,6 @@
 ### Variables ###
 export BROWSER="qutebrowser"
-export EDITOR="emacs"
+export EDITOR="code"
 export VISUAL="$EDITOR"
 export PATH="$PATH:$HOME/bin:$HOME/bin/go/bin:$HOME/.emacs.d/bin"
 export VIEW_PDF="zathura" # for latex-makefile
