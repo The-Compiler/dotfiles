@@ -1,6 +1,7 @@
 [core]
     pager = delta
 	attributesfile = /home/florian/.config/git/gitattributes
+	excludesfile = /home/florian/.config/git/gitignore
 
 [interactive]
     diffFilter = delta --color-only
