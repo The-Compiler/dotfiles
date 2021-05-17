@@ -108,6 +108,12 @@
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.iconTheme": "Monokai Classic Icons",
     "workbench.tree.indent": 16,
+    // hide squiggly lines as we have errorLens
+    "workbench.colorCustomizations": {
+        "editorError.foreground": "#fff0",
+        "editorWarning.foreground": "#fff0",
+        "editorInfo.foreground": "#fff0",
+    },
 
     /********** Behavior **********/
     "debug.console.closeOnEnd": true,
