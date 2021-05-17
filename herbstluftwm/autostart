@@ -170,6 +170,10 @@ modbind Shift-p spawn flameshot gui
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
 
+hc attr theme.title_font '-*-*-*-*-*-*-10-*-*-*-*-*-*-*'
+hc attr theme.title_height 10
+hc attr theme.title_color '#ebdbb2'
+
 
 #hc set frame_bg_normal_color '#282828'
 #hc set frame_bg_active_color '#282828'
