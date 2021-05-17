@@ -25,6 +25,8 @@ c.url.searchengines['duden'] = 'https://www.duden.de/suchen/dudenonline/{}'
 c.url.searchengines['dictcc'] = 'https://www.dict.cc/?s={}'
 #c.url.searchengines['maps'] = 'https://www.google.com/maps?q=%s'
 
+c.aliases['ytdl'] = """spawn -v -m bash -c 'cd ~/vid/yt && youtube-dl "$@"' _ {url}"""
+
 # c.fonts.tabs = '8pt monospace'
 # c.fonts.statusbar = '8pt monospace'
 c.fonts.web.family.fantasy = 'Arial'
