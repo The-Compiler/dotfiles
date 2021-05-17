@@ -3,7 +3,7 @@
     // https://github.com/VSpaceCode/VSpaceCode/blob/master/src/configuration/settings.jsonc
 
     "vim.easymotion": true,  // Vim easymotion is required for Jump menu - <SPC> j
-    "vim.useSystemClipboard": true,
+    // "vim.useSystemClipboard": true,
     // Trigger the main which key menu with in the active editor with vim
     // This cannot be put into keybindings.json because it will
     // create conflict with Vim.
@@ -56,10 +56,22 @@
             "command": "magit.blame-file",
         },
         {
+            "keys": "g.l",
+            "name": "View log graph",
+            "type" : "command",
+            "command": "git-graph.view",
+        },
+        {
             "keys": "g.g",
             "name": "GitLens Commands",
             "type" : "command",
             "command": "gitlens.gitCommands",
+        },
+        {
+            "keys": "g.y",
+            "name": "Yank link to GitHub",
+            "type" : "command",
+            "command": "extension.gitHubUrl",
         },
 
 
@@ -104,15 +116,22 @@
     "window.dialogStyle": "custom",
     "window.menuBarVisibility": "toggle",
     "window.zoomLevel": 1,
-    "workbench.colorTheme": "Monokai Classic",
+    "workbench.colorTheme": "Gruvbox Dark Medium",
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.iconTheme": "Monokai Classic Icons",
     "workbench.tree.indent": 16,
-    // hide squiggly lines as we have errorLens
     "workbench.colorCustomizations": {
+        // hide squiggly lines as we have errorLens
         "editorError.foreground": "#fff0",
         "editorWarning.foreground": "#fff0",
         "editorInfo.foreground": "#fff0",
+
+        // more contrast for quickInput
+        "[Gruvbox Dark Medium]": {
+            "quickInput.background": "#3c3836",
+            "quickInputTitle.background": "#504945",
+            "quickInputList.focusBackground": "#504945",
+        }
     },
 
     /********** Behavior **********/
@@ -147,9 +166,13 @@
     //     "blocks"
     // ],
     "gitlens.hovers.currentLine.enabled": false,
+    "github-actions.workflows.pinned.workflows": [".github/workflows/build.yml", ".github/workflows/ci.yml"],
+    "github-actions.workflows.pinned.refresh.enabled": true,
+    "magit.quick-switch-enabled": true,
 
     /********** Python **********/
     "python.useIsolation": false,  // for pytest to find qutebrowser package
+    "python.showStartPage": false,
 
     /********** LaTeX **********/
 	"latex-workshop.latex.tools": [
@@ -192,20 +215,15 @@
             "qt",
         ],
     },
+
+    /********** Unknown **********/
     "workbench.editorAssociations": [
         {
             "viewType": "jupyter.notebook.ipynb",
             "filenamePattern": "*.ipynb"
         }
     ],
-
-    /********** Unknown **********/
-    // "workbench.editorAssociations": [
-    //     {
-    //         "viewType": "jupyter.notebook.ipynb",
-    //         "filenamePattern": "*.ipynb"
-    //     }
-    // ],
+    "diffEditor.ignoreTrimWhitespace": false,
     // "workbench.colorCustomizations": {
     //     "statusBar.background": "#005f5f",
     //     "statusBar.noFolderBackground": "#005f5f",
@@ -214,5 +232,12 @@
     // "yaml.customTags": [
     //     "!encrypted/pkcs1-oaep scalar",
     //     "!vault scalar"
+    // ],
+    // "indentRainbow.errorColor": "#cc241d20",
+    // "indentRainbow.colors": [
+    //     "#28282820",
+    //     "#3c383620",
+    //     "#50494520",
+    //     "#665c5420",
     // ],
 }
