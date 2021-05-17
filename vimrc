@@ -11,6 +11,7 @@ endif
 " https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 let g:gruvbox_italic=1
@@ -21,3 +22,5 @@ colorscheme gruvbox
 " if &diff
 "   colorscheme github
 " endif
+"
+" source ~/.vim/vimrc-coc
