@@ -250,6 +250,7 @@ if is_first_start && ! is_xephyr; then
     blueman &
     redshift-gtk &
     kdeconnect-indicator &
+    /usr/lib/geoclue-2.0/demos/agent &
 fi
 
 hc unlock
