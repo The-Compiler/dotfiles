@@ -274,7 +274,7 @@ def main():
 
     left_widgets = [
         hlwm.HLWMTags(hc, monitor, tag_renderer=tag_renderer),
-        title_theme(hlwm.HLWMWindowTitle(hc)),
+        # title_theme(hlwm.HLWMWindowTitle(hc)),
     ]
     right_widgets = [
         conky.ConkyWidget(text=str(cg), config=conky_config),
