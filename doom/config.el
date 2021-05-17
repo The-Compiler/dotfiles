@@ -23,6 +23,7 @@
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
 
 (setq doom-font (font-spec :family "Iosevka Nerd Font" :size 15 :weight 'medium)
+      doom-big-font (font-spec :family "Iosevka Nerd Font" :size 30 :weight 'medium)
       doom-variable-pitch-font (font-spec :family "sans" :size 13))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
