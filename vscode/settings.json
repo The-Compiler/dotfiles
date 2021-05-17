@@ -1,0 +1,212 @@
+{
+    /********** VSpaceCode boilerplate **********/
+    // https://github.com/VSpaceCode/VSpaceCode/blob/master/src/configuration/settings.jsonc
+
+    "vim.easymotion": true,  // Vim easymotion is required for Jump menu - <SPC> j
+    "vim.useSystemClipboard": true,
+    // Trigger the main which key menu with in the active editor with vim
+    // This cannot be put into keybindings.json because it will
+    // create conflict with Vim.
+    // https://github.com/stevenguh/spacecode/issues/3
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<space>"],
+            "commands": ["vspacecode.space"]
+        },
+        {
+            "before": [","],
+            "commands": [
+                "vspacecode.space",
+                {
+                    "command": "whichkey.triggerKey",
+                    "args": "m"
+                }
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<space>"],
+            "commands": ["vspacecode.space"]
+        },
+        {
+            "before": [","],
+            "commands": [
+                "vspacecode.space",
+                {
+                    "command": "whichkey.triggerKey",
+                    "args": "m"
+                }
+            ]
+        }
+    ],
+
+    /********** Custom VSpaceCode bindings **********/
+    "vspacecode.bindingOverrides": [
+        {
+            "keys": "g.b",
+            "name": "Blame file with GitLens",
+            "type" : "command",
+            "command": "gitlens.toggleFileBlame",
+        },
+        {
+            "keys": "g.B",
+            "name": "Blame file with magit",
+            "type" : "command",
+            "command": "magit.blame-file",
+        },
+        {
+            "keys": "g.g",
+            "name": "GitLens Commands",
+            "type" : "command",
+            "command": "gitlens.gitCommands",
+        },
+
+
+        {
+            "keys": "h.z",
+            "name": "Zeal for current text",
+            "type" : "command",
+            "command": "extension.dash.specific",
+        },
+        {
+            "keys": "h.Z",
+            "name": "Open Zeal",
+            "type" : "command",
+            "command": "extension.dash.emptySyntax",
+        },
+
+        {
+            "keys": "p.o",
+            "name": "Open folder",
+            "type" : "command",
+            "command": "workbench.action.files.openFolder",
+        },
+    ],
+
+    /********** Appearance **********/
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSurroundingLines": 2,
+    "editor.fontFamily": "Iosevka",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 18,
+    "editor.inlineHints.fontFamily": "Iosevka",
+    "editor.minimap.scale": 2,
+    "editor.minimap.showSlider": "always",
+    "editor.renderControlCharacters": true,
+    "editor.renderLineHighlightOnlyWhenFocus": true,
+    "editor.renderWhitespace": "trailing",
+    // "editor.cursorSmoothCaretAnimation": true,
+    "errorLens.fontFamily": "Iosevka Extralight",
+    "errorLens.fontSize": "10pt",
+    "search.showLineNumbers": true,
+    "vim.showMarksInGutter": true,
+    "window.dialogStyle": "custom",
+    "window.menuBarVisibility": "toggle",
+    "window.zoomLevel": 2,
+    "workbench.colorTheme": "Monokai Classic",
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.iconTheme": "Monokai Classic Icons",
+    "workbench.tree.indent": 16,
+
+    /********** Behavior **********/
+    "debug.console.closeOnEnd": true,
+    "editor.find.autoFindInSelection": "multiline",
+    "editor.mouseWheelZoom": true,
+    "editor.tabCompletion": "on",
+    "file-browser.hideIgnoredFiles": true,
+    "file-browser.labelIgnoredFiles": true,
+    "files.insertFinalNewline": true,
+    "files.simpleDialog.enable": true,
+    "keyboard.dispatch": "keyCode",  // https://stackoverflow.com/a/50875402/2085149
+    "search.smartCase": true,
+    "terminal.external.linuxExec": "kitty",
+    "vim.camelCaseMotion.enable": true,
+    //"vim.textwidth": 88,
+    "workbench.startupEditor": "newUntitledFile",
+
+    /********** Privacy **********/
+    "update.mode": "none",
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+
+    /*********** Git **********/
+    "magit.forge-enabled": true,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.currentLine.enabled": false,
+    // "gitlens.codeLens.scopes": [
+    //     "document",
+    //     "containers",
+    //     "blocks"
+    // ],
+    "gitlens.hovers.currentLine.enabled": false,
+
+    /********** Python **********/
+    "python.useIsolation": false,  // for pytest to find qutebrowser package
+
+    /********** LaTeX **********/
+	"latex-workshop.latex.tools": [
+		{
+			"name": "latexmk",
+			"command": "latexmk",
+			"args": [
+                "-shell-escape",  // FIXME do we really want this globally?
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"-pdf",
+				"-outdir=%OUTDIR%",
+				"%DOC%"
+			],
+			"env": {}
+		},
+    ],
+    // https://github.com/James-Yu/LaTeX-Workshop/wiki/View#using-synctex-with-an-external-viewer
+    "latex-workshop.view.pdf.viewer": "external",
+    "latex-workshop.view.pdf.external.viewer.command": "zathura",
+    "latex-workshop.view.pdf.external.viewer.args": [
+        "--synctex-editor-command",
+        "code --reuse-window -g \"%{input}:%{line}\"",
+        "%PDF%"
+    ],
+    "latex-workshop.view.pdf.external.synctex.command": "zathura",
+    "latex-workshop.view.pdf.external.synctex.args": [
+        "--synctex-forward=%LINE%:0:%TEX%",
+        "%PDF%"
+    ],
+
+    /********** Dash/Zeal **********/
+    "dash.languageIdToDocsetMap": {
+        "ansible": [
+            "ansible"
+        ],
+        "python": [
+            "python",
+            "qt",
+        ],
+    },
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+
+    /********** Unknown **********/
+    // "workbench.editorAssociations": [
+    //     {
+    //         "viewType": "jupyter.notebook.ipynb",
+    //         "filenamePattern": "*.ipynb"
+    //     }
+    // ],
+    // "workbench.colorCustomizations": {
+    //     "statusBar.background": "#005f5f",
+    //     "statusBar.noFolderBackground": "#005f5f",
+    //     "statusBar.debuggingBackground": "#005f5f"
+    // },
+    // "yaml.customTags": [
+    //     "!encrypted/pkcs1-oaep scalar",
+    //     "!vault scalar"
+    // ],
+}
