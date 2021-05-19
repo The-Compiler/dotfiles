@@ -131,6 +131,8 @@
     // "editor.cursorSmoothCaretAnimation": true,
     "errorLens.fontFamily": "Iosevka Extralight",
     "errorLens.fontSize": "10pt",
+    "errorLens.delay": 500,
+    "errorLens.addNumberOfDiagnostics": true,
     "search.showLineNumbers": true,
     "vim.showMarksInGutter": true,
     "window.dialogStyle": "custom",
@@ -138,7 +140,8 @@
     "window.zoomLevel": 1,
     "workbench.colorTheme": "Gruvbox Dark Medium",
     "workbench.editor.highlightModifiedTabs": true,
-    "workbench.iconTheme": "Monokai Classic Icons",
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.folders.color": "#458588",
     "workbench.tree.indent": 16,
     "workbench.colorCustomizations": {
         // hide squiggly lines as we have errorLens
@@ -152,6 +155,10 @@
             "quickInputTitle.background": "#504945",
             "quickInputList.focusBackground": "#504945",
         }
+    },
+    "customizeUI.stylesheet": {
+        // https://github.com/VSpaceCode/vscode-which-key/issues/37#issuecomment-842893215
+        ".quick-input-widget > .quick-input-list > .monaco-list": "max-height: none !important;"
     },
 
     /********** Behavior **********/
@@ -177,6 +184,7 @@
     "workbench.settings.enableNaturalLanguageSearch": false,
 
     /*********** Git **********/
+    "git.autofetch": true,
     "magit.forge-enabled": true,
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.currentLine.enabled": false,
