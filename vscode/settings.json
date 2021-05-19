@@ -94,6 +94,26 @@
             "type": "command",
             "command": "workbench.action.files.openFolder",
         },
+
+        {
+            "keys": ["m", "languageId:asciidoc"],
+            "name": "Asciidoc",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "p",
+                    "name": "Show preview",
+                    "type": "command",
+                    "command": "asciidoc.showPreviewToSide",
+                },
+                {
+                    "key": "P",
+                    "name": "Show preview in new tab",
+                    "type": "command",
+                    "command": "asciidoc.showPreview",
+                }
+            ]
+        },
     ],
 
     /********** Appearance **********/
