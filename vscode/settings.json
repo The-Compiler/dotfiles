@@ -96,6 +96,13 @@
         },
 
         {
+            "keys": "f.y.i",
+            "name": "Yank image (CodeSnap)",
+            "type": "command",
+            "command": "codesnap.start",
+        },
+
+        {
             "keys": ["m", "languageId:asciidoc"],
             "name": "Asciidoc",
             "type": "bindings",
@@ -176,6 +183,8 @@
     "vim.camelCaseMotion.enable": true,
     //"vim.textwidth": 88,
     "workbench.startupEditor": "newUntitledFile",
+    "codesnap.showWindowControls": false,
+    "codesnap.shutterAction": "copy",
 
     /********** Privacy **********/
     "update.mode": "none",
