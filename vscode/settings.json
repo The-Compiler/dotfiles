@@ -46,31 +46,31 @@
         {
             "keys": "g.b",
             "name": "Blame file with GitLens",
-            "type" : "command",
+            "type": "command",
             "command": "gitlens.toggleFileBlame",
         },
         {
             "keys": "g.B",
             "name": "Blame file with magit",
-            "type" : "command",
+            "type": "command",
             "command": "magit.blame-file",
         },
         {
             "keys": "g.l",
             "name": "View log graph",
-            "type" : "command",
+            "type": "command",
             "command": "git-graph.view",
         },
         {
             "keys": "g.g",
             "name": "GitLens Commands",
-            "type" : "command",
+            "type": "command",
             "command": "gitlens.gitCommands",
         },
         {
             "keys": "g.y",
             "name": "Yank link to GitHub",
-            "type" : "command",
+            "type": "command",
             "command": "extension.gitHubUrl",
         },
 
@@ -78,20 +78,20 @@
         {
             "keys": "h.z",
             "name": "Zeal for current text",
-            "type" : "command",
+            "type": "command",
             "command": "extension.dash.specific",
         },
         {
             "keys": "h.Z",
             "name": "Open Zeal",
-            "type" : "command",
+            "type": "command",
             "command": "extension.dash.emptySyntax",
         },
 
         {
             "keys": "p.o",
             "name": "Open folder",
-            "type" : "command",
+            "type": "command",
             "command": "workbench.action.files.openFolder",
         },
     ],
