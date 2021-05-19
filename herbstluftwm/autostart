@@ -255,6 +255,7 @@ if is_first_start && ! is_xephyr; then
     redshift-gtk &
     kdeconnect-indicator &
     /usr/lib/geoclue-2.0/demos/agent &
+    /usr/lib/polkit-kde-authentication-agent-1 &  # for VS code monkeypatch
 fi
 
 hc unlock
