@@ -171,7 +171,22 @@
     },
     "customizeUI.stylesheet": {
         // https://github.com/VSpaceCode/vscode-which-key/issues/37#issuecomment-842893215
-        ".quick-input-widget > .quick-input-list > .monaco-list": "max-height: none !important;"
+        ".quick-input-widget > .quick-input-list > .monaco-list": "max-height: none !important;",
+
+        ".codicon-error": "color: #cc241d !important;",
+        ".codicon-warning": "color: #d79921 !important;",
+        ".codicon-git-branch": "color: #689d6a !important",
+        ".codicon-sync": "color: #689d6a !important;",
+        ".codicon-cloud-upload": "color: #689d6a !important;",
+        ".codicon-bell, .codicon-bell-dot": "color: #689d6a !important;",
+
+        "#status\\.editor\\.selection": "font-weight: bold !important;",
+
+        // "#vscodevim\\.vim": "border-radius: 3px !important",
+        // "#vscodevim\\.vim[aria-label=\"-- NORMAL --\"]": "background-color: #458588 !important;",
+        "#vscodevim\\.vim[aria-label=\"-- INSERT --\"]": "background-color: #98971a !important;",
+        "#vscodevim\\.vim[aria-label=\"-- VISUAL --\"]": "background-color: #b16286 !important;",
+        "#vscodevim\\.vim[aria-label^=\":\"]": "background-color: #7c6f64 !important;",
     },
 
     /********** Behavior **********/
