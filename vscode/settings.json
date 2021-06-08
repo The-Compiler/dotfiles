@@ -142,7 +142,7 @@
     "editor.renderLineHighlightOnlyWhenFocus": true,
     "editor.renderWhitespace": "trailing",
     // "editor.cursorSmoothCaretAnimation": true,
-    "errorLens.fontFamily": "Iosevka Extralight",
+    "errorLens.fontFamily": "Iosevka",
     "errorLens.fontSize": "10pt",
     "errorLens.delay": 500,
     "errorLens.addNumberOfDiagnostics": true,
