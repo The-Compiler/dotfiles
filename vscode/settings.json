@@ -153,6 +153,7 @@
     "window.zoomLevel": 1,
     "workbench.colorTheme": "Gruvbox Dark Medium",
     "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.untitled.hint": "hidden",
     "workbench.iconTheme": "material-icon-theme",
     "material-icon-theme.folders.color": "#458588",
     "workbench.tree.indent": 16,
