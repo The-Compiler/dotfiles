@@ -295,7 +295,6 @@
             "filenamePattern": "*.ipynb"
         }
     ],
-    "diffEditor.ignoreTrimWhitespace": false,
     // "workbench.colorCustomizations": {
     //     "statusBar.background": "#005f5f",
     //     "statusBar.noFolderBackground": "#005f5f",
