@@ -193,6 +193,12 @@
     "customizeUI.listRowHeight": 20,
     "customizeUI.font.monospace": "Iosevka",
     //"customizeUI.font.regular": "Iosevka",
+	"color-highlight.languages": [
+        "*",
+        "!restructuredtext",
+        "!magit",
+        "!git-commit",
+    ],
 
     /********** Behavior **********/
     "debug.console.closeOnEnd": true,
