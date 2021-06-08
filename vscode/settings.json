@@ -191,6 +191,8 @@
     "customizeUI.activityBar": "bottom",  // note, 'top' interfers with VSpaceCode 'Tb'
     "customizeUI.activityBarHideSettings": true,
     "customizeUI.listRowHeight": 20,
+    "customizeUI.font.monospace": "Iosevka",
+    //"customizeUI.font.regular": "Iosevka",
 
     /********** Behavior **********/
     "debug.console.closeOnEnd": true,
