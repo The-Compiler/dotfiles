@@ -271,7 +271,7 @@ ytdl() {
 }
 
 ## pyenv
-export PATH="/home/florian/.pyenv/bin:$PATH"
+# export PATH="/home/florian/.pyenv/bin:$PATH"
 if cmd_exists pyenv; then
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"

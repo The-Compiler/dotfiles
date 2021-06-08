@@ -27,4 +27,9 @@ export RANGER_DEVICONS_SEPARATOR='  '
 ### ndless
 #export PATH="/home/florian/code/Ndless/ndless-sdk/toolchain/install/bin:/home/florian/code/Ndless/ndless-sdk/bin:$PATH"
 
+### pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
 source ~/.profile-private
