@@ -218,6 +218,7 @@
     "codesnap.showWindowControls": false,
     "codesnap.shutterAction": "copy",
     "whichkey.delay": 1,
+    "latex-workshop.latex.autoBuild.run": "onSave",
 
     /********** Privacy **********/
     "update.mode": "none",
