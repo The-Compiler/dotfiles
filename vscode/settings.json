@@ -188,6 +188,9 @@
         "#vscodevim\\.vim[aria-label=\"-- VISUAL --\"]": "background-color: #b16286 !important;",
         "#vscodevim\\.vim[aria-label^=\":\"]": "background-color: #7c6f64 !important;",
     },
+    "customizeUI.activityBar": "bottom",  // note, 'top' interfers with VSpaceCode 'Tb'
+    "customizeUI.activityBarHideSettings": true,
+    "customizeUI.listRowHeight": 20,
 
     /********** Behavior **********/
     "debug.console.closeOnEnd": true,
