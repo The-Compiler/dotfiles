@@ -209,6 +209,7 @@
     "workbench.startupEditor": "newUntitledFile",
     "codesnap.showWindowControls": false,
     "codesnap.shutterAction": "copy",
+    "whichkey.delay": 1,
 
     /********** Privacy **********/
     "update.mode": "none",
