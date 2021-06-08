@@ -63,6 +63,12 @@
         },
         {
             "keys": "g.g",
+            "name": "Magit status",
+            "type": "command",
+            "command": "magit.status",
+        },
+        {
+            "keys": "g.G",
             "name": "GitLens Commands",
             "type": "command",
             "command": "gitlens.gitCommands",
