@@ -264,6 +264,10 @@
             "quickInputList.focusBackground": "#504945",
             "notifications.background": "#7c6f64",
             "notifications.foreground": "#ebdbb2",
+            "peekViewEditor.background": "#3c3836",
+            "peekViewEditorGutter.background": "#504945",
+            "peekViewResult.background": "#504945",
+            "peekViewTitle.background": "#504945",
         }
     },
     "customizeUI.stylesheet": {
