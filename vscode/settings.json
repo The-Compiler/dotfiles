@@ -254,6 +254,8 @@
             "quickInput.background": "#3c3836",
             "quickInputTitle.background": "#504945",
             "quickInputList.focusBackground": "#504945",
+            "notifications.background": "#7c6f64",
+            "notifications.foreground": "#ebdbb2",
         }
     },
     "customizeUI.stylesheet": {
@@ -270,7 +272,8 @@
         // "#vscodevim\\.vim[aria-label=\"-- NORMAL --\"]": "background-color: #458588 !important;",
         "#vscodevim\\.vim[aria-label=\"-- INSERT --\"]": "background-color: #98971a !important;",
         "#vscodevim\\.vim[aria-label=\"-- VISUAL --\"]": "background-color: #b16286 !important;",
-        "#vscodevim\\.vim[aria-label^=\":\"]": "background-color: #7c6f64 !important;",
+        "#vscodevim\\.vim[aria-label^=\":\"], #vscodevim\\.vim[aria-label^=\"/\"], #vscodevim\\.vim[aria-label^=\"?\"]":
+            "background-color: #d79921 !important; color: #282828 !important; font-weight: bold !important",
     },
     "customizeUI.activityBar": "bottom", // note, 'top' interfers with VSpaceCode 'Tb'
     "customizeUI.activityBarHideSettings": true,
