@@ -137,6 +137,77 @@
                 }
             ]
         },
+
+        {
+            "keys": "L",
+            "name": "Live Share",
+            "icon": "live-share",
+            "type": "bindings",
+            "bindings": [
+                {
+                    //"keys": ["f", "when:liveshare:hasCollaborators"],
+                    "key": "f",
+                    "name": "Follow participant",
+                    "icon": "pin",
+                    "type": "conditional",
+                    "bindings": [
+                        {
+                            "key": "!liveshare.isFollowing",
+                            "name": "default",
+                            "icon": "pin",
+                            "type": "command",
+                            "command": "liveshare.follow",
+                        },
+                        {
+                            "key": "liveshare.isFollowing",
+                            "name": "Unfollow participant",
+                            "icon": "pinned",
+                            "type": "command",
+                            "command": "liveshare.unfollow",
+                        }
+                    ]
+                },
+                {
+                    //"keys": ["/", "when:liveshare:hasCollaborators"],
+                    "key": "/",
+                    "name": "Follow participant to the side",
+                    "icon": "pin",
+                    "type": "command",
+                    "command": "liveshare.followToTheSide",
+                },
+                {
+                    //"keys": ["!", "when:liveshare:hasCollaborators"],
+                    "key": "!",
+                    "name": "Focus participants",
+                    "icon": "megaphone",
+                    "type": "command",
+                    "command": "liveshare.focusParticipants",
+                },
+                {
+                    "key": "s",
+                    "name": "Start session",
+                    "icon": "live-share",
+                    "type": "command",
+                    "command": "liveshare.start",
+                },
+                {
+                    //"keys": ["j", "when:liveshare.state != 'Joined' && liveshare.state != 'Shared'"],
+                    "key": "j",
+                    "name": "Join session",
+                    "icon": "remote",  // FIXME
+                    "type": "command",
+                    "command": "liveshare.join",
+                },
+                {
+                    //"keys": ["i", "when:liveshare.state != 'Joined' && liveshare.state != 'Shared'"],
+                    "key": "i",
+                    "name": "Invite participant",
+                    "icon": "mail",  // FIXME
+                    "type": "command",
+                    "command": "liveshare.inviteAvailableContacts",
+                }
+            ]
+        },
     ],
 
     /********** Appearance **********/
