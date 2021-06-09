@@ -47,18 +47,21 @@
             "keys": "g.b",
             "name": "Blame file with GitLens",
             "type": "command",
+            "icon": "file",
             "command": "gitlens.toggleFileBlame",
         },
         {
             "keys": "g.B",
             "name": "Blame file with magit",
             "type": "command",
+            "icon": "file",
             "command": "magit.blame-file",
         },
         {
             "keys": "g.l",
             "name": "View log graph",
             "type": "command",
+            "icon": "git-commit",
             "command": "git-graph.view",
         },
         {
@@ -66,24 +69,28 @@
             "name": "Magit status",
             "type": "command",
             "command": "magit.status",
+            "icon": "rocket",
         },
         {
             "keys": "g.G",
             "name": "GitLens Commands",
             "type": "command",
             "command": "gitlens.gitCommands",
+            "icon": "rocket",
         },
         {
             "keys": "g.y",
             "name": "Yank link to GitHub",
             "type": "command",
             "command": "extension.gitHubUrl",
+            "icon": "github",
         },
 
 
         {
             "keys": "h.z",
             "name": "Zeal for current text",
+            "icon": "library",
             "type": "command",
             "command": "extension.dash.specific",
         },
@@ -91,12 +98,14 @@
             "keys": "h.Z",
             "name": "Open Zeal",
             "type": "command",
+            "icon": "library",
             "command": "extension.dash.emptySyntax",
         },
 
         {
             "keys": "p.o",
             "name": "Open folder",
+            "icon": "folder-opened",
             "type": "command",
             "command": "workbench.action.files.openFolder",
         },
@@ -104,6 +113,7 @@
         {
             "keys": "f.y.i",
             "name": "Yank image (CodeSnap)",
+            //"icon": "device-camera",
             "type": "command",
             "command": "codesnap.start",
         },
