@@ -147,7 +147,7 @@
         },
         {
             "keys": "L",
-            "name": "Live Share",
+            "name": "+Live Share",
             "icon": "live-share",
             "type": "bindings",
             "bindings": [
@@ -261,7 +261,10 @@
     "customizeUI.stylesheet": {
         // https://github.com/VSpaceCode/vscode-which-key/issues/37#issuecomment-842893215
         ".quick-input-widget > .quick-input-list > .monaco-list": "max-height: none !important;",
-        "#workbench\\.parts\\.statusbar .codicon-error": "color: #cc241d !important;",
+        ".quick-input-widget > .quick-input-list .codicon": "color: #b8bb26 !important; padding-right: 8px;",
+        ".quick-input-widget > .quick-input-list .monaco-list-row[aria-label*=\"  +\"] .label-description": "color: #8ec07c !important;",
+
+        "#workbench\\.parts\\.statusbar .codicon-error": "color: #cc241d !important;", 
         "#workbench\\.parts\\.statusbar .codicon-warning": "color: #d79921 !important;",
         "#workbench\\.parts\\.statusbar .codicon-git-branch": "color: #689d6a !important",
         "#workbench\\.parts\\.statusbar .codicon-sync": "color: #689d6a !important;",
