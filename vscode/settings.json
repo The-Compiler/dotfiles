@@ -1,8 +1,7 @@
 {
     /********** VSpaceCode boilerplate **********/
     // https://github.com/VSpaceCode/VSpaceCode/blob/master/src/configuration/settings.jsonc
-
-    "vim.easymotion": true,  // Vim easymotion is required for Jump menu - <SPC> j
+    "vim.easymotion": true, // Vim easymotion is required for Jump menu - <SPC> j
     // "vim.useSystemClipboard": true,
     // Trigger the main which key menu with in the active editor with vim
     // This cannot be put into keybindings.json because it will
@@ -10,11 +9,17 @@
     // https://github.com/stevenguh/spacecode/issues/3
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-            "before": ["<space>"],
-            "commands": ["vspacecode.space"]
+            "before": [
+                "<space>"
+            ],
+            "commands": [
+                "vspacecode.space"
+            ]
         },
         {
-            "before": [","],
+            "before": [
+                ","
+            ],
             "commands": [
                 "vspacecode.space",
                 {
@@ -26,11 +31,17 @@
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
-            "before": ["<space>"],
-            "commands": ["vspacecode.space"]
+            "before": [
+                "<space>"
+            ],
+            "commands": [
+                "vspacecode.space"
+            ]
         },
         {
-            "before": [","],
+            "before": [
+                ","
+            ],
             "commands": [
                 "vspacecode.space",
                 {
@@ -40,7 +51,6 @@
             ]
         }
     ],
-
     /********** Custom VSpaceCode bindings **********/
     "vspacecode.bindingOverrides": [
         {
@@ -85,8 +95,6 @@
             "command": "extension.gitHubUrl",
             "icon": "github",
         },
-
-
         {
             "keys": "h.z",
             "name": "Zeal for current text",
@@ -101,7 +109,6 @@
             "icon": "library",
             "command": "extension.dash.emptySyntax",
         },
-
         {
             "keys": "p.o",
             "name": "Open folder",
@@ -109,7 +116,6 @@
             "type": "command",
             "command": "workbench.action.files.openFolder",
         },
-
         {
             "keys": "f.y.i",
             "name": "Yank image (CodeSnap)",
@@ -117,9 +123,11 @@
             "type": "command",
             "command": "codesnap.start",
         },
-
         {
-            "keys": ["m", "languageId:asciidoc"],
+            "keys": [
+                "m",
+                "languageId:asciidoc"
+            ],
             "name": "Asciidoc",
             "type": "bindings",
             "bindings": [
@@ -137,7 +145,6 @@
                 }
             ]
         },
-
         {
             "keys": "L",
             "name": "Live Share",
@@ -194,7 +201,7 @@
                     //"keys": ["j", "when:liveshare.state != 'Joined' && liveshare.state != 'Shared'"],
                     "key": "j",
                     "name": "Join session",
-                    "icon": "remote",  // FIXME
+                    "icon": "remote", // FIXME
                     "type": "command",
                     "command": "liveshare.join",
                 },
@@ -202,14 +209,13 @@
                     //"keys": ["i", "when:liveshare.state != 'Joined' && liveshare.state != 'Shared'"],
                     "key": "i",
                     "name": "Invite participant",
-                    "icon": "mail",  // FIXME
+                    "icon": "mail", // FIXME
                     "type": "command",
                     "command": "liveshare.inviteAvailableContacts",
                 }
             ]
         },
     ],
-
     /********** Appearance **********/
     "editor.cursorBlinking": "phase",
     "editor.cursorSurroundingLines": 2,
@@ -243,7 +249,6 @@
         "editorError.foreground": "#fff0",
         "editorWarning.foreground": "#fff0",
         "editorInfo.foreground": "#fff0",
-
         // more contrast for quickInput
         "[Gruvbox Dark Medium]": {
             "quickInput.background": "#3c3836",
@@ -254,34 +259,30 @@
     "customizeUI.stylesheet": {
         // https://github.com/VSpaceCode/vscode-which-key/issues/37#issuecomment-842893215
         ".quick-input-widget > .quick-input-list > .monaco-list": "max-height: none !important;",
-
-        ".codicon-error": "color: #cc241d !important;",
-        ".codicon-warning": "color: #d79921 !important;",
-        ".codicon-git-branch": "color: #689d6a !important",
-        ".codicon-sync": "color: #689d6a !important;",
-        ".codicon-cloud-upload": "color: #689d6a !important;",
-        ".codicon-bell, .codicon-bell-dot": "color: #689d6a !important;",
-
+        "#workbench\\.parts\\.statusbar .codicon-error": "color: #cc241d !important;",
+        "#workbench\\.parts\\.statusbar .codicon-warning": "color: #d79921 !important;",
+        "#workbench\\.parts\\.statusbar .codicon-git-branch": "color: #689d6a !important",
+        "#workbench\\.parts\\.statusbar .codicon-sync": "color: #689d6a !important;",
+        "#workbench\\.parts\\.statusbar .codicon-cloud-upload": "color: #689d6a !important;",
+        "#workbench\\.parts\\.statusbar .codicon-bell, .codicon-bell-dot": "color: #689d6a !important;",
         "#status\\.editor\\.selection": "font-weight: bold !important;",
-
         // "#vscodevim\\.vim": "border-radius: 3px !important",
         // "#vscodevim\\.vim[aria-label=\"-- NORMAL --\"]": "background-color: #458588 !important;",
         "#vscodevim\\.vim[aria-label=\"-- INSERT --\"]": "background-color: #98971a !important;",
         "#vscodevim\\.vim[aria-label=\"-- VISUAL --\"]": "background-color: #b16286 !important;",
         "#vscodevim\\.vim[aria-label^=\":\"]": "background-color: #7c6f64 !important;",
     },
-    "customizeUI.activityBar": "bottom",  // note, 'top' interfers with VSpaceCode 'Tb'
+    "customizeUI.activityBar": "bottom", // note, 'top' interfers with VSpaceCode 'Tb'
     "customizeUI.activityBarHideSettings": true,
     "customizeUI.listRowHeight": 20,
     "customizeUI.font.monospace": "Iosevka",
     //"customizeUI.font.regular": "Iosevka",
-	"color-highlight.languages": [
+    "color-highlight.languages": [
         "*",
         "!restructuredtext",
         "!magit",
         "!git-commit",
     ],
-
     /********** Behavior **********/
     "debug.console.closeOnEnd": true,
     "editor.find.autoFindInSelection": "multiline",
@@ -291,7 +292,7 @@
     "file-browser.labelIgnoredFiles": true,
     "files.insertFinalNewline": true,
     "files.simpleDialog.enable": true,
-    "keyboard.dispatch": "keyCode",  // https://stackoverflow.com/a/50875402/2085149
+    "keyboard.dispatch": "keyCode", // https://stackoverflow.com/a/50875402/2085149
     "search.smartCase": true,
     "terminal.external.linuxExec": "kitty",
     "vim.camelCaseMotion.enable": true,
@@ -301,13 +302,11 @@
     "codesnap.shutterAction": "copy",
     "whichkey.delay": 1,
     "latex-workshop.latex.autoBuild.run": "onSave",
-
     /********** Privacy **********/
     "update.mode": "none",
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "workbench.settings.enableNaturalLanguageSearch": false,
-
     /*********** Git **********/
     "git.autofetch": true,
     "magit.forge-enabled": true,
@@ -319,30 +318,31 @@
     //     "blocks"
     // ],
     "gitlens.hovers.currentLine.enabled": false,
-    "github-actions.workflows.pinned.workflows": [".github/workflows/build.yml", ".github/workflows/ci.yml"],
+    "github-actions.workflows.pinned.workflows": [
+        ".github/workflows/build.yml",
+        ".github/workflows/ci.yml"
+    ],
     "github-actions.workflows.pinned.refresh.enabled": true,
     "magit.quick-switch-enabled": true,
-
     /********** Python **********/
-    "python.useIsolation": false,  // for pytest to find qutebrowser package
+    "python.useIsolation": false, // for pytest to find qutebrowser package
     "python.showStartPage": false,
-
     /********** LaTeX **********/
-	"latex-workshop.latex.tools": [
-		{
-			"name": "latexmk",
-			"command": "latexmk",
-			"args": [
-                "-shell-escape",  // FIXME do we really want this globally?
-				"-synctex=1",
-				"-interaction=nonstopmode",
-				"-file-line-error",
-				"-pdf",
-				"-outdir=%OUTDIR%",
-				"%DOC%"
-			],
-			"env": {}
-		},
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-shell-escape", // FIXME do we really want this globally?
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
     ],
     // https://github.com/James-Yu/LaTeX-Workshop/wiki/View#using-synctex-with-an-external-viewer
     "latex-workshop.view.pdf.viewer": "external",
@@ -357,7 +357,6 @@
         "--synctex-forward=%LINE%:0:%TEX%",
         "%PDF%"
     ],
-
     /********** Dash/Zeal **********/
     "dash.languageIdToDocsetMap": {
         "ansible": [
@@ -368,7 +367,6 @@
             "qt",
         ],
     },
-
     /********** Unknown **********/
     "workbench.editorAssociations": [
         {
