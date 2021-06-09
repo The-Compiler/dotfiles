@@ -286,6 +286,7 @@
         "!magit",
         "!git-commit",
     ],
+    "[python]": { "editor.rulers": [88] },
     /********** Behavior **********/
     "debug.console.closeOnEnd": true,
     "editor.find.autoFindInSelection": "multiline",
