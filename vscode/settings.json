@@ -271,11 +271,15 @@
         }
     },
     "customizeUI.stylesheet": {
+        //// which-key styling
         // https://github.com/VSpaceCode/vscode-which-key/issues/37#issuecomment-842893215
         ".quick-input-widget > .quick-input-list > .monaco-list": "max-height: none !important;",
-        ".quick-input-widget > .quick-input-list .codicon": "color: #b8bb26 !important; padding-right: 8px;",
+        ".quick-input-widget > .quick-input-list .codicon": "color: #83a598 !important; padding-right: 8px;",
         ".quick-input-widget > .quick-input-list .monaco-list-row[aria-label*=\"  +\"] .label-description": "color: #8ec07c !important;",
+        // ".quick-input-widget > .quick-input-list .monaco-list-rows": "display: grid !important; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1.5em;",
+        // ".quick-input-widget > .quick-input-list .monaco-list-row": "position: unset !important;",
 
+        //// statusbar styling
         "#workbench\\.parts\\.statusbar .codicon-error": "color: #cc241d !important;", 
         "#workbench\\.parts\\.statusbar .codicon-warning": "color: #d79921 !important;",
         "#workbench\\.parts\\.statusbar .codicon-git-branch": "color: #689d6a !important",
