@@ -648,6 +648,8 @@
     /********** Python **********/
     "python.useIsolation": false, // for pytest to find qutebrowser package
     "python.showStartPage": false,
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.typeCheckingMode": "strict",
     /********** LaTeX **********/
     "latex-workshop.latex.tools": [
         {
