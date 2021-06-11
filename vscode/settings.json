@@ -327,6 +327,66 @@
             "command": "codesnap.start",
         },
 
+        // swap JSON/GUI settings
+        {
+            "keys": "f.e.D",
+            "name": "Open settings",
+            "icon": "settings-gear",
+            "type": "command",
+            "command": "workbench.action.openGlobalSettings"
+        },
+        {
+            "keys": "f.e.K",
+            "name": "Open global key bindings",
+            "icon": "keyboard",
+            "type": "command",
+            "command": "workbench.action.openGlobalKeybindings"
+        },
+        {
+            "keys": "f.e.W",
+            "name": "Open workspace settings",
+            "icon": "settings-edit",
+            "type": "command",
+            "command": "workbench.action.openWorkspaceSettings"
+        },
+        {
+            "keys": "f.e.d",
+            "name": "Open settings JSON",
+            "icon": "json",
+            "type": "command",
+            "command": "workbench.action.openSettingsJson"
+        },
+        {
+            "keys": "f.e.k",
+            "name": "Open global key bindings JSON",
+            "icon": "json",
+            "type": "command",
+            "command": "workbench.action.openGlobalKeybindingsFile"
+        },
+        {
+            "keys": "f.e.w",
+            "name": "Open workspace settings JSON",
+            "icon": "json",
+            "type": "command",
+            "command": "workbench.action.openWorkspaceSettingsFile"
+        },
+
+        // Add extension binding
+        {
+            "keys": "f.e.e",
+            "name": "Show extensions",
+            "icon": "extensions",
+            "type": "command",
+            "command": "workbench.view.extensions"
+        },
+        {
+            "keys": "f.e.E",
+            "name": "Install extension from VSIX",
+            "icon": "package",
+            "type": "command",
+            "command": "workbench.extensions.action.installVSIX"
+        },
+
         // Python tests via test-explorer
         {
             "keys": ["m", "languageId:python", "t", "a"],
