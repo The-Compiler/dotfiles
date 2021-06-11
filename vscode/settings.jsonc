@@ -291,11 +291,98 @@
             "icon": "rocket",
         },
         {
-            "keys": "g.Y",
-            "name": "Yank link to GitHub",
-            "type": "command",
-            "command": "extension.gitHubUrl",
+            "keys": "g.h",
+            "name": "+GitHub",
             "icon": "github",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "a",
+                    "name": "Open GitHub Actions",
+                    "icon": "github-action",
+                    "type": "command",
+                    "command": "workbench.view.extension.github-actions",
+                },
+                {
+                    "key": "o",
+                    "name": "Open permalink on GitHub",
+                    "icon": "globe",
+                    "type": "command",
+                    "command": "issue.openGithubPermalink",
+                },
+                {
+                    "key": "y",
+                    "name": "Copy GitHub permalink",
+                    "icon": "link",
+                    "type": "command",
+                    "command": "issue.copyGithubPermalink",
+                },
+                {
+                    "key": "Y",
+                    "name": "Copy GitHub permalink as Markdown",
+                    "icon": "markdown",
+                    "type": "command",
+                    "command": "issue.copyMarkdownGithubPermalink",
+                },
+                {
+                    "key": "p",
+                    "name": "+PRs",
+                    "icon": "git-pull-request",
+                    "type": "bindings",
+                    "bindings": [
+                        {
+                            "key": "p",
+                            "name": "Show pull requests",
+                            "icon": "eye",
+                            "type": "command",
+                            "command": "pr:github.focus",
+                        },
+                        {
+                            "key": "c",
+                            "name": "Create pull request",
+                            "icon": "git-pull-request-create",
+                            "type": "command",
+                            "command": "pr.create",
+                        },
+                    ]
+                },
+                {
+                    "key": "i",
+                    "name": "+Issues",
+                    "icon": "issues",
+                    "type": "bindings",
+                    "bindings": [
+                        {
+                            "key": "i",
+                            "name": "Show issues",
+                            "icon": "eye",
+                            "type": "command",
+                            "command": "issues:github.focus",
+                        },
+                        {
+                            "key": "c",
+                            "name": "Create issue",
+                            "icon": "issues",
+                            "type": "command",
+                            "command": "issue.createIssue",
+                        },
+                        {
+                            "key": "s",
+                            "name": "Create issue from selection",
+                            "icon": "selection",
+                            "type": "command",
+                            "command": "issue.createIssueFromSelection",
+                        },
+                        {
+                            "key": "S",
+                            "name": "Create issue from clipboard",
+                            "icon": "clippy",
+                            "type": "command",
+                            "command": "issue.createIssueFromClipboard",
+                        },
+                    ]
+                }
+            ]
         },
 
         {
