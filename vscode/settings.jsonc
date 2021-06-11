@@ -387,6 +387,52 @@
             "command": "workbench.extensions.action.installVSIX"
         },
 
+        // Developer bindings
+        // based on https://github.com/VSpaceCode/community-configs/tree/master/macintacos
+        {
+            "keys": "f.e.v",
+            "name": "+Developer",
+            "icon": "bug",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "command": "workbench.action.toggleDevTools",
+                    "key": "d",
+                    "name": "Show developer tools",
+                    "icon": "bug",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.action.setLogLevel",
+                    "key": "l",
+                    "name": "Set log level...",
+                    "icon": "output",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.action.showLogs",
+                    "key": "L",
+                    "name": "Show logs...",
+                    "icon": "eye",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.action.showRuntimeExtensions",
+                    "key": "r",
+                    "name": "Show running extensions",
+                    "icon": "extensions",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.action.openProcessExplorer",
+                    "key": "p",
+                    "name": "Open Process Explorer",
+                    "icon": "server-process",
+                    "type": "command"
+                }
+            ],
+        },
+
         // Python tests via test-explorer
         {
             "keys": ["m", "languageId:python", "t", "a"],
