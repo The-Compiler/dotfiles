@@ -131,5 +131,23 @@
         "key": "ctrl+l",
         "command": "file-browser.stepIn",
         "when": "inFileBrowser"
+    },
+    // unfocus helpers
+    {
+        "key": "shift+escape",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        // for search input
+        "key": "escape",
+        "command": "search.action.focusSearchList",
+        "when": "inputFocus && searchViewletFocus"
+    },
+    {
+        // for scm input box
+        "key": "escape",
+        "command": "workbench.scm.focus",
+        "when": "inputFocus && focusedView == 'workbench.scm'"
     }
 ]

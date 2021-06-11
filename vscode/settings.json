@@ -516,7 +516,6 @@
     "vim.showMarksInGutter": true,
     "window.dialogStyle": "custom",
     "window.menuBarVisibility": "toggle",
-    "window.zoomLevel": 1,
     "workbench.colorTheme": "Gruvbox Dark Medium",
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.untitled.hint": "hidden",
@@ -650,6 +649,12 @@
     "python.showStartPage": false,
     "python.analysis.diagnosticMode": "workspace",
     "python.analysis.typeCheckingMode": "strict",
+    // "python.analysis.memory.keepLibraryAst": true,
+
+    // "pythonTestExplorer.testFramework": "pytest",
+    // "python.testing.unittestEnabled": false,
+    // "python.testing.nosetestsEnabled": false,
+    // "python.testing.pytestEnabled": false,
     /********** LaTeX **********/
     "latex-workshop.latex.tools": [
         {
@@ -690,19 +695,23 @@
             "qt",
         ],
     },
+    /********** Other **********/
+    "extensions.supportUntrustedWorkspaces": {
+        "vspacecode.vspacecode": { "supported": true },
+        "vspacecode.whichkey": { "supported": true },
+        "iocave.monkey-patch": { "supported": true },
+        "iocave.customize-ui": { "supported": true },
+    },
     /********** Unknown **********/
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
-    "editor.tabSize": 8,
-    "editor.cursorStyle": "line",
-    "editor.insertSpaces": false,
-    "editor.lineNumbers": "on",
-    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
-    "editor.wordWrap": "off",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    // "editor.tabSize": 8,
+    // "editor.cursorStyle": "line",
+    // "editor.insertSpaces": false,
+    // "editor.lineNumbers": "on",
+    // "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    // "editor.wordWrap": "off",
     // "workbench.colorCustomizations": {
     //     "statusBar.background": "#005f5f",
     //     "statusBar.noFolderBackground": "#005f5f",
