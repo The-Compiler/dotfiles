@@ -814,6 +814,7 @@
     "codesnap.showWindowControls": false,
     "codesnap.shutterAction": "copy",
     "whichkey.delay": 1,
+    "whichkey.sortOrder": "nonNumberFirst",
     "latex-workshop.latex.autoBuild.run": "onSave",
     /********** Privacy **********/
     "update.mode": "none",
