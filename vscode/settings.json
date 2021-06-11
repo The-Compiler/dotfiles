@@ -145,7 +145,7 @@
             "command": "magit.rebasing",
         },
         {
-            "keys": "g.S",
+            "keys": "g.s",
             //"name": "Stage",
             "name": "Stage File",
             "icon": "file-add",
@@ -153,13 +153,13 @@
             //"command": "magit.stage",
             "command": "magit.stage-file",
         },
-        //{
-        //    "keys": "g.S",
-        //    "name": "Stage All",
-        //    "icon": "expand-all",
-        //    "type": "command",
-        //    "command": "magit.stage-all",
-        //},
+        {
+            "keys": "g.S",
+            "name": "Stage All",
+            "icon": "expand-all",
+            "type": "command",
+            "command": "magit.stage-all",
+        },
         {
             "keys": "g.t",
             "name": "+Tag",
@@ -168,7 +168,7 @@
             "command": "magit.tagging",
         },
         {
-            "keys": "g.U",
+            "keys": "g.u",
             //"name": "Unstage",
             "name": "Unstage File",
             "icon": "file",
@@ -176,13 +176,13 @@
             //"command": "magit.unstage",
             "command": "magit.unstage-file",
         },
-        //{
-        //    "keys": "g.U",
-        //    "name": "Unstage All",
-        //    "icon": "collapse-all",
-        //    "type": "command",
-        //    "command": "magit.unstage-all",
-        //},
+        {
+            "keys": "g.U",
+            "name": "Unstage All",
+            "icon": "collapse-all",
+            "type": "command",
+            "command": "magit.unstage-all",
+        },
         {
             "keys": "g._",
             "name": "+Revert",
