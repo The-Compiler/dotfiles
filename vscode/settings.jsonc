@@ -760,7 +760,7 @@
         ".quick-input-widget > .quick-input-list > .monaco-list":
             "max-height: none !important;",
         ".quick-input-widget > .quick-input-list .codicon":
-            "color: #83a598; padding-right: 5px;",
+            "color: #83a598 !important; padding-right: 5px;",
         ".quick-input-widget > .quick-input-list .monaco-list-row[aria-label*=\"  +\"] .label-description":
             "color: #8ec07c;",
         // ".quick-input-widget > .quick-input-list .monaco-list-rows":
