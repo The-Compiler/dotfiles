@@ -2,6 +2,7 @@
     pager = delta
 	attributesfile = /home/florian/.config/git/gitattributes
 	excludesfile = /home/florian/.config/git/gitignore
+    editor = code --wait
 
 [interactive]
     diffFilter = delta --color-only
