@@ -690,7 +690,7 @@
     "editor.cursorBlinking": "phase",
     "editor.cursorSurroundingLines": 2,
     "editor.fontFamily": "Iosevka",
-    "editor.fontLigatures": true,
+    "editor.fontLigatures": "'dlig', 'cv93' 3",  // more ligatures, less weird %
     "editor.fontSize": 18,
     "editor.inlineHints.fontFamily": "Iosevka Light",
     "terminal.integrated.fontFamily": "Iosevka Nerd Font",
