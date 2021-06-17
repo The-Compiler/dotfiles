@@ -864,6 +864,7 @@
         "reportUnknownArgumentType": "none",
         "reportUnknownVariableType": "none",
         "reportUnknownParameterType": "none",
+        "reportUnknownLambdaType": "none",
         "reportUntypedFunctionDecorator": "none",
     },
     // "python.analysis.memory.keepLibraryAst": true,
