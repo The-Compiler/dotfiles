@@ -601,6 +601,23 @@
             "command": "python.refactorExtractMethod"
         },
 
+        // Tox integration
+        {
+            "keys": ["m", "languageId:python", "c", "t"],
+            "name": "+Run tox",
+            "icon": "play",
+            "type": "command",
+            "command": "python-tox.select"
+        },
+        {
+            "keys": ["m", "languageId:python", "c", "T"],
+            "name": "+Run tox (multiple)",
+            "icon": "run-all",
+            "type": "command",
+            "command": "python-tox.selectMultiple"
+        },
+
+
         {
             "keys": [
                 "m",
