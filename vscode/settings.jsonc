@@ -915,8 +915,10 @@
     },
     /********** Other **********/
     "extensions.supportUntrustedWorkspaces": {
+        // https://github.com/VSpaceCode/VSpaceCode/issues/202
         "vspacecode.vspacecode": { "supported": true },
         "vspacecode.whichkey": { "supported": true },
+        // https://github.com/iocave/customize-ui/issues/98
         "iocave.monkey-patch": { "supported": true },
         "iocave.customize-ui": { "supported": true },
     },
