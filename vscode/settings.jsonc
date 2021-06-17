@@ -585,6 +585,22 @@
             "command": "test-explorer.focus"
         },
 
+        // More Python refactoring
+        {
+            "keys": ["m", "languageId:python", "r", "v"],
+            "name": "Extract variable",
+            "icon": "variable",
+            "type": "command",
+            "command": "python.refactorExtractVariable"
+        },
+        {
+            "keys": ["m", "languageId:python", "r", "m"],
+            "name": "Extract method",
+            "icon": "symbol-method",
+            "type": "command",
+            "command": "python.refactorExtractMethod"
+        },
+
         {
             "keys": [
                 "m",
