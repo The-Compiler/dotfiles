@@ -545,7 +545,7 @@
         {
             "keys": ["m", "languageId:python", "t", "r"],
             "name": "Re-run tests",
-            "icon": "refresh",
+            "icon": "sync",
             "type": "command",
             "command": "test-explorer.rerun"
         },
