@@ -829,7 +829,7 @@
     "customizeUI.activityBarHideSettings": true,
     "customizeUI.listRowHeight": 20,
     "customizeUI.font.monospace": "Iosevka",
-    //"customizeUI.font.regular": "Iosevka",
+    "customizeUI.font.regular": "Roboto Condensed",
     "color-highlight.languages": [
         "*",
         "!restructuredtext",
