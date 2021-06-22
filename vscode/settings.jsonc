@@ -407,6 +407,15 @@
             "command": "extension.dash.emptySyntax",
         },
         {
+            "keys": "f.y.i",
+            "name": "Yank image (CodeSnap)",
+            //"icon": "device-camera",
+            "type": "command",
+            "command": "codesnap.start",
+        },
+
+        // better project menu
+        {
             "keys": "p.o",
             "name": "Open folder",
             "icon": "folder-opened",
@@ -414,11 +423,54 @@
             "command": "workbench.action.files.openFolder",
         },
         {
-            "keys": "f.y.i",
-            "name": "Yank image (CodeSnap)",
-            //"icon": "device-camera",
+            "keys": "p.p",
+            "name": "Open project",
+            "icon": "project",
             "type": "command",
-            "command": "codesnap.start",
+            "command": "projectManager.listProjects",
+        },
+        {
+            "keys": "p.P",
+            "name": "Open project in new window",
+            "icon": "empty-window",
+            "type": "command",
+            "command": "projectManager.listProjectsNewWindow",
+        },
+        {
+            "keys": "p.m",
+            "name": "+Project manager",
+            "icon": "gear",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "r",
+                    "name": "Refresh projects",
+                    "icon": "refresh",
+                    "type": "command",
+                    "command": "projectManager.refreshProjects"
+                },
+                {
+                    "key": "e",
+                    "name": "Edit projects",
+                    "icon": "edit",
+                    "type": "command",
+                    "command": "projectManager.editProjects"
+                },
+                {
+                    "key": "s",
+                    "name": "Save project",
+                    "icon": "save",
+                    "type": "command",
+                    "command": "projectManager.saveProject"
+                },
+                {
+                    "key": "v",
+                    "name": "View sidebar",
+                    "icon": "eye",
+                    "type": "command",
+                    "command": "workbench.view.extension.project-manager"
+                }
+            ]
         },
 
         // swap JSON/GUI settings
@@ -951,6 +1003,14 @@
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
     },
+    "projectManager.groupList": true,
+    "projectManager.git.baseFolders": [
+        "~/proj/",
+        "~/talks/",
+        "~/talks/trainings",
+    ],
+    "projectManager.git.maxDepthRecursion": 1,
+    "window.zoomLevel": 2
     // "editor.suggestSelection": "first",
     // "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     // "editor.tabSize": 8,
