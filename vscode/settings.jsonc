@@ -786,7 +786,7 @@
             "max-height: none !important;",
         ".quick-input-widget > .quick-input-list .codicon":
             "color: #83a598 !important; padding-right: 5px;",
-        ".quick-input-widget > .quick-input-list .monaco-list-row[aria-label*=\"  +\"] .label-description":
+        ".quick-input-widget > .quick-input-list .monaco-list-row[aria-label*=\" +\"] .label-description":
             "color: #8ec07c;",
         // ".quick-input-widget > .quick-input-list .monaco-list-rows":
         //    "display: grid !important; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1.5em;",
