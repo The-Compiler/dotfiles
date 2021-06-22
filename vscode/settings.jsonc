@@ -311,6 +311,13 @@
                     "command": "issue.openGithubPermalink",
                 },
                 {
+                    "key": "O",
+                    "name": "Open remote repository",
+                    "icon": "remote",
+                    "type": "command",
+                    "command": "remoteHub.openRepository",
+                },
+                {
                     "key": "y",
                     "name": "Copy GitHub permalink",
                     "icon": "link",
