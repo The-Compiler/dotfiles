@@ -775,7 +775,8 @@
             "sideBar.background": "#3c3836",
             "panel.background": "#3c3836",
             // file browser keyboard usage
-            "list.focusForeground": "#689d6a",
+            "list.focusForeground": "#d3869b",
+            "quickInputList.focusForeground": "#fbf1c7"
         }
     },
     "customizeUI.stylesheet": {
