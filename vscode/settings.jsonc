@@ -806,6 +806,7 @@
     "workbench.editor.untitled.hint": "hidden",
     "workbench.iconTheme": "material-icon-theme",
     "material-icon-theme.folders.color": "#458588",
+    "material-icon-theme.saturation": 0.5,
     "workbench.tree.indent": 16,
     "workbench.colorCustomizations": {
         // hide squiggly lines as we have errorLens
