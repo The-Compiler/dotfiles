@@ -951,6 +951,8 @@
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
     },
+    // "editor.suggestSelection": "first",
+    // "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     // "editor.tabSize": 8,
     // "editor.cursorStyle": "line",
     // "editor.insertSpaces": false,
