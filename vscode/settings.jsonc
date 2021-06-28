@@ -1018,7 +1018,11 @@
         "~/hsr/",
     ],
     "projectManager.git.maxDepthRecursion": 1,
-    "window.zoomLevel": 2
+    "window.zoomLevel": 1,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    //"coverage-gutter.showRulerCoverage": true,
+    //"coverage-gutter.showLineCoverage": true,
     // "editor.suggestSelection": "first",
     // "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     // "editor.tabSize": 8,
@@ -1042,5 +1046,5 @@
     //     "#3c383620",
     //     "#50494520",
     //     "#665c5420",
-    // ],
+    // ]
 }
