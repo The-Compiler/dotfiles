@@ -982,6 +982,11 @@
         "--synctex-forward=%LINE%:0:%TEX%",
         "%PDF%"
     ],
+    /********** rst **********/
+    "restructuredtext.languageServer.disabled": true,
+    "restructuredtext.pythonPath": "/usr/bin/python3",
+    "restructuredtext.sphinxBuildPath": "/usr/bin/sphinx-build",
+    "restructuredtext.linter.executablePath": "/usr/bin/rstcheck",
     /********** Dash/Zeal **********/
     "dash.languageIdToDocsetMap": {
         "ansible": [
