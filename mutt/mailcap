@@ -1,4 +1,4 @@
-text/html; qutebrowser %s; needsterminal; nametemplate=%s.html
+text/html; qutebrowser --temp-basedir -s content.proxy http://localhost:666 -s content.javascript.enabled false %s; needsterminal; nametemplate=%s.html
 text/html; elinks -force-html -dump -localhost %s | sed 's/^   //'; copiousoutput
 
 application/pdf; zathura %s
