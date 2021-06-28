@@ -267,6 +267,20 @@
                     "icon": "file",
                     "command": "magit.blame-file",
                 },
+                {
+                    "key": "p",
+                    "name": "Blame previous change",
+                    "type": "command",
+                    "icon": "clock",
+                    "command": "gitlens.openBlamePriorToChange",
+                },
+                {
+                    "key": "s",
+                    "name": "Show commit details",
+                    "type": "command",
+                    "icon": "eye",
+                    "command": "gitlens.showQuickCommitDetails"
+                }
             ]
         },
         {
