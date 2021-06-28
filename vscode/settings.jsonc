@@ -914,6 +914,7 @@
     "update.mode": "none",
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
+    "redhat.telemetry.enabled": false,
     "workbench.settings.enableNaturalLanguageSearch": false,
     /*********** Git **********/
     "git.autofetch": true,
