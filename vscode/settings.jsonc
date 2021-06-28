@@ -1015,6 +1015,7 @@
         "~/proj/",
         "~/talks/",
         "~/talks/trainings",
+        "~/hsr/",
     ],
     "projectManager.git.maxDepthRecursion": 1,
     "window.zoomLevel": 2
