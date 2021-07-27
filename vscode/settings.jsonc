@@ -832,7 +832,7 @@
             "quickInput.background": "#3c3836",
             "quickInputTitle.background": "#504945",
             "quickInputList.focusBackground": "#504945",
-            "notifications.background": "#7c6f64",
+            "notifications.background": "#504945",
             "notifications.foreground": "#ebdbb2",
             "peekViewEditor.background": "#3c3836",
             "peekViewEditorGutter.background": "#504945",
