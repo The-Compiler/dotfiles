@@ -23,6 +23,7 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=0
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export CM_LAUNCHER=rofi  # clipmenu
 export RANGER_DEVICONS_SEPARATOR='  '
+export JDK_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
 
 ### ndless
 #export PATH="/home/florian/code/Ndless/ndless-sdk/toolchain/install/bin:/home/florian/code/Ndless/ndless-sdk/bin:$PATH"
