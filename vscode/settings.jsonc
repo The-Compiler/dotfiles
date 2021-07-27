@@ -1035,6 +1035,7 @@
     "window.zoomLevel": 1,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.inlineSuggest.enabled": true,
     //"coverage-gutter.showRulerCoverage": true,
     //"coverage-gutter.showLineCoverage": true,
     // "editor.suggestSelection": "first",
