@@ -674,7 +674,7 @@
             "command": "python-tox.selectMultiple"
         },
 
-
+        // Asciidoc mode
         {
             "keys": [
                 "m",
@@ -697,6 +697,8 @@
                 }
             ]
         },
+
+        // Live share bindings
         {
             "keys": "L",
             "name": "+Live Share",
