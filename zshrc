@@ -263,11 +263,13 @@ viewcert() {
 
 ytdl() {
     if [[ $1 == *://* || $1 == -* ]]; then
-        youtube-dl "$@"
+        #youtube-dl "$@"
+        yt-dlp "$@"
     else
         local url="https://youtu.be/$1"
         shift 1
-        youtube-dl "$url" "$@"
+        #youtube-dl "$url" "$@"
+        yt-dlp "$url" "$@"
     fi
 }
 
