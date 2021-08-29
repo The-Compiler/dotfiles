@@ -674,6 +674,180 @@
             "command": "python-tox.selectMultiple"
         },
 
+        // Arduino integration
+        {
+            "keys": ["m", "languageId:cpp", "a"],
+            "name": "+Arduino",
+            "type": "bindings",
+            "icon": "circuit-board",
+            "bindings": [
+                {
+                    "key": "c",
+                    "name": "Verify",
+                    "icon": "gear",
+                    "type": "command",
+                    "command": "arduino.verify",
+                },
+                {
+                    "key": "u",
+                    "name": "Upload",
+                    "icon": "zap",
+                    "type": "bindings",
+                    "bindings": [
+                        {
+                            "key": "u",
+                            "name": "Upload",
+                            "icon": "zap",
+                            "type": "command",
+                            "command": "arduino.upload",
+                        },
+                        {
+                            "key": "U",
+                            "name": "Upload Using Programmer",
+                            "icon": "plug",
+                            "type": "command",
+                            "command": "arduino.uploadUsingProgrammer",
+                        },
+                        {
+                            "key": "c",
+                            "name": "CLI Upload",
+                            "icon": "terminal",
+                            "type": "command",
+                            "command": "arduino.cliUpload",
+                        },
+                        {
+                            "key": "C",
+                            "name": "CLI Upload Using Programmer",
+                            "icon": "plug",
+                            "type": "command",
+                            "command": "arduino.cliUploadUsingProgrammer",
+                        },
+                    ],
+                },
+                {
+                    "key": "r",
+                    "name": "Rebuild IntelliSense Configuration",
+                    "icon": "refresh",
+                    "type": "command",
+                    "command": "arduino.rebuildIntelliSenseConfig",
+                },
+                {
+                    "key": "b",
+                    "name": "+Board",
+                    "icon": "circuit-board",
+                    "type": "bindings",
+                    "bindings": [
+                        {
+                            "key": "c",
+                            "name": "Board config",
+                            "icon": "gear",
+                            "type": "command",
+                            "command": "arduino.showBoardConfig",
+                        },
+                        {
+                            "key": "m",
+                            "name": "Board manager",
+                            "icon": "tools",
+                            "type": "command",
+                            "command": "arduino.showBoardManager",
+                        },
+                        {
+                            "key": "b",
+                            "name": "Change board type",
+                            "icon": "circuit-board",
+                            "type": "command",
+                            "command": "arduino.changeBoardType",
+                        },
+                    ],
+                },
+                {
+                    "key": "p",
+                    "name": "+Port",
+                    "icon": "plug",
+                    "type": "bindings",
+                    "bindings": [
+                        {
+                            "key": "b",
+                            "name": "Change Baud Rate",
+                            "icon": "pulse",
+                            "type": "command",
+                            "command": "arduino.changeBaudRate",
+                        },
+                        {
+                            "key": "m",
+                            "name": "Open Serial Monitor",
+                            "icon": "eye",
+                            "type": "command",
+                            "command": "arduino.openSerialMonitor",
+                        },
+                        {
+                            "key": "M",
+                            "name": "Close Serial Monitor",
+                            "icon": "eye-closed",
+                            "type": "command",
+                            "command": "arduino.closeSerialMonitor",
+                        },
+                        {
+                            "key": "p",
+                            "name": "Select Serial Port",
+                            "icon": "plug",
+                            "type": "command",
+                            "command": "arduino.selectSerialPort",
+                        },
+                        {
+                            "key": "P",
+                            "name": "Select Programmer",
+                            "icon": "zap",
+                            "type": "command",
+                            "command": "arduino.selectProgrammer",
+                        },
+                        {
+                            "key": "t",
+                            "name": "Send Text to Serial Port",
+                            "icon": "symbol-text",
+                            "type": "command",
+                            "command": "arduino.sendMessageToSerialPort",
+                        },
+                    ],
+                },
+                {
+                    "key": "e",
+                    "name": "Show examples",
+                    "icon": "file-code",
+                    "type": "command",
+                    "command": "arduino.showExamples",
+                },
+                {
+                    "key": "E",
+                    "name": "Show examples in explorer",
+                    "icon": "list-tree",
+                    "type": "command",
+                    "command": "arduinoExampleExplorer.focus",
+                },
+                {
+                    "key": "i",
+                    "name": "Initialize",
+                    "icon": "new-file",
+                    "type": "command",
+                    "command": "arduino.initialize",
+                },
+                {
+                    "key": "l",
+                    "name": "Library Manager",
+                    "icon": "library",
+                    "type": "command",
+                    "command": "arduino.showLibraryManager",
+                },
+                {
+                    "key": "s",
+                    "name": "Select sketch",
+                    "icon": "files",
+                    "type": "command",
+                    "command": "arduino.selectSketch",
+                },
+            ]
+        },
+
         // Asciidoc mode
         {
             "keys": [
