@@ -1022,7 +1022,7 @@
     },
     /********** Unknown **********/
     "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
+        "*.ipynb": "jupyter-notebook"
     },
     "projectManager.groupList": true,
     "projectManager.git.baseFolders": [
@@ -1036,6 +1036,10 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "editor.inlineSuggest.enabled": true,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "right"
+    },
     //"coverage-gutter.showRulerCoverage": true,
     //"coverage-gutter.showLineCoverage": true,
     // "editor.suggestSelection": "first",
