@@ -1107,6 +1107,7 @@
     ],
     "github-actions.workflows.pinned.refresh.enabled": true,
     "magit.quick-switch-enabled": true,
+    "remoteHub.search.download.enabled": true,
     /********** Python **********/
     "python.useIsolation": false, // for pytest to find qutebrowser package
     "python.showStartPage": false,
