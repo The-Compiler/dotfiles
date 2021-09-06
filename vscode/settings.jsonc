@@ -1121,6 +1121,13 @@
         "reportUnknownLambdaType": "none",
         "reportUntypedFunctionDecorator": "none",
     },
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "right"
+    },
     // "python.analysis.memory.keepLibraryAst": true,
 
     // "pythonTestExplorer.testFramework": "pytest",
@@ -1169,16 +1176,15 @@
         "https://raw.githubusercontent.com/keyboardio/arduino-kaleidoscope-master/main/package_kaleidoscope_master_index.json",
         "https://adafruit.github.io/arduino-board-index/package_adafruit_index.json",
     ],
-    /********** Dash/Zeal **********/
-    "dash.languageIdToDocsetMap": {
-        "ansible": [
-            "ansible"
-        ],
-        "python": [
-            "python",
-            "qt",
-        ],
-    },
+    /********** Project Manager **********/
+    "projectManager.groupList": true,
+    "projectManager.git.baseFolders": [
+        "~/proj/",
+        "~/talks/",
+        "~/talks/trainings",
+        "~/hsr/",
+    ],
+    "projectManager.git.maxDepthRecursion": 1,
     /********** Other **********/
     "extensions.supportUntrustedWorkspaces": {
         // https://github.com/VSpaceCode/VSpaceCode/issues/202
@@ -1188,26 +1194,19 @@
         "iocave.monkey-patch": { "supported": true },
         "iocave.customize-ui": { "supported": true },
     },
-    /********** Unknown **********/
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
+    "dash.languageIdToDocsetMap": {
+        "ansible": [
+            "ansible"
+        ],
+        "python": [
+            "python",
+            "qt",
+        ],
     },
-    "projectManager.groupList": true,
-    "projectManager.git.baseFolders": [
-        "~/proj/",
-        "~/talks/",
-        "~/talks/trainings",
-        "~/hsr/",
-    ],
-    "projectManager.git.maxDepthRecursion": 1,
-    "window.zoomLevel": 1,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "editor.inlineSuggest.enabled": true,
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "right"
-    },
+    "window.zoomLevel": 1,
     //"coverage-gutter.showRulerCoverage": true,
     //"coverage-gutter.showLineCoverage": true,
     // "editor.suggestSelection": "first",
