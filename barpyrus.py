@@ -74,6 +74,18 @@ def tag_renderer(taginfo, painter):
     painter.space(2)
 
 
+def cg_alerts(cg):
+    with cg.if_('up vpn0'):
+        with cg.temp_fg(Gruv.YELLOW_LIGHT):
+            cg.symbol(0xe0a6)
+        cg.space(50)
+
+    with cg.if_('match "${execi 20 dunstctl is-paused}" == "true"'):
+        with cg.temp_fg(Gruv.YELLOW_LIGHT):
+            cg.symbol(0xe0ad)
+        cg.space(50)
+
+
 def _cg_cpu_perc(cg, num):
     with highlight_critical(cg, f'cpu cpu{num}'):
         cg.var(f'cpu cpu{num}')
@@ -151,10 +163,6 @@ def _cg_net_icon(cg, iface):
 
 
 def cg_net(cg):
-    with cg.if_('up vpn0'):
-        with cg.temp_fg(Gruv.YELLOW_LIGHT):
-            cg.symbol(0xe0a6)
-
     for iface in ['eth', 'dock', 'wlan', 'ppp0', 'bnep0']:
         with cg.if_(f'up {iface}'), cg.if_('match "${addr %s}" != "No Address"' % iface):
             _cg_net_icon(cg, iface)
@@ -249,6 +257,7 @@ def main():
     hc(['pad', str(monitor), str(geom.height)])
 
     cg = conky.ConkyGenerator(lemonbar.textpainter())
+    cg_alerts(cg)
     cg_cpu(cg)
     cg_space(cg)
     cg_fan(cg)
