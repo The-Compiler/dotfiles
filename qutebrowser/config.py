@@ -12,6 +12,12 @@ config.bind(',rta', 'open {url}top/?sort=top&t=all')
 config.bind(',rtv', 'spawn termite -e "rtv {url}"')
 config.bind(',c', 'spawn -d chromium {url}')
 
+# Keyboardio
+config.bind('<Shift-Left>', 'back')
+config.bind('<Shift-Down>', 'tab-next')
+config.bind('<Shift-Up>', 'tab-prev')
+config.bind('<Shift-Right>', 'forward')
+
 css = '~/proj/solarized-everything-css/css/gruvbox/gruvbox-all-sites.css'
 config.bind(',n', f'config-cycle content.user_stylesheets {css} ""')
 
