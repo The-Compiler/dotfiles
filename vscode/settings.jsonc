@@ -965,6 +965,7 @@
     "editor.renderControlCharacters": true,
     "editor.renderLineHighlightOnlyWhenFocus": true,
     "editor.renderWhitespace": "trailing",
+    "editor.bracketPairColorization.enabled": true,
     // "editor.cursorSmoothCaretAnimation": true,
     "errorLens.fontFamily": "Iosevka Light",
     "errorLens.fontSize": "10pt",
@@ -1003,7 +1004,14 @@
             "panel.background": "#3c3836",
             // file browser keyboard usage
             "list.focusForeground": "#d3869b",
-            "quickInputList.focusForeground": "#fbf1c7"
+            "quickInputList.focusForeground": "#fbf1c7",
+            // bracket pair colorization
+            "editorBracketHighlight.foreground1": "#a89984",  // grey
+            "editorBracketHighlight.foreground2": "#d79921",  // yellow
+            "editorBracketHighlight.foreground3": "#b16286",  // purple
+            "editorBracketHighlight.foreground4": "#458588",  // blue
+            "editorBracketHighlight.foreground5": "#689d6a",  // aqua
+            "editorBracketHighlight.foreground6": "#cc241d",  // red
         }
     },
     "customizeUI.stylesheet": {
