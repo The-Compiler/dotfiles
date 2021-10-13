@@ -85,6 +85,12 @@ def cg_alerts(cg):
             cg.symbol(0xe0ad)
         cg.space(50)
 
+    with cg.temp_fg(ACCENT_COLOR):
+        cg.symbol(0xe01f)
+    cg.space(5)
+    cg.var(f'execi 60 cloclify --conky --conky-error-color {Gruv.RED_DARK}')
+    cg.space(5)
+
 
 def _cg_cpu_perc(cg, num):
     with highlight_critical(cg, f'cpu cpu{num}'):
