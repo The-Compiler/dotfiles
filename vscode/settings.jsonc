@@ -1206,7 +1206,7 @@
         "~/talks/trainings",
         "~/hsr/",
     ],
-    "projectManager.git.maxDepthRecursion": 1,
+    "projectManager.git.maxDepthRecursion": 2,
     /********** Other **********/
     "extensions.supportUntrustedWorkspaces": {
         // https://github.com/VSpaceCode/VSpaceCode/issues/202
