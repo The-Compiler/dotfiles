@@ -405,6 +405,164 @@
                 }
             ]
         },
+        {
+            "keys": "g.H",
+            "name": "+GitLab",
+            "icon": "github-alt",  // close enough...
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "/",
+                    "name": "GitLab project search",
+                    "icon": "search",
+                    "type": "command",
+                    "command": "gl.projectAdvancedSearch",
+                },
+                {
+                    "key": "a",
+                    "name": "GitLab Pipeline Actions",
+                    "icon": "github-action",
+                    "type": "command",
+                    "command": "gl.pipelineActions",
+                },
+                {
+                    "key": "A",
+                    "name": "Validate GitLab CI config",
+                    "icon": "check",
+                    "type": "command",
+                    "command": "gl.validateCIConfig",
+                },
+                {
+                    "key": "d",
+                    "name": "GitLab compare current branch with master",
+                    "icon": "diff",
+                    "type": "command",
+                    "command": "gl.compareCurrentBranch",
+                },
+                {
+                    "key": "o",
+                    "name": "Open permalink on GitLab",
+                    "icon": "globe",
+                    "type": "command",
+                    "command": "gl.openActiveFile",
+                },
+                {
+                    "key": "O",
+                    "name": "Open remote repository",
+                    "icon": "remote",
+                    "type": "command",
+                    "command": "gl.openRepository",
+                },
+                {
+                    "key": "y",
+                    "name": "Copy GitLab permalink",
+                    "icon": "link",
+                    "type": "command",
+                    "command": "gl.copyLinkToActiveFile",
+                },
+                {
+                    "key": "p",
+                    "name": "+MRs",
+                    "icon": "git-pull-request",
+                    "type": "bindings",
+                    "bindings": [
+                        {
+                            "key": "p",
+                            "name": "Show merge requests",
+                            "icon": "eye",
+                            "type": "command",
+                            "command": "issuesAndMrs.focus",
+                        },
+                        {
+                            "key": "P",
+                            "name": "Show merge requests assigned to me",
+                            "icon": "person",
+                            "type": "command",
+                            "command": "gl.showMergeRequestsAssignedToMe",
+                        },
+                        {
+                            "key": "/",
+                            "name": "Search project MRs",
+                            "icon": "search",
+                            "type": "command",
+                            "command": "gl.mergeRequestSearch",
+                        },
+                        {
+                            "key": "c",
+                            "name": "Create merge request from current branch",
+                            "icon": "git-branch",
+                            "type": "command",
+                            "command": "gl.openCurrentMergeRequest",
+                        },
+                        {
+                            "key": "C",
+                            "name": "Create merge request",
+                            "icon": "git-pull-request-create",
+                            "type": "command",
+                            "command": "gl.openCreateNewMR",
+                        },
+                    ]
+                },
+                {
+                    "key": "s",
+                    "name": "+Snippets",
+                    "icon": "symbol-snippet",
+                    "type": "bindings",
+                    "bindings": [
+                        {
+                            "key": "c",
+                            "name": "Create snippet",
+                            "icon": "add",
+                            "type": "command",
+                            "command": "gl.createSnippet",
+                        },
+                        {
+                            "key": "i",
+                            "name": "Insert snippet",
+                            "icon": "pencil",
+                            "type": "command",
+                            "command": "gl.insertSnippet",
+                        }
+                    ]
+                },
+                {
+                    "key": "i",
+                    "name": "+Issues",
+                    "icon": "issues",
+                    "type": "bindings",
+                    "bindings": [
+                        {
+                            "key": "i",
+                            "name": "Show issues",
+                            "icon": "eye",
+                            "type": "command",
+                            "command": "issuesAndMrs.focus",
+                        },
+                        {
+                            "key": "I",
+                            "name": "Show issues assigned to me",
+                            "icon": "person",
+                            "type": "command",
+                            "command": "gl.showIssuesAssignedToMe",
+                        },
+                        {
+                            "key": "/",
+                            "name": "Search project issues",
+                            "icon": "search",
+                            "type": "command",
+                            "command": "gl.issueSearch",
+                        },
+                        {
+                            "key": "c",
+                            "name": "Create issue",
+                            "icon": "issues",
+                            "type": "command",
+                            "command": "gl.openCreateNewIssue",
+                        },
+                    ]
+                }
+            ]
+        },
 
         {
             "keys": "h.z",
