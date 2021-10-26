@@ -1158,6 +1158,20 @@
             ],
             "env": {}
         },
+        {
+            "name": "lualatexmk",
+            "command": "latexmk",
+            "args": [
+                "-shell-escape", // FIXME do we really want this globally?
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "-lualatex",
+              "-outdir=%OUTDIR%",
+              "%DOC%"
+            ],
+            "env": {}
+          },
     ],
     // https://github.com/James-Yu/LaTeX-Workshop/wiki/View#using-synctex-with-an-external-viewer
     "latex-workshop.view.pdf.viewer": "external",
