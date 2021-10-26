@@ -124,6 +124,7 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias bell='echo -e "\a"'
 alias mi='miiocli airpurifier  --ip $MIROBO_IP --token $MIROBO_TOKEN'
+alias py='ipython3'
 
 ### completion ###
 # init completion
