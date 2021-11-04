@@ -752,69 +752,69 @@
         },
 
         // Python tests via test-explorer
-        {
-            "keys": ["m", "languageId:python", "t", "a"],
-            "name": "Run all tests",
-            "icon": "beaker",
-            "type": "command",
-            "command": "test-explorer.run-all",
-        },
-        {
-            "keys": ["m", "languageId:python", "t", "b"],
-            "name": "Run current test file",
-            "icon": "file",
-            "type": "command",
-            "command": "test-explorer.run-file",
-        },
-        {
-            "keys": ["m", "languageId:python", "t", "r"],
-            "name": "Re-run tests",
-            "icon": "sync",
-            "type": "command",
-            "command": "test-explorer.rerun"
-        },
-        {
-            "keys": ["m", "languageId:python", "t", "R"],
-            "name": "Re-run tests in debugger",
-            "icon": "bug",
-            "type": "command",
-            "command": "test-explorer.redebug"
-        },
-        {
-            "keys": ["m", "languageId:python", "t", "t"],
-            "name": "Run test under cursor",
-            "icon": "whole-word",
-            "type": "command",
-            "command": "test-explorer.run-test-at-cursor"
-        },
-        {
-            "keys": ["m", "languageId:python", "t", "T"],
-            "name": "Debug test under cursor",
-            "icon": "bug",
-            "type": "command",
-            "command": "test-explorer.debug-test-at-cursor"
-        },
-        {
-            "keys": ["m", "languageId:python", "t", "c"],
-            "name": "Cancel running tests",
-            "icon": "close",
-            "type": "command",
-            "command": "test-explorer.cancel"
-        },
-        {
-            "keys": ["m", "languageId:python", "t", "C"],
-            "name": "Refresh tests",
-            "icon": "refresh",
-            "type": "command",
-            "command": "test-explorer.refresh",
-        },
-        {
-            "keys": ["m", "languageId:python", "t", "v"],
-            "name": "Focus test explorer view",
-            "icon": "eye",
-            "type": "command",
-            "command": "test-explorer.focus"
-        },
+        // {
+        //     "keys": ["m", "languageId:python", "t", "a"],
+        //     "name": "Run all tests",
+        //     "icon": "beaker",
+        //     "type": "command",
+        //     "command": "test-explorer.run-all",
+        // },
+        // {
+        //     "keys": ["m", "languageId:python", "t", "b"],
+        //     "name": "Run current test file",
+        //     "icon": "file",
+        //     "type": "command",
+        //     "command": "test-explorer.run-file",
+        // },
+        // {
+        //     "keys": ["m", "languageId:python", "t", "r"],
+        //     "name": "Re-run tests",
+        //     "icon": "sync",
+        //     "type": "command",
+        //     "command": "test-explorer.rerun"
+        // },
+        // {
+        //     "keys": ["m", "languageId:python", "t", "R"],
+        //     "name": "Re-run tests in debugger",
+        //     "icon": "bug",
+        //     "type": "command",
+        //     "command": "test-explorer.redebug"
+        // },
+        // {
+        //     "keys": ["m", "languageId:python", "t", "t"],
+        //     "name": "Run test under cursor",
+        //     "icon": "whole-word",
+        //     "type": "command",
+        //     "command": "test-explorer.run-test-at-cursor"
+        // },
+        // {
+        //     "keys": ["m", "languageId:python", "t", "T"],
+        //     "name": "Debug test under cursor",
+        //     "icon": "bug",
+        //     "type": "command",
+        //     "command": "test-explorer.debug-test-at-cursor"
+        // },
+        // {
+        //     "keys": ["m", "languageId:python", "t", "c"],
+        //     "name": "Cancel running tests",
+        //     "icon": "close",
+        //     "type": "command",
+        //     "command": "test-explorer.cancel"
+        // },
+        // {
+        //     "keys": ["m", "languageId:python", "t", "C"],
+        //     "name": "Refresh tests",
+        //     "icon": "refresh",
+        //     "type": "command",
+        //     "command": "test-explorer.refresh",
+        // },
+        // {
+        //     "keys": ["m", "languageId:python", "t", "v"],
+        //     "name": "Focus test explorer view",
+        //     "icon": "eye",
+        //     "type": "command",
+        //     "command": "test-explorer.focus"
+        // },
 
         // Tox integration
         {
