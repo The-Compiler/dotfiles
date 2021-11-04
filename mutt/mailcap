@@ -2,7 +2,7 @@ text/html; qutebrowser --temp-basedir -s content.proxy http://localhost:666 -s c
 text/html; elinks -force-html -dump -localhost %s | sed 's/^   //'; copiousoutput
 
 application/pdf; zathura %s
-application/pdf; pdftotext -layout -l 10 -nopgbrk /dev/stdin -; copiousoutput
+application/pdf; pdftotext -layout -nopgbrk /dev/stdin -; copiousoutput
 
 application/zip; als %s; copiousoutput
 application/x-gzip; als %s; copiousoutput
