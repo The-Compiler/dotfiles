@@ -751,6 +751,15 @@
             ],
         },
 
+        // Duplicate file
+        {
+            "keys": ["f", "C"],
+            "name": "Duplicate (clone) file",
+            "icon": "files",
+            "type": "command",
+            "command": "duplicate.execute"
+        },
+
         // Additional testing Python bindings
         {
             "keys": ["m", "languageId:python", "t", "B"],
