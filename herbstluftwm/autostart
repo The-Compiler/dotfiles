@@ -124,7 +124,33 @@ modbind s floating toggle
 modbind Shift-s set_attr clients.focus.floating toggle
 
 modbind f spawn /usr/share/doc/herbstluftwm/examples/maximize.sh
-modbind Shift-f fullscreen toggle
+
+fullscreen_cmd=(
+and
+  # toggle the fullscreen state
+  : fullscreen toggle
+  # if it's become fullscreen
+  : compare clients.focus.fullscreen = true
+  # then go through all clients
+  : substitute CURTAG tags.focus.name
+    substitute CURCLIENT clients.focus.winid
+    foreach C clients. and
+      # only consider other clients
+      , sprintf WINID '%c.winid' C compare WINID != CURCLIENT
+      # only consider clients in fullscreen
+      , sprintf FS '%c.fullscreen' C compare FS = true
+      # and only consider clients on the same tag
+      , sprintf TAG '%c.tag' C compare TAG = CURTAG
+      # if there is another fs client on the same tag, then
+      # 1. undo the fullscreen
+      , set_attr clients.focus.fullscreen false
+      # 2. show a warning notification including the other fs client's title
+      , sprintf TITLE_ATTR '%c.title' C
+        sprintf TITLE 'Window %s' TITLE_ATTR
+        spawn notify-send TITLE 'is already fullscreen'
+)
+modbind Shift-f "${fullscreen_cmd[@]}"
+#modbind Shift-f fullscreen toggle
 
 # The following cycles through the available layouts within a frame, but skips
 # layouts, if the layout change wouldn't affect the actual window positions.
