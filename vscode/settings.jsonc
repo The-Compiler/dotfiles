@@ -1378,6 +1378,8 @@
     "remoteHub.search.download.enabled": true,
     /********** Python **********/
     // "python.analysis.diagnosticMode": "workspace",
+    "python.formatting.provider": "black",
+    "python.analysis.autoImportCompletions": false,
     "python.analysis.typeCheckingMode": "strict",
     "python.analysis.diagnosticSeverityOverrides": {
         "reportUnknownMemberType": "none",
@@ -1386,6 +1388,10 @@
         "reportUnknownParameterType": "none",
         "reportUnknownLambdaType": "none",
         "reportUntypedFunctionDecorator": "none",
+
+        //"reportMissingParameterType": "information",
+        "reportMissingParameterType": "none",
+        "reportUnusedVariable": "information",
     },
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
