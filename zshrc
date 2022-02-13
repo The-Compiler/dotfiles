@@ -285,3 +285,9 @@ fi
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -e "/usr/lib/kitty/shell-integration/kitty.zsh"; then source "/usr/lib/kitty/shell-integration/kitty.zsh"; fi
 # END_KITTY_SHELL_INTEGRATION
+
+# pipx
+autoload -U bashcompinit
+bashcompinit
+export PATH="$PATH:/home/florian/.local/bin"
+eval "$(register-python-argcomplete pipx)"
