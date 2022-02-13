@@ -1377,8 +1377,6 @@
     "magit.quick-switch-enabled": true,
     "remoteHub.search.download.enabled": true,
     /********** Python **********/
-    "python.useIsolation": false, // for pytest to find qutebrowser package
-    "python.showStartPage": false,
     // "python.analysis.diagnosticMode": "workspace",
     "python.analysis.typeCheckingMode": "strict",
     "python.analysis.diagnosticSeverityOverrides": {
@@ -1448,7 +1446,6 @@
     ],
     /********** rst **********/
     "restructuredtext.languageServer.disabled": true,
-    "restructuredtext.pythonPath": "/usr/bin/python3",
     "restructuredtext.sphinxBuildPath": "/usr/bin/sphinx-build",
     "restructuredtext.linter.executablePath": "/usr/bin/rstcheck",
     /********** other languages **********/
