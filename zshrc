@@ -25,7 +25,7 @@ autoload -U colors && colors
 # Path to the history file
 HISTFILE=$HOME/.zsh_history
 # Size of the history and how much to actually save
-HISTSIZE=5000
+HISTSIZE=20000
 SAVEHIST=$HISTSIZE
 # Ignore duplicate commands in the history
 setopt hist_ignore_all_dups
