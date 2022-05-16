@@ -19,3 +19,5 @@ end
 # source /usr/share/pwndbg/gdbinit.py
 # source /home/florian/.gdbinit-gef.py
 # source /home/florian/proj/peda/peda.py
+
+set debuginfod enabled ask
