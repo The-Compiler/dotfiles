@@ -1354,6 +1354,9 @@
     "whichkey.delay": 1,
     "whichkey.sortOrder": "nonNumberFirst",
     "latex-workshop.latex.autoBuild.run": "onSave",
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.perEditorGroup": true,
+    "workbench.editor.limit.value": 3,
     /********** Privacy **********/
     "update.mode": "none",
     "telemetry.enableCrashReporter": false,
