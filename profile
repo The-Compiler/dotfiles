@@ -24,6 +24,7 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export CM_LAUNCHER=rofi  # clipmenu
 export RANGER_DEVICONS_SEPARATOR='  '
 export JDK_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
+export PIP_REQUIRE_VIRTUALENV=1
 
 ### ndless
 #export PATH="/home/florian/code/Ndless/ndless-sdk/toolchain/install/bin:/home/florian/code/Ndless/ndless-sdk/bin:$PATH"
