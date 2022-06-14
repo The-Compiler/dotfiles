@@ -1,5 +1,7 @@
 ## Python
-source /home/florian/proj/cpython/Misc/gdbinit
+# source /home/florian/proj/cpython/Misc/gdbinit
+# add-auto-load-safe-path /home/florian/proj/cpython
+source /home/florian/proj/cpython/python-gdb.py
 
 ## Qt
 python
