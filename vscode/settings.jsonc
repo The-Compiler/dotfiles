@@ -1311,15 +1311,15 @@
             "font-weight: bold !important;",
 
         //// vim mode styling
-        // "#vscodevim\\.vim":
+        // "#vscodevim\\.vim\\.primary":
         //    "border-radius: 3px !important",
-        // "#vscodevim\\.vim[aria-label=\"-- NORMAL --\"]":
+        // "#vscodevim\\.vim\\.primary[aria-label=\"-- NORMAL --\"]":
         //    "background-color: #458588 !important;",
-        "#vscodevim\\.vim[aria-label=\"-- INSERT --\"]":
+        "#vscodevim\\.vim\\.primary[aria-label=\"-- INSERT --\"]":
             "color: #98971a !important;",
-        "#vscodevim\\.vim[aria-label=\"-- VISUAL --\"]":
+        "#vscodevim\\.vim\\.primary[aria-label=\"-- VISUAL --\"]":
             "color: #b16286 !important;",
-        "#vscodevim\\.vim[aria-label^=\":\"], #vscodevim\\.vim[aria-label^=\"/\"], #vscodevim\\.vim[aria-label^=\"?\"]":
+        "#vscodevim\\.vim\\.primary[aria-label^=\":\"], #vscodevim\\.vim[aria-label^=\"/\"], #vscodevim\\.vim[aria-label^=\"?\"]":
             "background-color: #d79921 !important; color: #282828 !important; font-weight: bold !important",
     },
     "customizeUI.activityBar": "bottom", // note, 'top' interfers with VSpaceCode 'Tb'
