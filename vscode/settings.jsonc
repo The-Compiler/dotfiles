@@ -1259,6 +1259,8 @@
             "peekViewEditorGutter.background": "#504945",
             "peekViewResult.background": "#504945",
             "peekViewTitle.background": "#504945",
+            // whitespaces
+            "editorWhitespace.foreground": "#7c6f64",
             // UI separation
             "sideBar.background": "#3c3836",
             "panel.background": "#3c3836",
