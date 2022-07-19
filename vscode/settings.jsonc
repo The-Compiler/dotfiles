@@ -928,17 +928,46 @@
         // Tox integration
         {
             "keys": ["m", "languageId:python", "c", "t"],
-            "name": "+Run tox",
+            "name": "+Tox",
             "icon": "play",
-            "type": "command",
-            "command": "python-tox.select"
-        },
-        {
-            "keys": ["m", "languageId:python", "c", "T"],
-            "name": "+Run tox (multiple)",
-            "icon": "run-all",
-            "type": "command",
-            "command": "python-tox.selectMultiple"
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "t",
+                    "name": "Run tox",
+                    "icon": "play",
+                    "type": "command",
+                    "command": "python-tox.select"
+                },
+                {
+                    "key": "T",
+                    "name": "Run tox with arguments",
+                    "icon": "play-circle",
+                    "type": "command",
+                    "command": "python-tox.selectWithArgs"
+                },
+                {
+                    "key": "m",
+                    "name": "Run tox (multiple)",
+                    "icon": "run-all",
+                    "type": "command",
+                    "command": "python-tox.selectMultiple"
+                },
+                {
+                    "key": "M",
+                    "name": "Run tox (multiple) with arguments",
+                    "icon": "run-all",
+                    "type": "command",
+                    "command": "python-tox.selectMultipleWithArgs"
+                },
+                {
+                    "key": "?",
+                    "name": "Show tox documentation",
+                    "icon": "book",
+                    "type": "command",
+                    "command": "python-tox.openDocs"
+                }
+            ]
         },
 
         // Arduino integration
