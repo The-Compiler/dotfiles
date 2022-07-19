@@ -13,6 +13,12 @@
         "command": "vspacecode.space",
         "when": "sideBarFocus && !inputFocus && !whichkeyActive"
     },
+    // Trigger vspacecode with neovim extension
+    {
+        "key": "space",
+        "command": "vspacecode.space",
+        "when": "editorTextFocus && neovim.mode == normal"
+    },
     // Keybindings required for edamagit
     // https://github.com/kahole/edamagit#vim-support-vscodevim
     // Cannot be added to package.json because keybinding replacements

@@ -1321,6 +1321,10 @@
             "color: #b16286 !important;",
         "#vscodevim\\.vim\\.primary[aria-label^=\":\"], #vscodevim\\.vim[aria-label^=\"/\"], #vscodevim\\.vim[aria-label^=\"?\"]":
             "background-color: #d79921 !important; color: #282828 !important; font-weight: bold !important",
+        "#asvetliakov\\.vscode-neovim[aria-label=\"-- INSERT --\"]":
+            "background-color: #98971a !important;",
+        "#asvetliakov\\.vscode-neovim[aria-label=\"-- VISUAL --\"]":
+            "background-color: #b16286 !important;",
     },
     "customizeUI.activityBar": "bottom", // note, 'top' interfers with VSpaceCode 'Tb'
     "customizeUI.activityBarHideSettings": true,
@@ -1483,6 +1487,8 @@
         // https://github.com/iocave/customize-ui/issues/98
         "iocave.monkey-patch": { "supported": true },
         "iocave.customize-ui": { "supported": true },
+        // ?
+        "asvetliakov.vscode-neovim": {"supported": true},
     },
     "dash.languageIdToDocsetMap": {
         "ansible": [
@@ -1523,4 +1529,6 @@
     //     "#50494520",
     //     "#665c5420",
     // ]
+    // nvim experiment
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
 }
