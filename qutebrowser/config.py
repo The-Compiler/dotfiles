@@ -38,7 +38,7 @@ c.aliases['ytdl'] = """spawn -v -m bash -c 'cd ~/vid/yt && youtube-dl "$@"' _ {u
 c.fonts.web.family.fantasy = 'Arial'
 
 c.search.incremental = False
-c.editor.command = ['emacs', '{}']
+c.editor.command = ['code', '-nw', '{}']
 
 #c.qt.args = ['ppapi-widevine-path=/usr/lib/qt/plugins/ppapi/libwidevinecdmadapter.so']
 
