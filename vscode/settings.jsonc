@@ -1168,6 +1168,198 @@
             ]
         },
 
+        // Monkey C mode
+        {
+            "keys": [
+                "m",
+                "languageId:monkeyc"
+            ],
+            "name": "Monkey C",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "m",
+                    "name": "Manifest",
+                    "type": "bindings",
+                    "icon": "checklist",
+                    "bindings": [
+                        {
+                            "key": "a",
+                            "name": "Edit application",
+                            "icon": "tools",
+                            "type": "command",
+                            "command": "monkeyc.editApplication",
+                        },
+                        {
+                            "key": "A",
+                            "name": "Edit annotations",
+                            "icon": "ellipsis",
+                            "type": "command",
+                            "command": "monkeyc.editAnnotations",
+                        },
+                        {
+                            "key": "d",
+                            "name": "Edit products",
+                            "icon": "watch",
+                            "type": "command",
+                            "command": "monkeyc.editProducts",
+                        },
+                        {
+                            "key": "D",
+                            "name": "Set Products by Version",
+                            "icon": "star-empty",
+                            "type": "command",
+                            "command": "monkeyc.setProductsByProductCategory",
+                        },
+                        {
+                            "key": "p",
+                            "name": "Edit permissions",
+                            "icon": "unlock",
+                            "type": "command",
+                            "command": "monkeyc.editPermissions",
+                        },
+                        {
+                            "key": "l",
+                            "name": "Edit languages",
+                            "icon": "globe",
+                            "type": "command",
+                            "command": "monkeyc.editLanguages",
+                        },
+                        {
+                            "key": "b",
+                            "name": "Edit monkey barrel",
+                            "icon": "library",
+                            "type": "command",
+                            "command": "monkeyc.configureBarrel",
+                        },
+                        {
+                            "key": "u",
+                            "name": "Regenerate UUID",
+                            "icon": "refresh",
+                            "type": "command",
+                            "command": "monkeyc.regenerateUUID",
+                        },
+                    ]
+                },
+                {
+                    "key": "s",
+                    "name": "Setup / SDK",
+                    "type": "bindings",
+                    "icon": "archive",
+                    "bindings": [
+                        {
+                            "key": "d",
+                            "name": "Show docs",
+                            "icon": "book",
+                            "type": "command",
+                            "command": "monkeyc.viewDocumentation"
+                        },
+                        {
+                            "key": "v",
+                            "name": "Verify installation",
+                            "icon": "check",
+                            "type": "command",
+                            "command": "monkeyc.verifyInstallation",
+                        },
+                        {
+                            "key": "s",
+                            "name": "Show samples",
+                            "icon": "book",
+                            "type": "command",
+                            "command": "monkeyc.samples",
+                        },
+                        {
+                            "key": "k",
+                            "name": "Generate developer key",
+                            "icon": "key",
+                            "type": "command",
+                            "command": "monkeyc.generateDeveloperKey",
+                        },
+                        {
+                            "key": "m",
+                            "name": "Open SDK manager",
+                            "icon": "package",
+                            "type": "command",
+                            "command": "monkeyc.openSdkManager",
+                        },
+                    ]
+                },
+                {
+                    "key": "b",
+                    "name": "Build",
+                    "type": "bindings",
+                    "icon": "gear",
+                    "bindings": [
+                        {
+                            "key": "b",
+                            "name": "Build current project",
+                            "icon": "gear",
+                            "type": "command",
+                            "command": "monkeyc.buildCurrentProject",
+                        },
+                        {
+                            "key": "d",
+                            "name": "Build for device",
+                            "icon": "watch",
+                            "type": "command",
+                            "command": "monkeyc.buildForDevice",
+                        },
+                        {
+                            "key": "e",
+                            "name": "Export project",
+                            "icon": "export",
+                            "type": "command",
+                            "command": "monkeyc.exportProject",
+                        },
+                    ]
+                },
+                {
+                    "key": "t",
+                    "name": "Run tests",
+                    "icon": "beaker",
+                    "type": "command",
+                    "command": "monkeyc.runTests",
+                },
+                {
+                    "key": "n",
+                    "name": "New project",
+                    "icon": "new-folder",
+                    "type": "command",
+                    "command": "monkeyc.newProject"
+                },
+                {
+                    "key": "a",
+                    "name": "SDK applications",
+                    "type": "bindings",
+                    "icon": "rocket",
+                    "bindings": [
+                        {
+                            "key": "g",
+                            "name": "Launch Monkey Graph",
+                            "icon": "graph-line",
+                            "type": "command",
+                            "command": "monkeyc.launchMonkeyGraph",
+                        },
+                        {
+                            "key": "m",
+                            "name": "Launch Monkey Motion",
+                            "icon": "squirrel",
+                            "type": "command",
+                            "command": "monkeyc.launchMonkeyMotion",
+                        },
+                        {
+                            "key": "e",
+                            "name": "Launch Error Reporting (ERA Viewer)",
+                            "icon": "error",
+                            "type": "command",
+                            "command": "monkeyc.launchEraViewer",
+                        },
+                    ]
+                }
+            ],
+
+        },
+
         // Live share bindings
         {
             "keys": "L",
