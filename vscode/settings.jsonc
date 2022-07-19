@@ -644,6 +644,13 @@
                 }
             ]
         },
+        {
+            "keys": "p.s",
+            "name": "Open SSH remote project",
+            "icon": "remote-explorer",
+            "type": "command",
+            "command": "opensshremotes.openEmptyWindow",
+        },
 
         // swap JSON/GUI settings
         {
