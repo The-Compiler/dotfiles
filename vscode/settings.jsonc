@@ -1405,6 +1405,7 @@
     "workbench.settings.enableNaturalLanguageSearch": false,
     /*********** Git **********/
     "git.autofetch": true,
+    "git.experimental.mergeEditor": true,
     "magit.forge-enabled": true,
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.currentLine.enabled": false,
@@ -1567,4 +1568,8 @@
     // ]
     // nvim experiment
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1,
+        "asvetliakov.vscode-neovim": 1
+    },
 }
