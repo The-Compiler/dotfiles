@@ -9,6 +9,7 @@ application/x-gzip; als %s; copiousoutput
 
 application/vnd.openxmlformats-officedocument.wordprocessingml.document; libreoffice %s
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; libreoffice %s
+application/vnd.oasis.opendocument.text; libreoffice %s
 image/*; sxiv %s
 
 text/calendar; vcal --all -; copiousoutput
