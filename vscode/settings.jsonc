@@ -1468,7 +1468,7 @@
     "errorLens.fontFamily": "Iosevka Light",
     "errorLens.fontSize": "10pt",
     "errorLens.delay": 500,
-    "errorLens.addNumberOfDiagnostics": true,
+    "errorLens.messageTemplate": "[1/$count] $message [$source] <$code>",
     "search.showLineNumbers": true,
     "vim.showMarksInGutter": true,
     "window.dialogStyle": "custom",
@@ -1613,8 +1613,7 @@
     "workbench.editor.limit.value": 3,
     /********** Privacy **********/
     "update.mode": "none",
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
+    "telemetry.telemetryLevel": "off",
     "redhat.telemetry.enabled": false,
     "workbench.settings.enableNaturalLanguageSearch": false,
     /*********** Git **********/
