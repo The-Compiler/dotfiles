@@ -1439,7 +1439,17 @@
                 }
             ]
         },
+
+        // @ shortcut for symbols
+        {
+            "keys": "@",
+            "name": "Jump to symbol in buffer",
+            "icon": "symbol-class",
+            "type": "command",
+            "command": "workbench.action.gotoSymbol"
+        }
     ],
+
     /********** Appearance **********/
     "editor.cursorBlinking": "phase",
     "editor.cursorSurroundingLines": 2,
