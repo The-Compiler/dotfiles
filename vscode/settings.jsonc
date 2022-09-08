@@ -1566,6 +1566,10 @@
             "background-color: #98971a !important;",
         "#asvetliakov\\.vscode-neovim[aria-label=\"-- VISUAL --\"]":
             "background-color: #b16286 !important;",
+
+        //// muted links
+        ".monaco-editor .detected-link, .monaco-editor .detected-link-active":
+            "text-decoration: underline 1px #665c54 !important;"
     },
     "customizeUI.activityBar": "bottom", // note, 'top' interfers with VSpaceCode 'Tb'
     "customizeUI.activityBarHideSettings": true,
