@@ -1311,6 +1311,49 @@
                             "type": "command",
                             "command": "monkeyc.exportProject",
                         },
+                        {
+                            "key": "o",
+                            "name": "Optimized",
+                            "type": "bindings",
+                            "icon": "dashboard",
+                            "bindings": [
+                                {
+                                    "key": "b",
+                                    "name": "Build optimized project",
+                                    "icon": "gear",
+                                    "type": "command",
+                                    "command": "prettiermonkeyc.buildOptimizedProject",
+                                },
+                                {
+                                    "key": "r",
+                                    "name": "Build and run optimized project",
+                                    "icon": "play",
+                                    "type": "command",
+                                    "command": "prettiermonkeyc.runOptimizedProject",
+                                },
+                                {
+                                    "key": "c",
+                                    "name": "Clean optimized project",
+                                    "icon": "trash",
+                                    "type": "command",
+                                    "command": "prettiermonkeyc.cleanOptimizedBuild",
+                                },
+                                {
+                                    "key": "g",
+                                    "name": "Generate optimized project",
+                                    "icon": "files",
+                                    "type": "command",
+                                    "command": "prettiermonkeyc.generateOptimizedProject",
+                                },
+                                {
+                                    "key": "e",
+                                    "name": "Export optimized project",
+                                    "icon": "export",
+                                    "type": "command",
+                                    "command": "prettiermonkeyc.exportOptimizedProject",
+                                },
+                            ]
+                        }
                     ]
                 },
                 {
