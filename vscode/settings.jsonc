@@ -1464,6 +1464,7 @@
     "editor.renderLineHighlightOnlyWhenFocus": true,
     "editor.renderWhitespace": "trailing",
     "editor.bracketPairColorization.enabled": true,
+    "editor.stickyScroll.enabled": true,
     // "editor.cursorSmoothCaretAnimation": true,
     "errorLens.fontFamily": "Iosevka Light",
     "errorLens.fontSize": "10pt",
@@ -1502,6 +1503,8 @@
             // UI separation
             "sideBar.background": "#3c3836",
             "panel.background": "#3c3836",
+            "editorStickyScroll.background": "#3c3836",
+            "editorStickyScrollHover.background": "#3c3836",
             // file browser keyboard usage
             "list.focusForeground": "#d3869b",
             "quickInputList.focusForeground": "#fbf1c7",
