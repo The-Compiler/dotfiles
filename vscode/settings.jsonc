@@ -1456,7 +1456,6 @@
     "editor.fontFamily": "Iosevka",
     "editor.fontLigatures": "'dlig', 'cv93' 3",  // more ligatures, less weird %
     "editor.fontSize": 18,
-    "editor.inlineHints.fontFamily": "Iosevka Light",
     "terminal.integrated.fontFamily": "Iosevka Nerd Font",
     "editor.minimap.scale": 2,
     "editor.minimap.showSlider": "always",
@@ -1470,7 +1469,6 @@
     "errorLens.fontSize": "10pt",
     "errorLens.delay": 500,
     "errorLens.addNumberOfDiagnostics": true,
-    "testExplorer.errorDecoration": false,
     "search.showLineNumbers": true,
     "vim.showMarksInGutter": true,
     "window.dialogStyle": "custom",
@@ -1621,7 +1619,6 @@
     "workbench.settings.enableNaturalLanguageSearch": false,
     /*********** Git **********/
     "git.autofetch": true,
-    "git.experimental.mergeEditor": true,
     "magit.forge-enabled": true,
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.currentLine.enabled": false,
