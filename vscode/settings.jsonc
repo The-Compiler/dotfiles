@@ -1582,7 +1582,12 @@
         "!magit",
         "!git-commit",
     ],
-    "[python]": { "editor.rulers": [88] },
+    "[python]": {
+        "editor.rulers": [
+            88
+        ],
+        //"editor.defaultFormatter": "ms-python.black-formatter"
+    },
     /********** Behavior **********/
     "debug.console.closeOnEnd": true,
     "editor.find.autoFindInSelection": "multiline",
