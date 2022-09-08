@@ -1574,12 +1574,12 @@
     "customizeUI.listRowHeight": 20,
     "customizeUI.font.monospace": "Iosevka",
     "customizeUI.font.regular": "Roboto Condensed",
-    "color-highlight.languages": [
-        "*",
-        "!restructuredtext",
-        "!magit",
-        "!git-commit",
-    ],
+    // "color-highlight.languages": [
+    //     "*",
+    //     "!restructuredtext",
+    //     "!magit",
+    //     "!git-commit",
+    // ],
     "[python]": {
         "editor.rulers": [
             88
@@ -1628,13 +1628,13 @@
     //     "blocks"
     // ],
     "gitlens.hovers.currentLine.enabled": false,
-    "github-actions.workflows.pinned.workflows": [
-        ".github/workflows/build.yml",
-        ".github/workflows/ci.yml"
-    ],
-    "github-actions.workflows.pinned.refresh.enabled": true,
+    //"github-actions.workflows.pinned.workflows": [
+    //    ".github/workflows/build.yml",
+    //    ".github/workflows/ci.yml"
+    //],
+    //"github-actions.workflows.pinned.refresh.enabled": true,
     "magit.quick-switch-enabled": true,
-    "remoteHub.search.download.enabled": true,
+    //"remoteHub.search.download.enabled": true,
     /********** Python **********/
     // "python.analysis.diagnosticMode": "workspace",
     "python.formatting.provider": "black",
@@ -1710,9 +1710,9 @@
         "%PDF%"
     ],
     /********** rst **********/
-    "restructuredtext.languageServer.disabled": true,
-    "restructuredtext.sphinxBuildPath": "/usr/bin/sphinx-build",
-    "restructuredtext.linter.executablePath": "/usr/bin/rstcheck",
+    //"restructuredtext.languageServer.disabled": true,
+    //"restructuredtext.sphinxBuildPath": "/usr/bin/sphinx-build",
+    //"restructuredtext.linter.executablePath": "/usr/bin/rstcheck",
     /********** other languages **********/
     "monkeyC.developerKeyPath": "/home/florian/.Garmin/developer_key",
     "monkeyC.javaPath": "/usr/lib/jvm/java-17-openjdk",
@@ -1781,7 +1781,7 @@
     //     "#665c5420",
     // ]
     // nvim experiment
-    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+    // "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1,
         "asvetliakov.vscode-neovim": 1
