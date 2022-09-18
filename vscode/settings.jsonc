@@ -1650,7 +1650,6 @@
     "codesnap.shutterAction": "copy",
     "whichkey.delay": 1,
     "whichkey.sortOrder": "nonNumberFirst",
-    "latex-workshop.latex.autoBuild.run": "onSave",
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.perEditorGroup": true,
     "workbench.editor.limit.value": 3,
@@ -1738,6 +1737,8 @@
             "env": {}
           },
     ],
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.latex.autoBuild.run": "onSave",
     // https://github.com/James-Yu/LaTeX-Workshop/wiki/View#using-synctex-with-an-external-viewer
     "latex-workshop.view.pdf.viewer": "external",
     "latex-workshop.view.pdf.external.viewer.command": "zathura",
