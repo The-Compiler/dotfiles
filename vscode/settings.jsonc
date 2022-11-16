@@ -1840,4 +1840,8 @@
         "asvetliakov.vscode-neovim": 1
     },
     "errorLens.followCursor": "allLinesExceptActive",
+    "coverage-gutters.highlightdark": "#98971a",
+    "coverage-gutters.noHighlightDark": "#cc241d",
+    "coverage-gutters.noHighlightLight": "#cc241d",
+    "coverage-gutters.highlightlight": "#98971a",
 }
