@@ -1497,6 +1497,15 @@
             "icon": "symbol-class",
             "type": "command",
             "command": "workbench.action.gotoSymbol"
+        },
+
+        // toggle light/dark theme
+        {
+            "keys": ["T", "S"],
+            "name": "Toggle light/dark theme",
+            "icon": "color-mode",
+            "type": "command",
+            "command": "workbench.action.toggleLightDarkThemes"
         }
     ],
 
@@ -1524,6 +1533,8 @@
     "window.dialogStyle": "custom",
     "window.menuBarVisibility": "toggle",
     "workbench.colorTheme": "Gruvbox Dark Medium",
+    "workbench.preferredLightColorTheme": "Gruvbox Light Medium",
+    "workbench.preferredDarkColorTheme": "Gruvbox Dark Medium",
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.untitled.hint": "hidden",
     "workbench.iconTheme": "material-icon-theme",
