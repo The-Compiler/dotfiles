@@ -1839,4 +1839,5 @@
         "vscodevim.vim": 1,
         "asvetliakov.vscode-neovim": 1
     },
+    "errorLens.followCursor": "allLinesExceptActive",
 }
