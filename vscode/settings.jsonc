@@ -1771,8 +1771,8 @@
     "monkeyC.javaPath": "/usr/lib/jvm/java-17-openjdk",
     "monkeyC.typeCheckLevel": "Strict",
     "arduino.additionalUrls": [
-        "https://raw.githubusercontent.com/keyboardio/arduino-kaleidoscope-master/main/package_kaleidoscope_master_index.json",
-        "https://adafruit.github.io/arduino-board-index/package_adafruit_index.json",
+        "https://raw.githubusercontent.com/keyboardio/boardsmanager/master/package_keyboardio_index.json",
+        "https://adafruit.github.io/arduino-board-index/package_adafruit_index.json"
     ],
     /********** Project Manager **********/
     "projectManager.groupList": true,
