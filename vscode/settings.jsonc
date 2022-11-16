@@ -832,6 +832,13 @@
             "command": "testing.openOutputPeek",
         },
         {
+            "keys": ["m", "languageId:python", "t", "s"],
+            "name": "Set up tests",
+            "icon": "gear",
+            "type": "command",
+            "command": "python.configureTests",
+        },
+        {
             "keys": ["m", "languageId:python", "t", "o"],
             "name": "Show output",
             "icon": "eye",
