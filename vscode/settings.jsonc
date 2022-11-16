@@ -1661,6 +1661,8 @@
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.perEditorGroup": true,
     "workbench.editor.limit.value": 3,
+    "markdown.validate.enabled": true,
+    "markdown.occurrencesHighlight.enabled": true,
     /********** Privacy **********/
     "update.mode": "none",
     "telemetry.telemetryLevel": "off",
