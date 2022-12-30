@@ -34,9 +34,9 @@ is_xephyr() {
 
 hc emit_hook reload
 
-if is_first_start; then
-    picom &
-fi
+#if is_first_start; then
+#    picom &
+#fi
 
 # xsetroot -solid black
 feh --bg-fill ~/img/wallpapers/abstract.png
