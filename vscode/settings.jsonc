@@ -1537,6 +1537,7 @@
     "workbench.preferredDarkColorTheme": "Gruvbox Dark Medium",
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.untitled.hint": "hidden",
+    "workbench.activityBar.visible": false,
     "workbench.iconTheme": "material-icon-theme",
     "material-icon-theme.folders.color": "#458588",
     "material-icon-theme.saturation": 0.5,
