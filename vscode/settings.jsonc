@@ -976,6 +976,43 @@
                 }
             ]
         },
+        // PlatformIO integration
+        {
+            "keys": ["m", "languageId:cpp", "p"],
+            "name": "+PlatformIO",
+            "type": "bindings",
+            "icon": "bug",
+            "bindings": [
+                {
+                    "key": "c",
+                    "name": "Build",
+                    "icon": "gear",
+                    "type": "command",
+                    "command": "platformio-ide.build"
+                },
+                {
+                    "key": "u",
+                    "name": "Upload",
+                    "icon": "zap",
+                    "type": "command",
+                    "command": "platformio-ide.upload"
+                },
+                {
+                    "key": "c",
+                    "name": "Clean",
+                    "icon": "trashcan",
+                    "type": "command",
+                    "command": "platformio-ide.clean"
+                },
+                {
+                    "key": "m",
+                    "name": "Monitor",
+                    "icon": "terminal",
+                    "type": "command",
+                    "command": "platformio-ide.serialMonitor"
+                }
+            ]
+        },
 
         // Arduino integration
         {
