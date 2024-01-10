@@ -79,3 +79,5 @@ colorMoved = plain
 #    fsckObjects = true
 [init]
 	defaultBranch = main
+[rebase]
+	updateRefs = true
