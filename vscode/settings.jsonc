@@ -1639,8 +1639,7 @@
         "editor.rulers": [
             88
         ],
-        "editor.defaultFormatter": "ms-python.python",
-        //"editor.defaultFormatter": "ms-python.black-formatter"
+        "editor.defaultFormatter": "ms-python.black-formatter"
     },
     /********** Behavior **********/
     "debug.console.closeOnEnd": true,
@@ -1713,7 +1712,7 @@
     },
     "notebook.cellToolbarLocation": {
         "default": "right",
-        "jupyter-notebook": "right"
+        "jupyter-notebook": "left"
     },
     // "python.analysis.memory.keepLibraryAst": true,
 
