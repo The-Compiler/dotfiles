@@ -48,8 +48,8 @@ colorMoved = plain
 	tool = kdiff3
 
 [color "diff"]
-	oldMoved = red dim
-	newMoved = green dim
+	oldMoved = yellow
+	newMoved = blue
 [magithub]
 	online = false
 [magithub "status"]
