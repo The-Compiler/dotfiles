@@ -1787,7 +1787,8 @@
     /********** other languages **********/
     "monkeyC.developerKeyPath": "/home/florian/.Garmin/developer_key",
     "monkeyC.javaPath": "/usr/lib/jvm/java-17-openjdk",
-    "monkeyC.typeCheckLevel": "Strict",
+    "monkeyC.typeCheckLevel": "Off",
+    "markdown.editor.pasteUrlAsFormattedLink.enabled": "smart",
     "arduino.additionalUrls": [
         "https://raw.githubusercontent.com/keyboardio/boardsmanager/master/package_keyboardio_index.json",
         "https://adafruit.github.io/arduino-board-index/package_adafruit_index.json"
@@ -1824,7 +1825,6 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "editor.inlineSuggest.enabled": true,
-    "window.zoomLevel": 1,
     //"coverage-gutter.showRulerCoverage": true,
     //"coverage-gutter.showLineCoverage": true,
     // "editor.suggestSelection": "first",
@@ -1862,4 +1862,19 @@
     "coverage-gutters.noHighlightDark": "#cc241d",
     "coverage-gutters.noHighlightLight": "#cc241d",
     "coverage-gutters.highlightlight": "#98971a",
+    "files.exclude": {
+        "**/.venv": true
+    },
+    "window.zoomLevel": 2,
+    "python.defaultInterpreterPath": "/home/florian/hsr/autpy/development/notebooks/6-project/project/solutions/wuff/.venv",
+    "git.openRepositoryInParentFolders": "never",
+    "githubPullRequests.pullBranch": "never",
+    "editor.experimental.asyncTokenization": true,
+    "diffEditor.experimental.useVersion2": true,
+    "diffEditor.experimental.showEmptyDecorations": true,
+    "diffEditor.experimental.showMoves": true,
+    "search.experimental.closedNotebookRichContentResults": true,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
 }
