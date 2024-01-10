@@ -313,3 +313,6 @@ zplug load
 
 # auto notify config
 AUTO_NOTIFY_IGNORE+=("zathura" "mosh" "neomutt" "physlock" "ranger")
+
+autoload -Uz compinit
+fpath+=~/.zfunc
