@@ -95,6 +95,9 @@ alias hc='herbstclient'
 alias tx='tmux -2 attach -d'
 alias kal='vdirsyncer sync && khal interactive && vdirsyncer sync'
 alias svg2pdf='inkscape --export-area-drawing --export-type=pdf'
+alias vpy='.venv/bin/python3'
+alias vpip='.venv/bin/pip'
+alias vpytest='.venv/bin/pytest'
 # (no, I'm not as immature as those aliases suggest - but they're memorable at
 # least...)
 alias fap='fahrplan -f'
