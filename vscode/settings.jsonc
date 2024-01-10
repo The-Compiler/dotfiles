@@ -1741,15 +1741,29 @@
             "command": "latexmk",
             "args": [
                 "-shell-escape", // FIXME do we really want this globally?
-              "-synctex=1",
-              "-interaction=nonstopmode",
-              "-file-line-error",
-              "-lualatex",
-              "-outdir=%OUTDIR%",
-              "%DOC%"
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-lualatex",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
             ],
             "env": {}
-          },
+        },
+        {
+            "name": "xelatexmk",
+            "command": "latexmk",
+            "args": [
+                // "-shell-escape", // FIXME do we really want this globally?
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-xelatex",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
     ],
     "latex-workshop.latex.recipe.default": "lastUsed",
     "latex-workshop.latex.autoBuild.run": "onSave",
