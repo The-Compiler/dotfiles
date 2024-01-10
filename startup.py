@@ -1,13 +1,17 @@
 import sys
-from pprint import pprint as pp  # convenience
+
+
 
 try:
-    from rich import pretty
+    import rich.pretty
+    import rich
 except ImportError:
     pass
 else:
-    pretty.install()
-    del pretty
+    rich.pretty.install()
+    help = rich.inspect
+    print = rich.print
+    del rich.pretty
 
 def chunk(elems, n):
     for i in range(0, len(elems), n):
