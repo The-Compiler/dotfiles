@@ -3,6 +3,8 @@
 	attributesfile = /home/florian/.config/git/gitattributes
 	excludesfile = /home/florian/.config/git/gitignore
     editor = code --wait
+	fsmonitor = true
+	untrackedcache = true
 
 [interactive]
     diffFilter = delta --color-only
