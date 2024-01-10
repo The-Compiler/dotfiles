@@ -1,5 +1,4 @@
 {
-    /********** VSpaceCode boilerplate **********/
     // https://github.com/VSpaceCode/VSpaceCode/blob/master/src/configuration/settings.jsonc
     "vim.easymotion": true, // Vim easymotion is required for Jump menu - <SPC> j
     // "vim.useSystemClipboard": true,
@@ -998,7 +997,14 @@
                     "command": "platformio-ide.upload"
                 },
                 {
-                    "key": "c",
+                    "key": "U",
+                    "name": "Upload and monitor",
+                    "icon": "squirrel",
+                    "type": "command",
+                    "command": "platformio-ide.uploadAndMonitor"
+                },
+                {
+                    "key": "C",
                     "name": "Clean",
                     "icon": "trashcan",
                     "type": "command",
