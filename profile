@@ -26,6 +26,7 @@ export RANGER_DEVICONS_SEPARATOR='  '
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
 export AWT_TOOLKIT=MToolkit  # fix blank windows
 export PIP_REQUIRE_VIRTUALENV=1
+export QUTE_QT_WRAPPER=PyQt6
 export SWEETHOME3D_JAVA3D=1.6   # fix 3D not working
 
 ### ndless
