@@ -1566,6 +1566,7 @@
     "editor.renderWhitespace": "trailing",
     "editor.bracketPairColorization.enabled": true,
     "editor.stickyScroll.enabled": true,
+    "notebook.stickyScroll.enabled": true,
     // "editor.cursorSmoothCaretAnimation": true,
     "errorLens.fontFamily": "Iosevka Light",
     "errorLens.fontSize": "9",
