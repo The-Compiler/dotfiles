@@ -1549,10 +1549,10 @@
     /********** Appearance **********/
     "editor.cursorBlinking": "phase",
     "editor.cursorSurroundingLines": 2,
-    "editor.fontFamily": "Iosevka",
+    "editor.fontFamily": "Iosevka NFM",
     "editor.fontLigatures": "'dlig', 'cv93' 3",  // more ligatures, less weird %
-    "editor.fontSize": 18,
-    "terminal.integrated.fontFamily": "Iosevka Nerd Font",
+    "editor.fontSize": 12,
+    "terminal.integrated.fontFamily": "Iosevka NFM",
     "editor.minimap.scale": 2,
     "editor.minimap.showSlider": "always",
     "editor.renderControlCharacters": true,
@@ -1562,7 +1562,7 @@
     "editor.stickyScroll.enabled": true,
     // "editor.cursorSmoothCaretAnimation": true,
     "errorLens.fontFamily": "Iosevka Light",
-    "errorLens.fontSize": "10pt",
+    "errorLens.fontSize": "9",
     "errorLens.delay": 500,
     "errorLens.messageTemplate": "[1/$count] $message [$source] <$code>",
     "search.showLineNumbers": true,
