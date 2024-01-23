@@ -1549,6 +1549,60 @@
             "icon": "color-mode",
             "type": "command",
             "command": "workbench.action.toggleLightDarkThemes"
+        },
+
+        // copilot
+        {
+            "keys": "a",
+            "name": "Co-Pilot",
+            "type": "bindings",
+            "icon": "copilot",
+            "bindings": [
+                {
+                    "key": "c",
+                    "name": "Open New Chat",
+                    "icon": "comment",
+                    "command": "workbench.action.openChat.copilot"
+                },
+                {
+                    "key": "i",
+                    "name": "Interactive",
+                    "icon": "comment-discussion",
+                    "type": "bindings",
+                    "bindings": [
+                        {
+                            "key": "e",
+                            "name": "Explain",
+                            "icon": "question",
+                            "command": "github.copilot.interactiveEditor.explain"
+                        },
+                        {
+                            "key": "f",
+                            "name": "Fix",
+                            "icon": "check",
+                            "command": "github.copilot.interactiveEditor.fix"
+                        },
+                        {
+                            "key": "t",
+                            "name": "Generate Test",
+                            "icon": "beaker",
+                            "command": "github.copilot.interactiveEditor.generateTests"
+                        },
+                        {
+                            "key": "d",
+                            "name": "Generate Docs",
+                            "icon": "book",
+                            "command": "github.copilot.interactiveEditor.generateDocs"
+                        }
+                    ]
+                },
+                {
+                    "key": "q",
+                    "name": "Open New Quick Chat",
+                    "icon": "comment-draft",
+                    "command": "workbench.action.openQuickChat.copilot"
+                }
+            ]
         }
     ],
 
