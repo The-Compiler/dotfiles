@@ -297,22 +297,24 @@ export PATH="$PATH:/home/florian/.local/bin"
 eval "$(register-python-argcomplete pipx)"
 
 # plugins
-source /usr/share/zsh/scripts/zplug/init.zsh
-zplug "MichaelAquilina/zsh-auto-notify"
+if [[ -e /usr/share/zsh/scripts/zplug/init.zsh ]]; then
+    source /usr/share/zsh/scripts/zplug/init.zsh
+    zplug "MichaelAquilina/zsh-auto-notify"
 
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
+    # Install plugins if there are plugins that have not been installed
+    if ! zplug check --verbose; then
+        printf "Install? [y/N]: "
+        if read -q; then
+            echo; zplug install
+        fi
     fi
+
+    # Then, source plugins and add commands to $PATH
+    zplug load
+
+    # auto notify config
+    AUTO_NOTIFY_IGNORE+=("zathura" "mosh" "neomutt" "physlock" "ranger" "mpv")
 fi
-
-# Then, source plugins and add commands to $PATH
-zplug load
-
-# auto notify config
-AUTO_NOTIFY_IGNORE+=("zathura" "mosh" "neomutt" "physlock" "ranger")
 
 autoload -Uz compinit
 fpath+=~/.zfunc
