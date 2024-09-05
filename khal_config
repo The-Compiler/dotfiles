@@ -16,9 +16,17 @@ color = dark green
 path = ~/.local/share/vdirsyncer/calendars/hsr
 color = dark blue
 
-[[mline]]
+[[friends]]
 path = ~/.local/share/vdirsyncer/calendars/mline
 color = dark magenta
+
+[[events]]
+path = ~/.local/share/vdirsyncer/calendars/events
+color = dark red
+
+[[bruhinsw]]
+path = ~/.local/share/vdirsyncer/calendars/bruhin-software
+color = dark blue
 
 [locale]
 timeformat = %H:%M
