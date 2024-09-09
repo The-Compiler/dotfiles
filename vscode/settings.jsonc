@@ -1768,6 +1768,7 @@
     "magit.forge-enabled": true,
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.currentLine.enabled": false,
+    "gitlens.rebaseEditor.ordering": "asc",
     // "gitlens.codeLens.scopes": [
     //     "document",
     //     "containers",
@@ -1799,7 +1800,8 @@
         "reportUnusedVariable": "information",
     },
     "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
+        "*.ipynb": "jupyter-notebook",
+        "git-rebase-todo": "gitlens.rebase"
     },
     "notebook.cellToolbarLocation": {
         "default": "right",
