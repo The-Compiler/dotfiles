@@ -1651,6 +1651,7 @@
     "editor.fontSize": 12,
     "terminal.integrated.fontFamily": "Iosevka NFM",
     "editor.minimap.scale": 2,
+    "editor.minimap.renderCharacters": false,
     "editor.minimap.showSlider": "always",
     "editor.renderControlCharacters": true,
     "editor.renderLineHighlightOnlyWhenFocus": true,
