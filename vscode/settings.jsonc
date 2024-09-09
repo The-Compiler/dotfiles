@@ -1967,4 +1967,7 @@
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
+    "multiDiffEditor.experimental.enabled": true,
+    "github.copilot.editor.enableCodeActions": false,
+    "github.copilot.editor.enableAutoCompletions": true
 }
