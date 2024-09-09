@@ -1857,6 +1857,7 @@
         },
     ],
     "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.latex.build.forceRecipeUsage": false,
     "latex-workshop.latex.autoBuild.run": "onSave",
     // https://github.com/James-Yu/LaTeX-Workshop/wiki/View#using-synctex-with-an-external-viewer
     "latex-workshop.view.pdf.viewer": "external",
