@@ -1731,7 +1731,7 @@
         "editor.rulers": [
             88
         ],
-        "editor.defaultFormatter": "ms-python.black-formatter"
+        "editor.defaultFormatter": "charliermarsh.ruff"
     },
     /********** Behavior **********/
     "debug.console.closeOnEnd": true,
