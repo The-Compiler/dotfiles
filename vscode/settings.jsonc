@@ -1674,7 +1674,6 @@
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.activityBar.location": "hidden",
     "workbench.editor.empty.hint": "hidden",
-    "workbench.iconTheme": "material-icon-theme",
     "material-icon-theme.folders.color": "#458588",
     "material-icon-theme.saturation": 0.5,
     "workbench.tree.indent": 16,
@@ -1957,8 +1956,7 @@
     "files.exclude": {
         "**/.venv": true
     },
-    "window.zoomLevel": 2,
-    "python.defaultInterpreterPath": "/home/florian/hsr/autpy/development/notebooks/6-project/project/solutions/wuff/.venv",
+    "window.zoomLevel": 3,
     "git.openRepositoryInParentFolders": "never",
     "githubPullRequests.pullBranch": "never",
     "editor.experimental.asyncTokenization": true,
