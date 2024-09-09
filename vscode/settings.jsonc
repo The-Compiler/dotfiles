@@ -405,6 +405,43 @@
             ]
         },
         {
+            "keys": "D.p",
+            "name": "+partial",
+            "icon": "list-selection",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "s",
+                    "name": "Select text for compare",
+                    "icon": "list-selection",
+                    "type": "command",
+                    "command": "extension.partialDiff.markSection1",
+
+                },
+                {
+                    "key": "d",
+                    "name": "Compare Text with Previous Selection",
+                    "icon": "diff",
+                    "type": "command",
+                    "command": "extension.partialDiff.markSection2AndTakeDiff",
+                },
+                {
+                    "key": "c",
+                    "name": "Compare Text with Clipboard",
+                    "icon": "clippy",
+                    "type": "command",
+                    "command": "extension.partialDiff.diffSelectionWithClipboard",
+                },
+                {
+                    "key": "e",
+                    "name": "Compare Text in Visible Editors",
+                    "icon": "diff-multiple",
+                    "type": "command",
+                    "command": "extension.partialDiff.diffVisibleEditors",
+                },
+            ]
+        },
+        {
             "keys": "g.H",
             "name": "+GitLab",
             "icon": "github-alt",  // close enough...
