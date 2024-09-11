@@ -11,10 +11,7 @@ export ARDUINO_PATH=/usr/share/arduino
 
 ### ccache ###
 export PATH="/usr/lib/ccache/bin/:$PATH"
-export CCACHE_COMPRESS=1
-export CCACHE_DIR=~/.cache/ccache
-export CCACHE_BASEDIR=~
-export CCACHE_PREFIX=$(which cope)
+# export CCACHE_PREFIX=$(which cope)
 
 ### settings
 export SUDO_PROMPT=$'\033[33m[sudo]\033[0m password for \033[32m%u@%h\033[0m (-> \033[31m%U\033[0m): '
