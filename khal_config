@@ -12,7 +12,7 @@ color = dark red
 path = ~/.local/share/vdirsyncer/calendars/default
 color = dark green
 
-[[hsr]]
+[[ost]]
 path = ~/.local/share/vdirsyncer/calendars/hsr
 color = dark blue
 
