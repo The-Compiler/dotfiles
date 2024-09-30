@@ -38,9 +38,7 @@ setopt hist_ignore_space
 [[ -f ~/.dircolors ]] && eval $(dircolors ~/.dircolors) || eval $(dircolors)
 
 ### general colors ###
-if cmd_exists cope_path; then
-    export PATH="$(cope_path):$PATH"
-fi
+cmd_exists grc && source /etc/grc.zsh
 
 ### Colors for less / man ###
 export LESS='-R --use-color -Dd+r$Du+b$'
