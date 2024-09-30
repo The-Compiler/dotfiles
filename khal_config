@@ -2,31 +2,31 @@
 
 [[birthdays]]
 path = ~/.local/share/vdirsyncer/calendars/birthdays
-color = dark red
+color = '#CC317C'
 
 [[contact_birthdays]]
 path = ~/.local/share/vdirsyncer/calendars/contact_birthdays
-color = dark red
+color = yellow
 
 [[default]]
 path = ~/.local/share/vdirsyncer/calendars/default
-color = dark green
+color = '#31CC7C'
 
 [[ost]]
 path = ~/.local/share/vdirsyncer/calendars/hsr
-color = dark blue
+color = '#8C195F'
 
 [[friends]]
 path = ~/.local/share/vdirsyncer/calendars/mline
-color = dark magenta
+color = '#7C31CC'
 
 [[events]]
 path = ~/.local/share/vdirsyncer/calendars/events
-color = dark red
+color = '#C98879'
 
 [[bruhinsw]]
 path = ~/.local/share/vdirsyncer/calendars/bruhin-software
-color = dark blue
+color = '#1C355E'
 
 [locale]
 timeformat = %H:%M
