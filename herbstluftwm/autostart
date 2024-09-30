@@ -17,6 +17,9 @@ hc() {
     herbstclient "$@"
 }
 
+# used in all spawning keybinds as prefix via "${spawner[@]}"
+spawner=(systemd-run --user bash -c 'herbstclient rule prepend maxage=120 pid=$$ tag=$(herbstclient attr tags.focus.name) once && exec "$@"' _)
+
 modbind() {
     key=$1
     shift
@@ -46,7 +49,7 @@ hc keyunbind --all
 
 # keybindings
 modbind Shift-space spawn metarofi
-modbind Shift-q spawn rofi-power 'herbstclient quit'
+modbind Shift-q spawn ~/.local/bin/rofi-power 'herbstclient quit'
 modbind Shift-r reload
 modbind Shift-c close
 modbind Return spawn ${TERMINAL:-xterm}
@@ -111,8 +114,8 @@ for i in "${!tag_keys[@]}"; do
 done
 
 # cycle through tags
-modbind comma spawn hlwm-tagswitch prev
-modbind period spawn hlwm-tagswitch next
+modbind comma spawn "${spawner[@]}" hlwm-tagswitch prev
+modbind period spawn "${spawner[@]}" hlwm-tagswitch next
 modbind Shift-comma use_index -1
 modbind Shift-period use_index +1
 
@@ -123,7 +126,7 @@ modbind p pseudotile toggle
 modbind s floating toggle
 modbind Shift-s set_attr clients.focus.floating toggle
 
-modbind f spawn /usr/share/doc/herbstluftwm/examples/maximize.sh
+modbind f spawn "${spawner[@]}" /usr/share/doc/herbstluftwm/examples/maximize.sh
 
 fullscreen_cmd=(
 and
@@ -175,22 +178,23 @@ modbind c cycle
 modbind i jumpto urgent
 
 # utility keys
-hc keybind XF86MonBrightnessUp spawn brightnessctl set +5
-hc keybind XF86MonBrightnessDown spawn brightnessctl set 5-
-hc keybind XF86Display spawn rofi-xrandr
-hc keybind XF86Favorites spawn tp-lock
-hc keybind Shift+XF86Favorites spawn systemctl suspend
+hc keybind XF86MonBrightnessUp spawn "${spawner[@]}" brightnessctl set +5% -e
+hc keybind XF86MonBrightnessDown spawn "${spawner[@]}" brightnessctl set 5-% -n 1 -e
+hc keybind XF86Display spawn "${spawner[@]}" rofi-xrandr
+hc keybind XF86Favorites spawn "${spawner[@]}" tp-lock
+hc keybind Shift+XF86Favorites spawn "${spawner[@]}" systemctl suspend
 
+# FIXME for some reason spawning doesn't work when rofi is used with $spawner...
 modbind d spawn rofi -show drun -modi drun,run -show-icons
 modbind Shift-d spawn rofi -show run -modi drun,run
-modbind w spawn rofi -show window -modi window -show-icons
-modbind Shift-w spawn hlwm-bring
-modbind grave spawn hlwm-namenstag
-modbind n spawn networkmanager_dmenu
+modbind w spawn "${spawner[@]}" rofi -show window -modi window -show-icons
+modbind Shift-w spawn "${spawner[@]}" ~/bin/hlwm-bring
+modbind grave spawn "${spawner[@]}" hlwm-namenstag
+modbind n spawn "${spawner[@]}" networkmanager_dmenu
 modbind y spawn utf8select
-modbind Shift-y spawn rofimoji
-modbind p spawn keepmenu
-modbind Shift-p spawn flameshot gui
+modbind Shift-y spawn "${spawner[@]}" rofimoji
+modbind p spawn "${spawner[@]}" keepmenu
+modbind Shift-p spawn "${spawner[@]}" flameshot gui
 
 # theme
 hc attr theme.tiling.reset 1
@@ -238,15 +242,15 @@ hc set mouse_recenter_gap 0
 hc attr monitors.tag_selection_strategy only_empty
 
 # Multimedia keys
-hc keybind XF86AudioLowerVolume spawn pavolume-dunst decrease 5
-hc keybind XF86AudioRaiseVolume spawn pavolume-dunst increase 5
-hc keybind Shift-XF86AudioLowerVolume spawn pavolume-dunst decrease 5 --allow-boost
-hc keybind Shift-XF86AudioRaiseVolume spawn pavolume-dunst increase 5 --allow-boost
-hc keybind XF86AudioMute spawn pavolume-dunst mute
+hc keybind XF86AudioLowerVolume spawn "${spawner[@]}" pavolume-dunst decrease 5
+hc keybind XF86AudioRaiseVolume spawn "${spawner[@]}" pavolume-dunst increase 5
+hc keybind Shift-XF86AudioLowerVolume spawn "${spawner[@]}" pavolume-dunst decrease 5 --allow-boost
+hc keybind Shift-XF86AudioRaiseVolume spawn "${spawner[@]}" pavolume-dunst increase 5 --allow-boost
+hc keybind XF86AudioMute spawn "${spawner[@]}" pavolume-dunst mute
 
-hc keybind XF86AudioPlay spawn playerctl play-pause
-hc keybind XF86AudioPrev spawn playerctl previous
-hc keybind XF86AudioNext spawn playerctl next
+hc keybind XF86AudioPlay spawn "${spawner[@]}" playerctl play-pause
+hc keybind XF86AudioPrev spawn "${spawner[@]}" playerctl previous
+hc keybind XF86AudioNext spawn "${spawner[@]}" playerctl next
 
 # rules
 hc unrule -F
@@ -271,11 +275,11 @@ if is_first_start && ! is_xephyr; then
     xinput disable 'SYNA8022:00 06CB:CE67 Touchpad' &
     # guake -e 'journalctl -f -n 200' &
 
-    dunst &
+    "${spawner[@]}" dunst
     # xss-lock tp-lock &
-    # mate-power-manager &
+    "${spawner[@]}" mate-power-manager
 
-    # nm-applet &
+    "${spawner[@]}" nm-applet
     # pasystray &
     # hp-systray &
     # udiskie &
@@ -284,7 +288,7 @@ if is_first_start && ! is_xephyr; then
     # kdeconnect-indicator &
     # /usr/lib/geoclue-2.0/demos/agent &
     # /usr/lib/polkit-kde-authentication-agent-1 &  # for VS code monkeypatch
-    lxqt-policykit-agent &
+    "${spawner[@]}" lxqt-policykit-agent
     # ~/proj/Model01-Firmware/hlwm-tags.py &
 fi
 
