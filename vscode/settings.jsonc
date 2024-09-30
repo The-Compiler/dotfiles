@@ -1880,7 +1880,7 @@
     //"restructuredtext.linter.executablePath": "/usr/bin/rstcheck",
     /********** other languages **********/
     "monkeyC.developerKeyPath": "/home/florian/.Garmin/developer_key",
-    "monkeyC.javaPath": "/usr/lib/jvm/java-17-openjdk",
+    "monkeyC.javaPath": "/usr/lib/jvm/java-22-openjdk",
     "monkeyC.typeCheckLevel": "Off",
     "markdown.editor.pasteUrlAsFormattedLink.enabled": "smart",
     "arduino.additionalUrls": [
