@@ -277,7 +277,8 @@ def main():
     trayer_config = {
         'tint': Gruv.BG.replace('#', '0x'),
         'iconspacing': '5',
-        'padding': '5'
+        'padding': '5',
+        'monitor': 'primary',
     }
 
     bar = lemonbar.Lemonbar(geometry=geom, foreground=Gruv.FG, background=Gruv.BG)
