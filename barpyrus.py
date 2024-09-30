@@ -125,9 +125,6 @@ def cg_space(cg):
     _cg_space_usage(cg, 0xe021, 'memperc')
     _cg_space_usage(cg, 0xe1bb, 'fs_used_perc /')
 
-    with cg.if_('mounted /mnt/sd'):
-        _cg_space_usage(cg, 0xe1eb, 'fs_size /mnt/sd')
-
 
 def cg_fan(cg):
     with cg.if_('match ${ibm_fan} != 65535'):
