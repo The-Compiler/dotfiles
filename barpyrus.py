@@ -290,7 +290,7 @@ def main():
         # title_theme(hlwm.HLWMWindowTitle(hc)),
     ]
     right_widgets = [
-        conky.ConkyWidget(text=str(cg), config=conky_config),
+        conky.ConkyWidget(text=cg, config=conky_config),
     ]
     if monitor == 0:
         right_widgets.append(trayer.TrayerWidget(args=trayer_config))
