@@ -178,8 +178,8 @@ modbind c cycle
 modbind i jumpto urgent
 
 # utility keys
-hc keybind XF86MonBrightnessUp spawn brightnessctl set +5
-hc keybind XF86MonBrightnessDown spawn brightnessctl set 5-
+hc keybind XF86MonBrightnessUp spawn brightnessctl -e set +5%
+hc keybind XF86MonBrightnessDown spawn brightnessctl -n 1 -e set 5-%
 hc keybind XF86Display spawn rofi-xrandr
 hc keybind XF86Favorites spawn tp-lock
 hc keybind Shift+XF86Favorites spawn systemctl suspend
