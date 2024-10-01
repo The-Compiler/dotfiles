@@ -37,6 +37,8 @@ hc emit_hook reload
 #if is_first_start; then
 #    picom &
 #fi
+# FIXME why does this not work OOTB?
+hc setenv PATH ~/bin:"$PATH"
 
 # xsetroot -solid black
 feh --bg-fill ~/img/wallpapers/abstract.png
