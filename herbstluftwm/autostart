@@ -276,18 +276,19 @@ if is_first_start && ! is_xephyr; then
 
     dunst &
     # xss-lock tp-lock &
-    # mate-power-manager &
+    mate-power-manager &
 
-    # nm-applet &
+    nm-applet &
     # pasystray &
     # hp-systray &
     # udiskie &
     # blueman &
     # redshift-gtk &
-    # kdeconnect-indicator &
+    kdeconnect-indicator &
     # /usr/lib/geoclue-2.0/demos/agent &
     # /usr/lib/polkit-kde-authentication-agent-1 &  # for VS code monkeypatch
     lxqt-policykit-agent &
+    rofi-xrandr --listen &
     # ~/proj/Model01-Firmware/hlwm-tags.py &
 fi
 
