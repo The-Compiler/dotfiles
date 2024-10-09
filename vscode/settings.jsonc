@@ -1591,7 +1591,7 @@
         // copilot
         {
             "keys": "a",
-            "name": "Co-Pilot",
+            "name": "Co-Pilot Chat",
             "type": "bindings",
             "icon": "copilot",
             "bindings": [
@@ -1599,20 +1599,20 @@
                     "key": "c",
                     "name": "Open New Chat",
                     "icon": "comment",
-                    "command": "workbench.action.openChat.copilot"
+                    "command": "workbench.action.chat.newChat"
                 },
                 {
                     "key": "i",
-                    "name": "Interactive",
+                    "name": "Open inline chat",
+                    "icon": "comment-discussion",
+                    "command": "inlineChat.start"
+                },
+                {
+                    "key": "I",
+                    "name": "Inline...",
                     "icon": "comment-discussion",
                     "type": "bindings",
                     "bindings": [
-                        {
-                            "key": "e",
-                            "name": "Explain",
-                            "icon": "question",
-                            "command": "github.copilot.interactiveEditor.explain"
-                        },
                         {
                             "key": "f",
                             "name": "Fix",
@@ -1630,6 +1630,12 @@
                             "name": "Generate Docs",
                             "icon": "book",
                             "command": "github.copilot.interactiveEditor.generateDocs"
+                        },
+                        {
+                            "key": "g",
+                            "name": "Generate...",
+                            "icon": "gear",
+                            "command": "github.copilot.interactiveEditor.generate"
                         }
                     ]
                 },
@@ -1637,7 +1643,7 @@
                     "key": "q",
                     "name": "Open New Quick Chat",
                     "icon": "comment-draft",
-                    "command": "workbench.action.openQuickChat.copilot"
+                    "command": "workbench.action.openQuickChat"
                 }
             ]
         }
