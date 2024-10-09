@@ -1978,5 +1978,11 @@
     },
     "multiDiffEditor.experimental.enabled": true,
     "github.copilot.editor.enableCodeActions": false,
-    "github.copilot.editor.enableAutoCompletions": true
+    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.chat.search.semanticTextResults": true,
+    "github.copilot.chat.experimental.temporalContext.enabled": true,
+    "github.copilot.chat.experimental.inlineChatHint.enabled": true,
+    "github.copilot.chat.experimental.inlineChatCompletionTrigger.enabled": true,
+    "python.terminal.shellIntegration.enabled": true,
+    "git.mergeEditor": true
 }
