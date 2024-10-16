@@ -405,6 +405,13 @@
             ]
         },
         {
+            "keys": "d.\t",
+            "name": "Diff editor: switch side",
+            "icon": "arrow-swap",
+            "type": "command",
+            "command": "diffEditor.switchSide"
+        },
+        {
             "keys": "D.p",
             "name": "+partial",
             "icon": "list-selection",
