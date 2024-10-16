@@ -311,3 +311,20 @@ fi
 
 autoload -Uz compinit
 fpath+=~/.zfunc
+
+# pty for bat
+zmodload zsh/zpty
+
+pty() {
+	zpty pty-${UID} "$@"
+	if [[ ! -t 1 ]];then
+		setopt local_traps
+		trap '' INT
+	fi
+	zpty -r pty-${UID}
+	zpty -d pty-${UID}
+}
+
+ptybat() {
+    COLUMNS=$((COLUMNS-8)) pty "$@" | bat
+}
