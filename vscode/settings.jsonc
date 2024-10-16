@@ -1874,6 +1874,7 @@
     "latex-workshop.latex.recipe.default": "lastUsed",
     "latex-workshop.latex.build.forceRecipeUsage": false,
     "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
     // https://github.com/James-Yu/LaTeX-Workshop/wiki/View#using-synctex-with-an-external-viewer
     "latex-workshop.view.pdf.viewer": "external",
     "latex-workshop.view.pdf.external.viewer.command": "zathura",
@@ -1887,6 +1888,14 @@
         "--synctex-forward=%LINE%:0:%TEX%",
         "%PDF%"
     ],
+    "latex-workshop.formatting.latex": "latexindent",
+    "latex-workshop.linting.lacheck.enabled": true,
+    "latex-workshop.linting.run": "onType",
+    "latex-workshop.linting.chktex.enabled": true,
+    "files.associations": {
+        // LaTeX TikZ/pgf profiling files
+        "*.profiler.20??-??-??_??h_??m.dat": "tsv"
+    },
     /********** rst **********/
     //"restructuredtext.languageServer.disabled": true,
     //"restructuredtext.sphinxBuildPath": "/usr/bin/sphinx-build",
